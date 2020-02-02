@@ -49,6 +49,10 @@ public class BuildSettings : MonoBehaviour
 	List<GameObject> Favourites = new List<GameObject>(); //save the player prefered tiles here
 	#endregion
 
+	#region Object lists
+	List<GameObject> Doors;
+	#endregion
+
 	#region Setters and Getters
 	public void SetTime(float _newTime)
 	{
@@ -123,6 +127,10 @@ public class BuildSettings : MonoBehaviour
 	public Vector2 GetLevelSmallest()
 	{
 		return minBaseLevelLimits;
+	}
+	public List<GameObject> GetDoorList()
+	{
+		return Doors;
 	}
 	#endregion
 	void Start()
