@@ -5,36 +5,18 @@ using UnityEngine.UI;
 
 public class UIBaseObject : MonoBehaviour
 {
-	int objectID = 0;
-	Sprite mouseObject;
-	Image thisObject;
-	Color startColour;
-	Renderer thisRenderer;
-	bool isMouseHovering = false;
+	[SerializeField]
+	int objectID;
 
-    void Start()
-    {
-		startColour = gameObject.GetComponent<Renderer>().material.color;
-		thisRenderer = gameObject.GetComponent<Renderer>();
-		thisObject = gameObject.GetComponent<Image>();
-    }
+	Image childImage;
 
-	private void OnMouseEnter()
+	private void Start()
 	{
-		thisRenderer.material.color = Color.gray;
-		isMouseHovering = true;
-	}
-	private void OnMouseExit()
-	{
-		thisRenderer.material.color = startColour;
-		isMouseHovering = false;
+		childImage = gameObject.GetComponentInChildren<Image>();
 	}
 
-	void Update()
-    {
-		if (Input.GetMouseButtonUp(0) && isMouseHovering)
-		{
-			//call a function in the pointer
-		}
+	public Image GetImage()
+	{
+		return childImage;
 	}
 }

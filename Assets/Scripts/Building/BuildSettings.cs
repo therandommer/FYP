@@ -116,7 +116,14 @@ public class BuildSettings : MonoBehaviour
 			levelLimits.x = _y;
 		}
 	}
-
+	public Vector2 GetLevelLimit()
+	{
+		return maxBaseLevelLimits;
+	}
+	public Vector2 GetLevelSmallest()
+	{
+		return minBaseLevelLimits;
+	}
 	#endregion
 	void Start()
     {
