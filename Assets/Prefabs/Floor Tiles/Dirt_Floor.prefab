@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1086226590119985728}
   - component: {fileID: 1086226590119985731}
   - component: {fileID: 7327993080054549860}
+  - component: {fileID: -5658978241968128877}
   m_Layer: 0
   m_Name: Dirt_Floor
   m_TagString: Platform
@@ -107,3 +108,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-5658978241968128877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086226590119985730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc177a92ac79ce458c235af707ba47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

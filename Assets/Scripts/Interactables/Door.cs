@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Door : MonoBehaviour
 {
 	[SerializeField]
-	int linkNo = 0; //used to change where each door links to. 1-1 2-2, etc.
-	Vector2 otherDoor;
+	int linkNo = 1; //used to change where each door links to. 1-1 2-2, etc.
+    [SerializeField]
+    TextMeshPro linkText;
+    Vector2 otherDoor;
 	BuildSettings buildSettings;
 	void Start()
     {
@@ -30,7 +33,7 @@ public class Door : MonoBehaviour
 
 	void Update()
     {
-        if(otherDoor == Vector2.zero)
+        if(otherDoor != Vector2.zero)
 		{
 			if(buildSettings.GetDoorList().Count>1)
 			{
@@ -48,6 +51,7 @@ public class Door : MonoBehaviour
 	public void SetDoorlinkNo(int _id)
 	{
 		linkNo = _id;
+        linkText.text = _id.ToString();
 	}
 	public int GetLinkNo()
 	{
