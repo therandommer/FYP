@@ -1,0 +1,362 @@
+Special thanks to http://opengameart.org for being an awesome site for free 2D assets
+
+Title:
+    Cat Fighter Sprite Sheet (Used)
+
+Author:
+    dogchicken
+
+URL:
+    https://opengameart.org/content/cat-fighter-sprite-sheet
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+File(s):
+    * cat_ani.zip
+    * sprite_base_addon_2012_12_14.png
+
+----------------------------------------
+
+Title:
+    Cute Monster Sprite Sheet
+
+Author:
+    dogchicken
+
+URL:
+    https://opengameart.org/content/cute-monster-sprite-sheet
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+File(s):
+    * mon1_ani.zip
+    * mon1_sprite_addon_2012_12_14.png
+
+----------------------------------------
+
+Title:
+    Minimal sidescroller tileset
+
+Author:
+    Buch
+
+URL:
+    https://opengameart.org/content/minimal-sidescroller-tileset
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    Credit me as Buch and link back to my OGA profile page
+
+File(s):
+    * tileset_32.png
+    * background_32.png
+    * ts_32.psd
+
+----------------------------------------
+
+Title:
+    minimalist Pixel tileset
+
+Author:
+    Blarget2
+
+URL:
+    https://opengameart.org/content/minimalist-pixel-tileset
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    Just give my name credit unless you modify it more than 70% of the original piece (basically not noticeably like the original).
+
+File(s):
+    * mininicular.png
+
+----------------------------------------
+
+Title:
+    Skull Monster Sprite Sheet
+
+Author:
+    dogchicken
+
+URL:
+    https://opengameart.org/content/skull-monster-sprite-sheet
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+File(s):
+    * mon2_ani.zip
+
+----------------------------------------
+
+Title:
+    Flying Tongue Monster Sprite Sheet
+
+Author:
+    dogchicken
+
+URL:
+    https://opengameart.org/content/flying-tongue-monster-sprite-sheet
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+File(s):
+    * mon3_ani.zip
+
+----------------------------------------
+
+Title:
+    Cat Fighter Addon1 [ Energy Force Master Kit ] (Used)
+
+Author:
+    dogchicken
+
+URL:
+    https://opengameart.org/content/cat-fighter-addon1-energy-force-master-kit
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+File(s):
+    * cat_addon_energyforcemaster.zip
+    * shot_effect.zip
+
+----------------------------------------
+
+Title:
+    Dog Fighter - Cat Fighter Remix Base Add-on One
+
+Author:
+    IsometricRobot
+
+Collaborators:
+    dogchicken
+
+URL:
+    https://opengameart.org/content/dog-fighter-cat-fighter-remix-base-add-on-one
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    "Dog Figher by Michael J Pierce @ IsometricRobot.com" or Display the IsometricRobot mascot in one of his forms (anywhere is the associated work) with a link back to IsometricRobot.com
+
+And including the following:
+
+"Based on the work of dogchicken - "Cat Fighter""
+with link to http://opengameart.org/content/cat-fighter-sprite-sheet Unless Otherwise specified by dogchicken at this link.
+
+File(s):
+    * DogSheetAddon1.PNG
+
+----------------------------------------
+
+Title:
+    Cat Fighter Addon2[ Assault  Rifle Kit ] (Used)
+
+Author:
+    dogchicken
+
+URL:
+    https://opengameart.org/content/cat-fighter-addon2-assault-rifle-kit
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+File(s):
+    * cat_assault_rifle.zip
+
+----------------------------------------
+
+Title:
+    Minimal sidescroller tileset expansion
+
+Author:
+    Buch
+
+URL:
+    https://opengameart.org/content/minimal-sidescroller-tileset-expansion
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    Credit me as Buch and link back to my OGA profile page
+
+File(s):
+    * ts_32_expansion.png
+
+----------------------------------------
+
+Title:
+    Minimalist Chinese Temple tileset
+
+Author:
+    bart
+
+URL:
+    https://opengameart.org/content/minimalist-chinese-temple-tileset
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    http://opengameart.org
+
+File(s):
+    * Chinese Temple.png
+    * Chinese Temple Small.png
+
+----------------------------------------
+
+Title:
+    Minimalist Sidescroll City
+
+Author:
+    Sharm
+
+URL:
+    https://opengameart.org/content/minimalist-sidescroll-city
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+    * OGA-BY 3.0 ( http://static.opengameart.org/OGA-BY-3.0.txt )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    Lanea Zimmerman.
+
+File(s):
+    * min.png
+    * churches.png
+
+----------------------------------------
+
+Title:
+    Prototyping 2D Pixelart Tilesets (Used)
+
+Author:
+    robotality
+
+URL:
+    https://opengameart.org/content/prototyping-2d-pixelart-tilesets
+
+License(s):
+    * CC-BY-SA 3.0 ( http://creativecommons.org/licenses/by-sa/3.0/legalcode )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    http://www.robotality.com
+
+File(s):
+    * TilesetsRelease.zip
+    * JnRLayer01.png
+    * JnRLayer02.png
+    * JnRLayer03.png
+    * JnRLayer04.png
+    * JnRTiles.png
+    * RPGTiles.png
+
+----------------------------------------
+
+Title:
+    Minimal Industrial Tiles
+
+Author:
+    surt
+
+URL:
+    https://opengameart.org/content/minimal-industrial-tiles
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * minimal_industry.png
+
+----------------------------------------
+
+Title:
+    Ruined City Background
+
+Author:
+    TokyoGeisha
+
+URL:
+    https://opengameart.org/content/ruined-city-background
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+Copyright/Attribution Notice:
+    Feel free to use it anyway you want. No credit necessary.
+
+File(s):
+    * City Background.zip
+
+----------------------------------------
+
+Title:
+    animated pixel zombie
+
+Author:
+    z-uo
+
+URL:
+    https://opengameart.org/content/animated-pixel-zombie
+
+License(s):
+    * CC-BY 3.0 ( http://creativecommons.org/licenses/by/3.0/legalcode )
+    * OGA-BY 3.0 ( http://static.opengameart.org/OGA-BY-3.0.txt )
+
+Copyright/Attribution Notice:
+    nicolas bougère: www.z-uo.co
+
+File(s):
+    * zombalpha.gif
+
+----------------------------------------
+
+Title:
+    Urban Landscape
+
+Author:
+    ansimuz
+
+URL:
+    https://opengameart.org/content/urban-landscape
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * Urban-landscape-files.zip
+
+----------------------------------------
+
+Title:
+    Parallax Tree Background
+
+Author:
+    Monster Logix Studio
+
+URL:
+    https://opengameart.org/content/parallax-tree-background
+
+License(s):
+    * CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+
+File(s):
+    * Trees1.PNG
+    * Trees2.PNG
+    * Trees3.PNG
+    * Trees4.PNG
+
+----------------------------------------
+
+
