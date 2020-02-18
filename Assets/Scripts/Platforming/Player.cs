@@ -15,11 +15,6 @@ public class Player : MonoBehaviour
 	float moveScalar = 10.0f;
 	[SerializeField] [Range(0,1)]
 	float crouchSpeed = 0.3f; //scalar for movement while crouching
-	[SerializeField]
-	[Range(0, 0.3f)]
-	float moveSmooth = 0.05f;
-	[SerializeField]
-	Vector3 velocity = Vector3.zero;
 
 	[Header("Guard Conditions")]
 	[SerializeField]
@@ -34,6 +29,10 @@ public class Player : MonoBehaviour
 	bool isFacingRight = true;
 	[SerializeField]
 	bool isAirControl = false; //if the player can move while not grounded
+	[SerializeField]
+	float moveHorizontal = Input.GetAxis("Horizontal");
+	float moveVertical = Input.GetAxis("Vertical");
+	Vector2 movementVector = new Vector2();
 
 	[Header("Other Values")]
 	[SerializeField]
@@ -47,119 +46,43 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	Rigidbody2D rb;
 
-	[Header("Events")]
-	public UnityEvent OnLandEvent;
-
-	public class BoolEvent : UnityEvent<bool> { }
-
-	public BoolEvent OnCrouchEvent;
-	private bool wasCrouching = false;
-
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
-		if(OnLandEvent == null)
-		{
-			OnLandEvent = new UnityEvent();
-		}
-		if(OnCrouchEvent == null)
-		{
-			OnCrouchEvent = new BoolEvent();
-		}
 	}
 
 	private void FixedUpdate()
 	{
-		bool wasGrounded = isGrounded;
+		//ground check
 		isGrounded = false;
-
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundRadius, whatIsGround);
 		for (int i = 0; i < colliders.Length; ++i) //if the groundcheck circle collides with the correct layer, sets grounded to true
 		{
 			if(colliders[i].gameObject != gameObject)
 			{
+				Debug.Log("Setting grounded to true");
 				isGrounded = true;
-				if(!wasGrounded)
-				{
-					OnLandEvent.Invoke();
-				}
 			}
 		}
+		//movement
+		float moveHorizontal = Input.GetAxis("Horizontal") * moveScalar;
+		if (Input.GetAxis("Jump") != 0 && isGrounded)
+		{
+			moveVertical = Input.GetAxis("Jump") * jumpForce;
+		}
+		movementVector = new Vector2(moveHorizontal, moveVertical);
+		if(movementVector.x>0 && !isFacingRight)
+		{
+			Flip();
+		}
+		else if(movementVector.x<0 && isFacingRight)
+		{
+			Flip();
+		}
+		rb.AddForce(movementVector);
 	}
 
-	//called to manipulate the player as needed
-	//move > 0 = move right, move < 0 = move left
-	//crouch = true, enables crouching
-	//jump = true starts a jump
-	public void Move(float _move, bool _crouch, bool _jump)
-	{
-		//check if player can stand
-		if(!_crouch)
-		{
-			//if character colliding with ceiling, keep crouching.
-			if(Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, whatIsGround))
-			{
-				_crouch = true;
-			}
-		}
-
-		//only allows control of the player if grounded or if they can be controlled in the air
-		if(isGrounded || isAirControl)
-		{
-			if (_crouch)
-			{
-				if (!wasCrouching)
-				{
-					wasCrouching = true;
-					OnCrouchEvent.Invoke(true);
-				}
-				//Reduce movement speed by crouchSpeed scalar
-				_move *= crouchSpeed;
-
-				//when crouching, disable larger collider
-				if (crouchCollider != null)
-				{
-					crouchCollider.enabled = false;
-				}
-			}
-			else
-			{
-				//reenables larger collider when standing
-				if (crouchCollider != null)
-				{
-					crouchCollider.enabled = true;
-				}
-				if (wasCrouching)
-				{
-					wasCrouching = false;
-					OnCrouchEvent.Invoke(false);
-				}
-			}
-
-				//move character by target velocity
-				Vector3 targetVelocity = new Vector2(_move * moveScalar, rb.velocity.y);
-				//applies smoothing
-				rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, moveSmooth);
-
-				//flipping the player
-				if(_move > 0 && !isFacingRight)
-				{
-					Flip();
-				}
-				else if (_move < 0 && isFacingRight)
-				{
-					Flip();
-				}
-			}
-		//handles jumping
-		if(isGrounded && _jump)
-		{
-			//applies vertical force
-			isGrounded = false;
-			rb.AddForce(new Vector2(0.0f, jumpForce));
-		}
-
-		}
+	
 	private void Flip()
 	{
 		//switches isFacingRight to other value
