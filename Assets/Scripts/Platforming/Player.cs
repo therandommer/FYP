@@ -30,8 +30,8 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	bool isAirControl = false; //if the player can move while not grounded
 	[SerializeField]
-	float moveHorizontal = Input.GetAxis("Horizontal");
-	float moveVertical = Input.GetAxis("Vertical");
+	float moveHorizontal = 0;
+	float moveVertical = 0;
 	Vector2 movementVector = new Vector2();
 
 	[Header("Other Values")]
