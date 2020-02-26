@@ -13,6 +13,15 @@ public class GlobalController : MonoBehaviour
 	[SerializeField]
 	bool isSaving = false;
 	#endregion
+	#region UI Elements
+	[Header("UI Elements")]
+	[SerializeField]
+	GameObject BuildUI;
+	[SerializeField]
+	GameObject GamePlayUI;
+	[SerializeField]
+	GameObject OtherUI;
+	#endregion
 
 	void Start()
     {

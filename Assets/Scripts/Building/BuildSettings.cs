@@ -50,7 +50,8 @@ public class BuildSettings : MonoBehaviour
 	#endregion
 
 	#region Object lists
-	List<GameObject> Doors;
+	[SerializeField]
+	List<GameObject> Doors; //used to link positions
 	#endregion
 
 	#region Setters and Getters
@@ -131,6 +132,10 @@ public class BuildSettings : MonoBehaviour
 	public List<GameObject> GetDoorList()
 	{
 		return Doors;
+	}
+	public void AddToDoors(GameObject _door)
+	{
+		Doors.Add(_door);
 	}
 	#endregion
 	void Start()

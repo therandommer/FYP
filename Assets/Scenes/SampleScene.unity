@@ -460,6 +460,7 @@ MonoBehaviour:
   clearObject: {fileID: 0}
   clearConditionRequired: 0
   isPlayerValid: 0
+  Doors: []
 --- !u!1 &682054945
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +654,8 @@ MonoBehaviour:
   roundedLocation: {x: 0, y: 0}
   isLocationValid: 0
   isHoveringInteractable: 0
+  buildDelay: 0.2
+  currentBuildDelay: 0
 --- !u!61 &1275468530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -828,14 +831,13 @@ MonoBehaviour:
   jumpForce: 7
   moveScalar: 10
   crouchSpeed: 0.3
-  moveSmooth: 0.05
-  velocity: {x: 0, y: 0, z: 0}
   groundRadius: 0.2
   isGrounded: 0
   ceilingRadius: 0.2
   isCeiling: 0
   isFacingRight: 1
   isAirControl: 0
+  moveHorizontal: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
@@ -843,22 +845,6 @@ MonoBehaviour:
   ceilingCheck: {fileID: 962423037}
   crouchCollider: {fileID: 1295839452}
   rb: {fileID: 1295839453}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1295839450}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!212 &1295839455
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -25,6 +25,10 @@ public class Pointer : MonoBehaviour
 	bool isLocationValid = true;
     [SerializeField]
     bool isHoveringInteractable = false;
+	[SerializeField]
+	float buildDelay = 0.2f;
+	[SerializeField]
+	float currentBuildDelay;
 	#endregion
 
 	void Start()
@@ -86,17 +90,21 @@ public class Pointer : MonoBehaviour
 
 	void Update()
     {
+		if(currentBuildDelay>0.0f)
+		{
+			currentBuildDelay -= Time.deltaTime;
+		}
 		pointingLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		roundedLocation.x = Mathf.RoundToInt(pointingLocation.x);
 		roundedLocation.y = Mathf.RoundToInt(pointingLocation.y);
-
 		heldObject.sprite = placeableObjects[heldID].GetComponent<SpriteRenderer>().sprite;
-		this.transform.position = pointingLocation;
+		this.transform.position = roundedLocation;
         if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0) && isLocationValid)
+            if (Input.GetMouseButtonDown(0) && isLocationValid && currentBuildDelay <= 0)
             {
-                Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation);
+				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation);
+				currentBuildDelay = buildDelay;
             }  
         }
 	}

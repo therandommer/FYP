@@ -51,7 +51,7 @@ public class InteractableBaseObject : MonoBehaviour
     {
         if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonDown(0) && isDisplaying)
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(2) && isDisplaying)
             {
                 HideElements();
             }
