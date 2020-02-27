@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This script keeps a track of all the states that the game will go through.
+/// </summary>
 public class GlobalController : MonoBehaviour
 {
 	#region States

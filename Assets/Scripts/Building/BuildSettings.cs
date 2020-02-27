@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script keeps various values for gameplay stored in a convenient location.
+/// Also this script limits the number of tiles/entities to be placed
+/// </summary>
 public class BuildSettings : MonoBehaviour
 {
 	#region Level Variables
@@ -25,22 +29,26 @@ public class BuildSettings : MonoBehaviour
 	int maxFriendly = 256;
 	[SerializeField]
 	int placedHazards = 0;
-	int maxHazards = 256;
+	int maxHazards = 512;
 	[SerializeField]
 	int placedInteractables = 0;
 	int maxInteractables = 1024;
 	[SerializeField]
 	int placedOther = 0;
 	int maxOther = 1024;
-	[Space(10)]
+    [SerializeField]
+    int placedPlayer = 0;
+    int maxPlayer = 1;
+    [SerializeField]
+    int placedDoors = 0;
+    int maxDoors = 10;
+    [Space(10)]
 	[SerializeField]
 	bool isClearConditionEnabled = false; //if true then restrict end point access till following completed
 	[SerializeField]
 	GameObject clearObject; //need a reference to a type of object, so they can be taken when the level is played.
 	[SerializeField]
 	int clearConditionRequired = 0; //this will probably change
-	[SerializeField]
-	bool isPlayerValid = false; //if the player is placed in a valid location then this will become true;
 	#endregion
 
 	#region User Settings
@@ -64,8 +72,8 @@ public class BuildSettings : MonoBehaviour
 		switch(_type)
 		{
 			case 1:
-				placedTerrain += _amount;
-				break;
+                placedTerrain += _amount;
+                break;
 			case 2:
 				placedFriendly += _amount;
 				break;
@@ -78,10 +86,58 @@ public class BuildSettings : MonoBehaviour
 			case 5:
 				placedOther += _amount;
 				break;
+            case 6:
+                placedPlayer += _amount;
+                break;
+            case 7:
+                placedDoors += _amount;
+                break;
 			default:
 				break;
 		}
 	}
+    public int GetMaxObjects(int _type)
+    {
+        switch(_type)
+        {
+            case 1:
+                return maxTerrain;
+            case 2:
+                return maxFriendly;
+            case 3:
+                return maxHazards;
+            case 4:
+                return maxInteractables;
+            case 5:
+                return maxOther;
+            case 6:
+                return maxPlayer;
+            default:
+                break;
+        }
+        Debug.Log("Object incorrectly defined");
+        return 0;
+    }
+    public int GetCurrentObjects(int _type)
+    {
+        switch(_type)
+        {
+            case 1:
+                return placedTerrain;
+            case 2:
+                return placedFriendly;
+            case 3:
+                return placedHazards;
+            case 4:
+                return placedInteractables;
+            case 5:
+                return placedOther;
+            case 6:
+                return placedPlayer;
+        }
+        Debug.Log("Object incorrectly defined");
+        return 0;
+    }
 	public void SetPlayerSpawn(Vector2 _newSpawn)
 	{
 		if(_newSpawn.x > minBaseLevelLimits.x && _newSpawn.y > minBaseLevelLimits.y &&
