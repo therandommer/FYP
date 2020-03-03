@@ -45,10 +45,12 @@ public class Player : MonoBehaviour
 	Collider2D crouchCollider; //determines which collider to disable while crouching
 	[SerializeField]
 	Rigidbody2D rb;
+	GlobalController gc;
 
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		gc = FindObjectOfType<GlobalController>();
 	}
 
 	private void FixedUpdate()

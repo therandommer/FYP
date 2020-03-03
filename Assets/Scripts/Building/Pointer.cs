@@ -90,6 +90,14 @@ public class Pointer : MonoBehaviour
 
 	void Update()
     {
+		if(heldID == 12)
+		{
+			this.transform.localScale = new Vector3(3,3,3);
+		}
+		else if(heldID != 12)
+		{
+			this.transform.localScale = new Vector3(1, 1, 1);
+		}
 		if(currentBuildDelay>0.0f)
 		{
 			currentBuildDelay -= Time.deltaTime;

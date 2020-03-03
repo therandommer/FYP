@@ -28,9 +28,16 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Children: []
   m_Father: {fileID: 8699131981077717900}
   m_RootOrder: 1
+=======
+  m_Children:
+  - {fileID: 5073139075282851792}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 4
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -194,7 +201,90 @@ RectTransform:
   m_AnchoredPosition: {x: -62, y: -120}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131979707070070
+=======
+--- !u!222 &2546948875496000992
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948875496001005}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948875496001007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948875496001005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 48
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 64
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: X 100
+--- !u!1 &2546948875594469506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2546948875594469507}
+  - component: {fileID: 2546948875594469509}
+  - component: {fileID: 2546948875594469508}
+  m_Layer: 5
+  m_Name: Icon Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2546948875594469507
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948875594469506}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2546948876934523707}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948875594469509
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,7 +312,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 8894383583585950953, guid: 87c2f002b796dce468324c6bf40a2054,
+=======
+  m_Sprite: {fileID: -6196384345857209559, guid: 87c2f002b796dce468324c6bf40a2054,
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -339,8 +433,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - {fileID: 8699131980595302822}
   m_Father: {fileID: 8699131980196237114}
+=======
+  - {fileID: 5073139074961079032}
+  m_Father: {fileID: 2546948877046708288}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -499,9 +598,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - {fileID: 8699131980117590400}
   m_Father: {fileID: 8699131980196237114}
   m_RootOrder: 7
+=======
+  - {fileID: 5073139075377892265}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 8
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -627,6 +732,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131979970349827
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +809,9 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
 --- !u!1 &8699131980000277873
+=======
+--- !u!1 &2546948876070379308
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -959,8 +1068,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - {fileID: 8699131981311849364}
   m_Father: {fileID: 8699131980196237114}
+=======
+  - {fileID: 5073139076251861564}
+  m_Father: {fileID: 2546948877046708288}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -1087,6 +1201,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131980170546667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1566,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8699131980308721334
+=======
+--- !u!1 &2546948876230987247
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1610,7 +1728,11 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131980331398025
+=======
+--- !u!1 &2546948876559133927
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1618,22 +1740,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980331398022}
   - component: {fileID: 8699131980331398020}
   - component: {fileID: 8699131980331398023}
   m_Layer: 5
   m_Name: Top Banner
+=======
+  - component: {fileID: 2546948876559133944}
+  - component: {fileID: 2546948876559133949}
+  - component: {fileID: 2546948876559133948}
+  - component: {fileID: 2546948876559133947}
+  - component: {fileID: 2546948876559133945}
+  m_Layer: 5
+  m_Name: Favourite Image 4
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980331398022
+=======
+--- !u!224 &2546948876559133944
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980331398025}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: -0.0000006407499}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1648,20 +1785,47 @@ RectTransform:
   m_SizeDelta: {x: 1920, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131980331398020
+=======
+  m_GameObject: {fileID: 2546948876559133927}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5073139075585237990}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -272.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948876559133949
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980331398025}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131980331398023
+=======
+  m_GameObject: {fileID: 2546948876559133927}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948876559133948
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980331398025}
+=======
+  m_GameObject: {fileID: 2546948876559133927}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -1669,13 +1833,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 21300000, guid: 1aa8d513bc5e45540a130ff06d1ee227, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 55e241190fd56e4489b0d83434bc8a56, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1684,12 +1852,18 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131980413735344
 GameObject:
+=======
+--- !u!114 &2546948876559133947
+MonoBehaviour:
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8699131980413735308}
@@ -1705,10 +1879,22 @@ GameObject:
   m_IsActive: 1
 --- !u!224 &8699131980413735308
 RectTransform:
+=======
+  m_GameObject: {fileID: 2546948876559133927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+--- !u!114 &2546948876559133945
+MonoBehaviour:
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980413735344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1733,175 +1919,8 @@ RectTransform:
   m_Pivot: {x: 0, y: 0}
 --- !u!223 &8699131980413735311
 Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980413735344}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!114 &8699131980413735310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980413735344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!114 &8699131980413735345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980413735344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!1 &8699131980519501753
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8699131980519501750}
-  - component: {fileID: 8699131980519501748}
-  - component: {fileID: 8699131980519501751}
-  - component: {fileID: 8699131980519501749}
-  - component: {fileID: 8699131980519501746}
-  - component: {fileID: 8699131980519501747}
-  m_Layer: 5
-  m_Name: Favourite Image 11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8699131980519501750
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980519501753}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8699131981510071459}
-  m_Father: {fileID: 8699131980196237114}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 455.5, y: 446}
-  m_SizeDelta: {x: 78, y: 78}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8699131980519501748
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980519501753}
-  m_CullTransparentMesh: 0
---- !u!114 &8699131980519501751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980519501753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7fe5dbd4766cdf24ba0f3a6b5d53d81d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!114 &8699131980519501749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980519501753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 0
---- !u!114 &8699131980519501746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980519501753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 0
---- !u!114 &8699131980519501747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980519501753}
+=======
+  m_GameObject: {fileID: 2546948876559133927}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -1934,7 +1953,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 8699131980519501751}
+  m_TargetGraphic: {fileID: 2546948876559133948}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1944,14 +1963,14 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &8699131980521532287
+--- !u!1 &2546948876563908769
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1959,22 +1978,396 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8699131980521532284}
-  - component: {fileID: 8699131980521532282}
-  - component: {fileID: 8699131980521532285}
+  - component: {fileID: 2546948876563908770}
+  - component: {fileID: 2546948876563908772}
+  - component: {fileID: 2546948876563908771}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MoreObjectsImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8699131980521532284
+--- !u!224 &2546948876563908770
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948876563908769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2546948876800221138}
+  m_Father: {fileID: 6620593749232762494}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -90, y: -70}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948876563908772
+CanvasRenderer:
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980413735344}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &8699131980413735310
+=======
+  m_GameObject: {fileID: 2546948876563908769}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948876563908771
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980413735344}
+=======
+  m_GameObject: {fileID: 2546948876563908769}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &8699131980413735345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699131980413735344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!1 &8699131980519501753
+=======
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 3f7d517fd0d34314481be5a328a24750, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!1 &2546948876659203324
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - component: {fileID: 8699131980519501750}
+  - component: {fileID: 8699131980519501748}
+  - component: {fileID: 8699131980519501751}
+  - component: {fileID: 8699131980519501749}
+  - component: {fileID: 8699131980519501746}
+  - component: {fileID: 8699131980519501747}
+  m_Layer: 5
+  m_Name: Favourite Image 11
+=======
+  - component: {fileID: 2546948876659203325}
+  - component: {fileID: 2546948876659203314}
+  - component: {fileID: 2546948876659203313}
+  - component: {fileID: 2546948876659203312}
+  - component: {fileID: 2546948876659203326}
+  m_Layer: 5
+  m_Name: Favourite Image 10
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!224 &8699131980519501750
+=======
+--- !u!224 &2546948876659203325
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980519501753}
+=======
+  m_GameObject: {fileID: 2546948876659203324}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - {fileID: 8699131981510071459}
+  m_Father: {fileID: 8699131980196237114}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 455.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8699131980519501748
+=======
+  - {fileID: 5073139075053577447}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 351.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948876659203314
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980519501753}
+  m_CullTransparentMesh: 0
+--- !u!114 &8699131980519501751
+=======
+  m_GameObject: {fileID: 2546948876659203324}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948876659203313
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980519501753}
+=======
+  m_GameObject: {fileID: 2546948876659203324}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 7fe5dbd4766cdf24ba0f3a6b5d53d81d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!114 &8699131980519501749
+=======
+--- !u!114 &2546948876659203312
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980519501753}
+=======
+  m_GameObject: {fileID: 2546948876659203324}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!114 &8699131980519501746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699131980519501753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+--- !u!114 &8699131980519501747
+=======
+--- !u!114 &2546948876659203326
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980519501753}
+=======
+  m_GameObject: {fileID: 2546948876659203324}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    m_PressedColor: {r: 0.6886792, g: 0.6854307, b: 0.6854307, a: 1}
+    m_SelectedColor: {r: 0.6901961, g: 0.6862745, b: 0.6862745, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_TargetGraphic: {fileID: 8699131980519501751}
+=======
+  m_TargetGraphic: {fileID: 2546948876659203313}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetHeldID
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+          m_IntArgument: 10
+=======
+          m_IntArgument: 9
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!1 &8699131980521532287
+=======
+--- !u!1 &2546948876723202424
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - component: {fileID: 8699131980521532284}
+  - component: {fileID: 8699131980521532282}
+  - component: {fileID: 8699131980521532285}
+  m_Layer: 5
+  m_Name: Text
+=======
+  - component: {fileID: 2546948876723202425}
+  - component: {fileID: 2546948876723202430}
+  - component: {fileID: 2546948876723202429}
+  - component: {fileID: 2546948876723202428}
+  - component: {fileID: 2546948876723202426}
+  m_Layer: 5
+  m_Name: Favourite Image 6
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!224 &8699131980521532284
+=======
+--- !u!224 &2546948876723202425
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980521532287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1990,18 +2383,85 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131980521532282
 CanvasRenderer:
+=======
+  m_GameObject: {fileID: 2546948876723202424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5073139075024556377}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -64.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948876723202430
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980521532287}
+  m_GameObject: {fileID: 2546948876723202424}
   m_CullTransparentMesh: 0
---- !u!114 &8699131980521532285
+--- !u!114 &2546948876723202429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948876723202424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 55e241190fd56e4489b0d83434bc8a56, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &2546948876723202428
+MonoBehaviour:
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980521532287}
+  m_CullTransparentMesh: 0
+--- !u!114 &8699131980521532285
+=======
+  m_GameObject: {fileID: 2546948876723202424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+--- !u!114 &2546948876723202426
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980521532287}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2031,116 +2491,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: X 100
 --- !u!1 &8699131980528124783
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8699131980528124780}
-  - component: {fileID: 8699131980528124778}
-  - component: {fileID: 8699131980528124781}
-  - component: {fileID: 8699131980528124779}
-  - component: {fileID: 8699131980528124776}
-  - component: {fileID: 8699131980528124777}
-  m_Layer: 5
-  m_Name: Favourite Image 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8699131980528124780
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980528124783}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8699131980995972579}
-  m_Father: {fileID: 8699131980196237114}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -272.5, y: 446}
-  m_SizeDelta: {x: 78, y: 78}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8699131980528124778
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980528124783}
-  m_CullTransparentMesh: 0
---- !u!114 &8699131980528124781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980528124783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 55e241190fd56e4489b0d83434bc8a56, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!114 &8699131980528124779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980528124783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 0
---- !u!114 &8699131980528124776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980528124783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 0
---- !u!114 &8699131980528124777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980528124783}
+=======
+  m_GameObject: {fileID: 2546948876723202424}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2173,7 +2525,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 8699131980528124781}
+  m_TargetGraphic: {fileID: 2546948876723202429}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2183,14 +2535,15 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &8699131980528813746
+--- !u!1 &2546948876723632135
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2198,9 +2551,235 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - component: {fileID: 8699131980528124780}
+  - component: {fileID: 8699131980528124778}
+  - component: {fileID: 8699131980528124781}
+  - component: {fileID: 8699131980528124779}
+  - component: {fileID: 8699131980528124776}
+  - component: {fileID: 8699131980528124777}
+=======
+  - component: {fileID: 2546948876723632152}
+  - component: {fileID: 2546948876723632157}
+  - component: {fileID: 2546948876723632156}
+  - component: {fileID: 2546948876723632155}
+  - component: {fileID: 2546948876723632153}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Layer: 5
+  m_Name: Favourite Image 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!224 &8699131980528124780
+=======
+--- !u!224 &2546948876723632152
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980528124783}
+=======
+  m_GameObject: {fileID: 2546948876723632135}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - {fileID: 8699131980995972579}
+  m_Father: {fileID: 8699131980196237114}
+  m_RootOrder: 3
+=======
+  - {fileID: 5073139076334548104}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 2
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -378.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!222 &8699131980528124778
+=======
+--- !u!222 &2546948876723632157
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980528124783}
+  m_CullTransparentMesh: 0
+--- !u!114 &8699131980528124781
+=======
+  m_GameObject: {fileID: 2546948876723632135}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948876723632156
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980528124783}
+=======
+  m_GameObject: {fileID: 2546948876723632135}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: d371a436d10fa0c4b907664b418c7e4e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!114 &8699131980528124779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699131980528124783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+--- !u!114 &8699131980528124776
+=======
+--- !u!114 &2546948876723632155
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980528124783}
+=======
+  m_GameObject: {fileID: 2546948876723632135}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!114 &8699131980528124777
+=======
+--- !u!114 &2546948876723632153
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980528124783}
+=======
+  m_GameObject: {fileID: 2546948876723632135}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    m_PressedColor: {r: 0.6886792, g: 0.6854307, b: 0.6854307, a: 1}
+    m_SelectedColor: {r: 0.6901961, g: 0.6862745, b: 0.6862745, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_TargetGraphic: {fileID: 8699131980528124781}
+=======
+  m_TargetGraphic: {fileID: 2546948876723632156}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetHeldID
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!1 &8699131980528813746
+=======
+--- !u!1 &2546948876800221137
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980528813747}
   - component: {fileID: 8699131980528813745}
   - component: {fileID: 8699131980528813744}
+=======
+  - component: {fileID: 2546948876800221138}
+  - component: {fileID: 2546948876800221140}
+  - component: {fileID: 2546948876800221139}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
   m_Name: MoreObjects Text
   m_TagString: Untagged
@@ -2208,18 +2787,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980528813747
+=======
+--- !u!224 &2546948876800221138
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980528813746}
+=======
+  m_GameObject: {fileID: 2546948876800221137}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Father: {fileID: 8699131979677362620}
+=======
+  m_Father: {fileID: 2546948876563908770}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -2227,21 +2818,35 @@ RectTransform:
   m_AnchoredPosition: {x: -47, y: -59}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131980528813745
+=======
+--- !u!222 &2546948876800221140
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980528813746}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131980528813744
+=======
+  m_GameObject: {fileID: 2546948876800221137}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948876800221139
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980528813746}
+=======
+  m_GameObject: {fileID: 2546948876800221137}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2269,7 +2874,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: +
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131980536740549
+=======
+--- !u!1 &2546948876927587247
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2277,22 +2886,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980536740546}
   - component: {fileID: 8699131980536740544}
   - component: {fileID: 8699131980536740547}
   m_Layer: 5
   m_Name: PlayerPlacement
+=======
+  - component: {fileID: 2546948876927587232}
+  - component: {fileID: 2546948876927587237}
+  - component: {fileID: 2546948876927587236}
+  - component: {fileID: 2546948876927587235}
+  - component: {fileID: 2546948876927587233}
+  m_Layer: 5
+  m_Name: Favourite Image 7
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980536740546
+=======
+--- !u!224 &2546948876927587232
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980536740549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2308,24 +2932,95 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131980536740544
 CanvasRenderer:
+=======
+  m_GameObject: {fileID: 2546948876927587247}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5073139075762210602}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 39.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948876927587237
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980536740549}
+  m_GameObject: {fileID: 2546948876927587247}
   m_CullTransparentMesh: 0
---- !u!114 &8699131980536740547
+--- !u!114 &2546948876927587236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948876927587247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 9e58fd86967eb8d4cbbc1d47cb610f65, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &2546948876927587235
+MonoBehaviour:
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980536740549}
+  m_CullTransparentMesh: 0
+--- !u!114 &8699131980536740547
+=======
+  m_GameObject: {fileID: 2546948876927587247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+--- !u!114 &2546948876927587233
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980536740549}
+=======
+  m_GameObject: {fileID: 2546948876927587247}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -2349,6 +3044,53 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!1 &8699131980595302825
+=======
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    m_PressedColor: {r: 0.6886792, g: 0.6854307, b: 0.6854307, a: 1}
+    m_SelectedColor: {r: 0.6901961, g: 0.6862745, b: 0.6862745, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2546948876927587236}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetHeldID
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &2546948876934523706
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2356,26 +3098,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980595302822}
   - component: {fileID: 8699131980595302820}
   - component: {fileID: 8699131980595302823}
   m_Layer: 5
   m_Name: Icon Image
+=======
+  - component: {fileID: 2546948876934523707}
+  - component: {fileID: 2546948876934523696}
+  - component: {fileID: 2546948876934523711}
+  - component: {fileID: 2546948876934523710}
+  - component: {fileID: 2546948876934523708}
+  m_Layer: 5
+  m_Name: Favourite Image
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980595302822
+=======
+--- !u!224 &2546948876934523707
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980595302825}
+=======
+  m_GameObject: {fileID: 2546948876934523706}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Children: []
   m_Father: {fileID: 8699131979909332301}
   m_RootOrder: 0
@@ -2386,20 +3147,43 @@ RectTransform:
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131980595302820
+=======
+  m_Children:
+  - {fileID: 2546948875594469507}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -586.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948876934523696
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980595302825}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131980595302823
+=======
+  m_GameObject: {fileID: 2546948876934523706}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948876934523711
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980595302825}
+=======
+  m_GameObject: {fileID: 2546948876934523706}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2413,8 +3197,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 1081825477912002528, guid: 87c2f002b796dce468324c6bf40a2054,
     type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: d371a436d10fa0c4b907664b418c7e4e, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2423,7 +3211,80 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131980888716657
+=======
+--- !u!114 &2546948876934523710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948876934523706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+--- !u!114 &2546948876934523708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948876934523706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    m_PressedColor: {r: 0.6886792, g: 0.6854307, b: 0.6854307, a: 1}
+    m_SelectedColor: {r: 0.6901961, g: 0.6862745, b: 0.6862745, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2546948876934523711}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetHeldID
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SetHeldID,1
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &2546948877046708303
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2431,6 +3292,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980888716622}
   - component: {fileID: 8699131980888716620}
   - component: {fileID: 8699131980888716623}
@@ -2439,24 +3301,95 @@ GameObject:
   - component: {fileID: 8699131980888716619}
   m_Layer: 5
   m_Name: Favourite Image 13
+=======
+  - component: {fileID: 2546948877046708288}
+  m_Layer: 0
+  m_Name: Favourite Objects
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980888716622
+=======
+--- !u!224 &2546948877046708288
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980888716657}
+=======
+  m_GameObject: {fileID: 2546948877046708303}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2546948876934523707}
+  - {fileID: 2546948876126122364}
+  - {fileID: 2546948876723632152}
+  - {fileID: 2546948876559133944}
+  - {fileID: 2546948875386887768}
+  - {fileID: 2546948876723202425}
+  - {fileID: 2546948876927587232}
+  - {fileID: 2546948877221010838}
+  - {fileID: 2546948876030869908}
+  - {fileID: 2546948876659203325}
+  - {fileID: 2546948877424782452}
+  - {fileID: 2546948875945456258}
+  - {fileID: 2546948877085138337}
+  - {fileID: 5073139074634810068}
+  m_Father: {fileID: 6620593749232762494}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -566}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2546948877085138336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2546948877085138337}
+  - component: {fileID: 2546948877085138342}
+  - component: {fileID: 2546948877085138341}
+  - component: {fileID: 2546948877085138340}
+  - component: {fileID: 2546948877085138339}
+  m_Layer: 5
+  m_Name: Favourite Image 13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2546948877085138337
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948877085138336}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - {fileID: 8699131981327940840}
   m_Father: {fileID: 8699131980196237114}
+=======
+  - {fileID: 5073139074412941273}
+  m_Father: {fileID: 2546948877046708288}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -2464,21 +3397,35 @@ RectTransform:
   m_AnchoredPosition: {x: 663.5, y: 446}
   m_SizeDelta: {x: 78, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131980888716620
+=======
+--- !u!222 &2546948877085138342
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980888716657}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131980888716623
+=======
+  m_GameObject: {fileID: 2546948877085138336}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948877085138341
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980888716657}
+=======
+  m_GameObject: {fileID: 2546948877085138336}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2501,26 +3448,42 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!114 &8699131980888716621
+=======
+--- !u!114 &2546948877085138340
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980888716657}
+=======
+  m_GameObject: {fileID: 2546948877085138336}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!114 &8699131980888716618
+=======
+--- !u!114 &2546948877085138339
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980888716657}
+=======
+  m_GameObject: {fileID: 2546948877085138336}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2553,7 +3516,11 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_TargetGraphic: {fileID: 8699131980888716623}
+=======
+  m_TargetGraphic: {fileID: 2546948877085138341}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2570,6 +3537,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!114 &8699131980888716619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,6 +3552,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectID: 0
 --- !u!1 &8699131980914835496
+=======
+--- !u!1 &2546948877221010837
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2591,129 +3562,87 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980914835497}
   - component: {fileID: 8699131980914835495}
   - component: {fileID: 8699131980914835494}
+=======
+  - component: {fileID: 2546948877221010838}
+  - component: {fileID: 2546948877221010859}
+  - component: {fileID: 2546948877221010858}
+  - component: {fileID: 2546948877221010857}
+  - component: {fileID: 2546948877221010839}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
-  m_Name: Icon Image
+  m_Name: Favourite Image 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980914835497
+=======
+--- !u!224 &2546948877221010838
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980914835496}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8699131980308721335}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 64, y: 64}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8699131980914835495
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980914835496}
-  m_CullTransparentMesh: 0
---- !u!114 &8699131980914835494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980914835496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 3312832305946147652, guid: 87c2f002b796dce468324c6bf40a2054,
-    type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!1 &8699131980950319520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8699131980950319521}
-  - component: {fileID: 8699131980950319551}
-  - component: {fileID: 8699131980950319550}
-  - component: {fileID: 8699131980950319548}
-  - component: {fileID: 8699131980950319549}
-  - component: {fileID: 8699131980950319546}
-  m_Layer: 5
-  m_Name: Favourite Image 6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8699131980950319521
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980950319520}
+=======
+  m_GameObject: {fileID: 2546948877221010837}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_Children: []
+  m_Father: {fileID: 8699131980308721335}
+  m_RootOrder: 0
+=======
   m_Children:
-  - {fileID: 8699131981198570283}
-  m_Father: {fileID: 8699131980196237114}
-  m_RootOrder: 5
+  - {fileID: 5073139075382315573}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 7
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -64.5, y: 446}
+  m_AnchoredPosition: {x: 143.5, y: 446}
   m_SizeDelta: {x: 78, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8699131980950319551
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!222 &8699131980914835495
+=======
+--- !u!222 &2546948877221010859
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980950319520}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980914835496}
   m_CullTransparentMesh: 0
---- !u!114 &8699131980950319550
+--- !u!114 &8699131980914835494
+=======
+  m_GameObject: {fileID: 2546948877221010837}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948877221010858
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980950319520}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980914835496}
+=======
+  m_GameObject: {fileID: 2546948877221010837}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2727,7 +3656,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 55e241190fd56e4489b0d83434bc8a56, type: 3}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_Sprite: {fileID: 3312832305946147652, guid: 87c2f002b796dce468324c6bf40a2054,
+    type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 79ce843283c8667448eea00d9b597178, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2736,39 +3670,29 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8699131980950319548
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!1 &8699131980950319520
+=======
+--- !u!114 &2546948877221010857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980950319520}
+  m_GameObject: {fileID: 2546948877221010837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 0
---- !u!114 &8699131980950319549
+--- !u!114 &2546948877221010839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980950319520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 0
---- !u!114 &8699131980950319546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980950319520}
+  m_GameObject: {fileID: 2546948877221010837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2801,7 +3725,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 8699131980950319550}
+  m_TargetGraphic: {fileID: 2546948877221010858}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2811,14 +3735,14 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &8699131980967530967
+--- !u!1 &2546948877380571979
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2826,50 +3750,151 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8699131980967530964}
-  - component: {fileID: 8699131980967530962}
-  - component: {fileID: 8699131980967530965}
+  - component: {fileID: 2546948877380571980}
+  - component: {fileID: 2546948877380571982}
+  - component: {fileID: 2546948877380571981}
   m_Layer: 5
-  m_Name: Icon Image
+  m_Name: TimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8699131980967530964
+--- !u!224 &2546948877380571980
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980967530967}
+  m_GameObject: {fileID: 2546948877380571979}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8699131980279002485}
-  m_RootOrder: 0
+  m_Father: {fileID: 2546948876105590975}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 1, y: -93}
+  m_SizeDelta: {x: 100, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8699131980967530962
+--- !u!222 &2546948877380571982
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980967530967}
+  m_GameObject: {fileID: 2546948877380571979}
   m_CullTransparentMesh: 0
---- !u!114 &8699131980967530965
+--- !u!114 &2546948877380571981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131980967530967}
+  m_GameObject: {fileID: 2546948877380571979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 47d3461819fbf5248941ce216dce4bb5, type: 3}
+    m_FontSize: 64
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 64
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: '200
+
+'
+--- !u!1 &2546948877393349596
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - component: {fileID: 8699131980950319521}
+  - component: {fileID: 8699131980950319551}
+  - component: {fileID: 8699131980950319550}
+  - component: {fileID: 8699131980950319548}
+  - component: {fileID: 8699131980950319549}
+  - component: {fileID: 8699131980950319546}
+  m_Layer: 5
+  m_Name: Favourite Image 6
+=======
+  - component: {fileID: 2546948877393349597}
+  - component: {fileID: 2546948877393349599}
+  - component: {fileID: 2546948877393349598}
+  - component: {fileID: 2546948877393349584}
+  m_Layer: 5
+  m_Name: Side Banner
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!224 &8699131980950319521
+=======
+--- !u!224 &2546948877393349597
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980950319520}
+=======
+  m_GameObject: {fileID: 2546948877393349596}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710766, w: 0.707106}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0875, y: 1.1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6620593749232762494}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 121, y: -91}
+  m_SizeDelta: {x: 950, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948877393349599
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948877393349596}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948877393349598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948877393349596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2878,6 +3903,374 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 1aa8d513bc5e45540a130ff06d1ee227, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &2546948877393349584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948877393349596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_ColorMultiplier: 3
+    m_FadeDuration: 0.7
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2546948877393349598}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &2546948877424782451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2546948877424782452}
+  - component: {fileID: 2546948877424776073}
+  - component: {fileID: 2546948877424776072}
+  - component: {fileID: 2546948877424782455}
+  - component: {fileID: 2546948877424782453}
+  m_Layer: 5
+  m_Name: Favourite Image 11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2546948877424782452
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546948877424782451}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - {fileID: 8699131981198570283}
+  m_Father: {fileID: 8699131980196237114}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -64.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8699131980950319551
+=======
+  - {fileID: 5073139075060111665}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 455.5, y: 446}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2546948877424776073
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980950319520}
+  m_CullTransparentMesh: 0
+--- !u!114 &8699131980950319550
+=======
+  m_GameObject: {fileID: 2546948877424782451}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948877424776072
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980950319520}
+=======
+  m_GameObject: {fileID: 2546948877424782451}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_Sprite: {fileID: 21300000, guid: 55e241190fd56e4489b0d83434bc8a56, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 7fe5dbd4766cdf24ba0f3a6b5d53d81d, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!114 &8699131980950319548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699131980950319520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+--- !u!114 &8699131980950319549
+=======
+--- !u!114 &2546948877424782455
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980950319520}
+=======
+  m_GameObject: {fileID: 2546948877424782451}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!114 &8699131980950319546
+=======
+--- !u!114 &2546948877424782453
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980950319520}
+=======
+  m_GameObject: {fileID: 2546948877424782451}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    m_PressedColor: {r: 0.6886792, g: 0.6854307, b: 0.6854307, a: 1}
+    m_SelectedColor: {r: 0.6901961, g: 0.6862745, b: 0.6862745, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_TargetGraphic: {fileID: 8699131980950319550}
+=======
+  m_TargetGraphic: {fileID: 2546948877424776072}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetHeldID
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+          m_IntArgument: 5
+=======
+          m_IntArgument: 10
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!1 &8699131980967530967
+=======
+--- !u!1 &2546948877440148153
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - component: {fileID: 8699131980967530964}
+  - component: {fileID: 8699131980967530962}
+  - component: {fileID: 8699131980967530965}
+=======
+  - component: {fileID: 2546948877440148154}
+  - component: {fileID: 2546948877440148156}
+  - component: {fileID: 2546948877440148155}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Layer: 5
+  m_Name: Conditional Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!224 &8699131980967530964
+=======
+--- !u!224 &2546948877440148154
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980967530967}
+=======
+  m_GameObject: {fileID: 2546948877440148153}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_Children: []
+  m_Father: {fileID: 8699131980279002485}
+=======
+  m_Children:
+  - {fileID: 2546948875496001006}
+  m_Father: {fileID: 2546948875395847675}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -62, y: -120}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!222 &8699131980967530962
+=======
+--- !u!222 &2546948877440148156
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980967530967}
+  m_CullTransparentMesh: 0
+--- !u!114 &8699131980967530965
+=======
+  m_GameObject: {fileID: 2546948877440148153}
+  m_CullTransparentMesh: 0
+--- !u!114 &2546948877440148155
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131980967530967}
+=======
+  m_GameObject: {fileID: 2546948877440148153}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2893,7 +4286,11 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131980986930738
+=======
+--- !u!1 &5073139074412941272
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2901,6 +4298,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980986930739}
   - component: {fileID: 8699131980986930737}
   - component: {fileID: 8699131980986930736}
@@ -2909,21 +4307,37 @@ GameObject:
   - component: {fileID: 8699131980986930700}
   m_Layer: 5
   m_Name: Favourite Image 7
+=======
+  - component: {fileID: 5073139074412941273}
+  - component: {fileID: 5073139074412941279}
+  - component: {fileID: 5073139074412941278}
+  m_Layer: 5
+  m_Name: Icon Image
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980986930739
+=======
+--- !u!224 &5073139074412941273
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980986930738}
+=======
+  m_GameObject: {fileID: 5073139074412941272}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Children:
   - {fileID: 8699131981515529945}
   m_Father: {fileID: 8699131980196237114}
@@ -2935,20 +4349,42 @@ RectTransform:
   m_SizeDelta: {x: 78, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131980986930737
+=======
+  m_Children: []
+  m_Father: {fileID: 2546948877085138337}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5073139074412941279
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980986930738}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131980986930736
+=======
+  m_GameObject: {fileID: 5073139074412941272}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139074412941278
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980986930738}
+=======
+  m_GameObject: {fileID: 5073139074412941272}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2956,13 +4392,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 21300000, guid: 9e58fd86967eb8d4cbbc1d47cb610f65, type: 3}
+=======
+  m_Sprite: {fileID: 1081825477912002528, guid: 87c2f002b796dce468324c6bf40a2054,
+    type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2971,6 +4412,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!114 &8699131980986930702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2986,10 +4428,15 @@ MonoBehaviour:
   objectID: 0
 --- !u!114 &8699131980986930703
 MonoBehaviour:
+=======
+--- !u!1 &5073139074634810071
+GameObject:
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980986930738}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2999,11 +4446,103 @@ MonoBehaviour:
   objectID: 0
 --- !u!114 &8699131980986930700
 MonoBehaviour:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5073139074634810068}
+  - component: {fileID: 5073139074634810072}
+  - component: {fileID: 5073139074634810075}
+  - component: {fileID: 5073139074634810074}
+  - component: {fileID: 5073139074634810069}
+  m_Layer: 5
+  m_Name: Player Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5073139074634810068
+RectTransform:
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980986930738}
+=======
+  m_GameObject: {fileID: 5073139074634810071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5073139076227886543}
+  m_Father: {fileID: 2546948877046708288}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -789.3, y: 446.00003}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5073139074634810072
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073139074634810071}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139074634810075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073139074634810071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 404203229911094984, guid: a86e46d26ad08cc4dbacce0c2c774190, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &5073139074634810074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073139074634810071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918d92bc658a81d4d977c67406af44b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 12
+--- !u!114 &5073139074634810069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073139074634810071}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3036,7 +4575,11 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_TargetGraphic: {fileID: 8699131980986930736}
+=======
+  m_TargetGraphic: {fileID: 5073139074634810075}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -3046,14 +4589,22 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
           m_IntArgument: 6
+=======
+          m_IntArgument: 12
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131980995972578
+=======
+--- !u!1 &5073139074961079035
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3061,9 +4612,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131980995972579}
   - component: {fileID: 8699131980995972577}
   - component: {fileID: 8699131980995972576}
+=======
+  - component: {fileID: 5073139074961079032}
+  - component: {fileID: 5073139074961079038}
+  - component: {fileID: 5073139074961079033}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
   m_Name: Icon Image
   m_TagString: Untagged
@@ -3071,18 +4628,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131980995972579
+=======
+--- !u!224 &5073139074961079032
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980995972578}
+=======
+  m_GameObject: {fileID: 5073139074961079035}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Father: {fileID: 8699131980528124780}
+=======
+  m_Father: {fileID: 2546948875945456258}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3090,21 +4659,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131980995972577
+=======
+--- !u!222 &5073139074961079038
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980995972578}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131980995972576
+=======
+  m_GameObject: {fileID: 5073139074961079035}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139074961079033
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131980995972578}
+=======
+  m_GameObject: {fileID: 5073139074961079035}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3118,7 +4701,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 7686597512542201583, guid: 87c2f002b796dce468324c6bf40a2054,
+=======
+  m_Sprite: {fileID: 1081825477912002528, guid: 87c2f002b796dce468324c6bf40a2054,
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3128,7 +4715,11 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131981010519760
+=======
+--- !u!1 &5073139075024556376
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3136,22 +4727,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981010519761}
   - component: {fileID: 8699131981010519727}
   - component: {fileID: 8699131981010519726}
   m_Layer: 5
   m_Name: PlayImage
+=======
+  - component: {fileID: 5073139075024556377}
+  - component: {fileID: 5073139075024556383}
+  - component: {fileID: 5073139075024556382}
+  m_Layer: 5
+  m_Name: Icon Image
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981010519761
+=======
+--- !u!224 &5073139075024556377
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981010519760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3166,20 +4770,46 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131981010519727
+=======
+  m_GameObject: {fileID: 5073139075024556376}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2546948876723202425}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5073139075024556383
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981010519760}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981010519726
+=======
+  m_GameObject: {fileID: 5073139075024556376}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139075024556382
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981010519760}
+=======
+  m_GameObject: {fileID: 5073139075024556376}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3187,13 +4817,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 21300000, guid: f8da38e0c3f161f41b40a503db8e962a, type: 3}
+=======
+  m_Sprite: {fileID: -214508684392753617, guid: 87c2f002b796dce468324c6bf40a2054,
+    type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3202,7 +4837,11 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131981077717903
+=======
+--- !u!1 &5073139075053577446
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3210,22 +4849,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981077717900}
   - component: {fileID: 8699131981077717898}
   - component: {fileID: 8699131981077717901}
   m_Layer: 5
   m_Name: Timer Background
+=======
+  - component: {fileID: 5073139075053577447}
+  - component: {fileID: 5073139075053577445}
+  - component: {fileID: 5073139075053577444}
+  m_Layer: 5
+  m_Name: Icon Image
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981077717900
+=======
+--- !u!224 &5073139075053577447
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981077717903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3242,20 +4894,46 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131981077717898
+=======
+  m_GameObject: {fileID: 5073139075053577446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2546948876659203325}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5073139075053577445
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981077717903}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981077717901
+=======
+  m_GameObject: {fileID: 5073139075053577446}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139075053577444
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981077717903}
+=======
+  m_GameObject: {fileID: 5073139075053577446}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3263,12 +4941,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_RaycastTarget: 1
+=======
+  m_RaycastTarget: 0
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 21300000, guid: 7fe5dbd4766cdf24ba0f3a6b5d53d81d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3344,6 +5027,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: -214508684392753617, guid: 87c2f002b796dce468324c6bf40a2054,
+=======
+  m_Sprite: {fileID: 1081825477912002528, guid: 87c2f002b796dce468324c6bf40a2054,
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3353,7 +5039,11 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131981311849367
+=======
+--- !u!1 &5073139075060111664
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3361,9 +5051,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981311849364}
   - component: {fileID: 8699131981311849362}
   - component: {fileID: 8699131981311849365}
+=======
+  - component: {fileID: 5073139075060111665}
+  - component: {fileID: 5073139075060111671}
+  - component: {fileID: 5073139075060111670}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
   m_Name: Icon Image
   m_TagString: Untagged
@@ -3371,18 +5067,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981311849364
+=======
+--- !u!224 &5073139075060111665
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981311849367}
+=======
+  m_GameObject: {fileID: 5073139075060111664}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Father: {fileID: 8699131980122526141}
+=======
+  m_Father: {fileID: 2546948877424782452}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3390,21 +5098,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131981311849362
+=======
+--- !u!222 &5073139075060111671
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981311849367}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981311849365
+=======
+  m_GameObject: {fileID: 5073139075060111664}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139075060111670
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981311849367}
+=======
+  m_GameObject: {fileID: 5073139075060111664}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3418,7 +5140,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 5154499726331935827, guid: 87c2f002b796dce468324c6bf40a2054,
+=======
+  m_Sprite: {fileID: 1081825477912002528, guid: 87c2f002b796dce468324c6bf40a2054,
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3428,7 +5154,10 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131981327940843
+=======
+--- !u!1 &5073139075282851795
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3436,9 +5165,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8699131981327940840}
-  - component: {fileID: 8699131981327940838}
-  - component: {fileID: 8699131981327940841}
+  - component: {fileID: 5073139075282851792}
+  - component: {fileID: 5073139075282851798}
+  - component: {fileID: 5073139075282851793}
   m_Layer: 5
   m_Name: Icon Image
   m_TagString: Untagged
@@ -3446,18 +5175,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8699131981327940840
+--- !u!224 &5073139075282851792
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131981327940843}
+  m_GameObject: {fileID: 5073139075282851795}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8699131980888716622}
+  m_Father: {fileID: 2546948875386887768}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3465,21 +5194,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8699131981327940838
+--- !u!222 &5073139075282851798
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131981327940843}
+  m_GameObject: {fileID: 5073139075282851795}
   m_CullTransparentMesh: 0
---- !u!114 &8699131981327940841
+--- !u!114 &5073139075282851793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8699131981327940843}
+  m_GameObject: {fileID: 5073139075282851795}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3493,7 +5222,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 1081825477912002528, guid: 87c2f002b796dce468324c6bf40a2054,
+  m_Sprite: {fileID: 3312832305946147652, guid: 87c2f002b796dce468324c6bf40a2054,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3503,7 +5232,8 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!1 &8699131981332062529
+--- !u!1 &5073139075377892264
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3511,9 +5241,130 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  - component: {fileID: 8699131981327940840}
+  - component: {fileID: 8699131981327940838}
+  - component: {fileID: 8699131981327940841}
+=======
+  - component: {fileID: 5073139075377892265}
+  - component: {fileID: 5073139075377892271}
+  - component: {fileID: 5073139075377892270}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Layer: 5
+  m_Name: Icon Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!224 &8699131981327940840
+=======
+--- !u!224 &5073139075377892265
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131981327940843}
+=======
+  m_GameObject: {fileID: 5073139075377892264}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_Father: {fileID: 8699131980888716622}
+=======
+  m_Father: {fileID: 2546948876030869908}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!222 &8699131981327940838
+=======
+--- !u!222 &5073139075377892271
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131981327940843}
+  m_CullTransparentMesh: 0
+--- !u!114 &8699131981327940841
+=======
+  m_GameObject: {fileID: 5073139075377892264}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139075377892270
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_GameObject: {fileID: 8699131981327940843}
+=======
+  m_GameObject: {fileID: 5073139075377892264}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+  m_Sprite: {fileID: 1081825477912002528, guid: 87c2f002b796dce468324c6bf40a2054,
+=======
+  m_Sprite: {fileID: 8894383583585950953, guid: 87c2f002b796dce468324c6bf40a2054,
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+    type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
+--- !u!1 &8699131981332062529
+=======
+--- !u!1 &5073139075382315572
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981332062558}
   - component: {fileID: 8699131981332062556}
   - component: {fileID: 8699131981332062559}
+=======
+  - component: {fileID: 5073139075382315573}
+  - component: {fileID: 5073139075382315579}
+  - component: {fileID: 5073139075382315578}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -3521,18 +5372,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981332062558
+=======
+--- !u!224 &5073139075382315573
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981332062529}
+=======
+  m_GameObject: {fileID: 5073139075382315572}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Father: {fileID: 8699131981077717900}
+=======
+  m_Father: {fileID: 2546948877221010838}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -3540,21 +5403,35 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131981332062556
+=======
+--- !u!222 &5073139075382315579
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981332062529}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981332062559
+=======
+  m_GameObject: {fileID: 5073139075382315572}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139075382315578
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981332062529}
+=======
+  m_GameObject: {fileID: 5073139075382315572}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3568,7 +5445,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 21300000, guid: dc6b3a31a7100fc43ad976c221215bc7, type: 3}
+=======
+  m_Sprite: {fileID: 1419693603096562125, guid: 87c2f002b796dce468324c6bf40a2054,
+    type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3577,7 +5459,11 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131981430807045
+=======
+--- !u!1 &5073139075585237985
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3585,12 +5471,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981430807042}
   - component: {fileID: 8699131981430807040}
   - component: {fileID: 8699131981430807043}
   - component: {fileID: 8699131981430807041}
   - component: {fileID: 8699131981430807070}
   - component: {fileID: 8699131981430807071}
+=======
+  - component: {fileID: 5073139075585237990}
+  - component: {fileID: 5073139075585237988}
+  - component: {fileID: 5073139075585237991}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
   m_Name: Favourite Image 10
   m_TagString: Untagged
@@ -3598,41 +5490,69 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981430807042
+=======
+--- !u!224 &5073139075585237990
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981430807045}
+=======
+  m_GameObject: {fileID: 5073139075585237985}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Children:
   - {fileID: 8699131979970349824}
   m_Father: {fileID: 8699131980196237114}
   m_RootOrder: 9
+=======
+  m_Children: []
+  m_Father: {fileID: 2546948876559133944}
+  m_RootOrder: 0
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 351.5, y: 446}
   m_SizeDelta: {x: 78, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131981430807040
+=======
+--- !u!222 &5073139075585237988
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981430807045}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981430807043
+=======
+  m_GameObject: {fileID: 5073139075585237985}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139075585237991
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981430807045}
+=======
+  m_GameObject: {fileID: 5073139075585237985}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3646,7 +5566,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 21300000, guid: 7fe5dbd4766cdf24ba0f3a6b5d53d81d, type: 3}
+=======
+  m_Sprite: {fileID: 7686597512542201583, guid: 87c2f002b796dce468324c6bf40a2054,
+    type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3655,6 +5580,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!114 &8699131981430807041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3738,6 +5664,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8699131981493761466
+=======
+--- !u!1 &5073139075762210597
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3745,50 +5674,83 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981493761467}
   - component: {fileID: 8699131981493761465}
   - component: {fileID: 8699131981493761464}
+=======
+  - component: {fileID: 5073139075762210602}
+  - component: {fileID: 5073139075762210600}
+  - component: {fileID: 5073139075762210603}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
-  m_Name: Side Banner
+  m_Name: Icon Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981493761467
+=======
+--- !u!224 &5073139075762210602
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981493761466}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710766, w: 0.707106}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0875, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 8699131980413735308}
+=======
+  m_GameObject: {fileID: 5073139075762210597}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2546948876927587232}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: -91}
-  m_SizeDelta: {x: 950, y: 250}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131981493761465
+=======
+--- !u!222 &5073139075762210600
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981493761466}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981493761464
+=======
+  m_GameObject: {fileID: 5073139075762210597}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139075762210603
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981493761466}
+=======
+  m_GameObject: {fileID: 5073139075762210597}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3802,7 +5764,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1aa8d513bc5e45540a130ff06d1ee227, type: 3}
+  m_Sprite: {fileID: -5235539755981621657, guid: 87c2f002b796dce468324c6bf40a2054,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3811,7 +5774,11 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131981503526641
+=======
+--- !u!1 &5073139076227886542
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3819,6 +5786,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981503526606}
   - component: {fileID: 8699131981503526604}
   - component: {fileID: 8699131981503526607}
@@ -3827,21 +5795,37 @@ GameObject:
   - component: {fileID: 8699131981503526603}
   m_Layer: 5
   m_Name: Favourite Image 3
+=======
+  - component: {fileID: 5073139076227886543}
+  - component: {fileID: 5073139076227886541}
+  - component: {fileID: 5073139076227886540}
+  m_Layer: 5
+  m_Name: Icon Image
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981503526606
+=======
+--- !u!224 &5073139076227886543
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981503526641}
+=======
+  m_GameObject: {fileID: 5073139076227886542}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Children:
   - {fileID: 8699131980078851374}
   m_Father: {fileID: 8699131980196237114}
@@ -3853,20 +5837,42 @@ RectTransform:
   m_SizeDelta: {x: 78, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699131981503526604
+=======
+  m_Children: []
+  m_Father: {fileID: 5073139074634810068}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 78, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5073139076227886541
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981503526641}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981503526607
+=======
+  m_GameObject: {fileID: 5073139076227886542}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139076227886540
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981503526641}
+=======
+  m_GameObject: {fileID: 5073139076227886542}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3874,13 +5880,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: 21300000, guid: d371a436d10fa0c4b907664b418c7e4e, type: 3}
+=======
+  m_Sprite: {fileID: 404203229911094984, guid: a86e46d26ad08cc4dbacce0c2c774190, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3889,6 +5899,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!114 &8699131981503526605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3972,6 +5983,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8699131981510071458
+=======
+--- !u!1 &5073139076251861567
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3979,9 +5993,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981510071459}
   - component: {fileID: 8699131981510071457}
   - component: {fileID: 8699131981510071456}
+=======
+  - component: {fileID: 5073139076251861564}
+  - component: {fileID: 5073139076251861538}
+  - component: {fileID: 5073139076251861565}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
   m_Name: Icon Image
   m_TagString: Untagged
@@ -3989,13 +6009,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981510071459
+=======
+--- !u!224 &5073139076251861564
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981510071458}
+=======
+  m_GameObject: {fileID: 5073139076251861567}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -4008,21 +6036,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131981510071457
+=======
+--- !u!222 &5073139076251861538
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981510071458}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981510071456
+=======
+  m_GameObject: {fileID: 5073139076251861567}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139076251861565
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981510071458}
+=======
+  m_GameObject: {fileID: 5073139076251861567}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -4046,7 +6088,11 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!1 &8699131981515529944
+=======
+--- !u!1 &5073139076334548107
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4054,9 +6100,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   - component: {fileID: 8699131981515529945}
   - component: {fileID: 8699131981515529943}
   - component: {fileID: 8699131981515529942}
+=======
+  - component: {fileID: 5073139076334548104}
+  - component: {fileID: 5073139076334548110}
+  - component: {fileID: 5073139076334548105}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Layer: 5
   m_Name: Icon Image
   m_TagString: Untagged
@@ -4064,18 +6116,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!224 &8699131981515529945
+=======
+--- !u!224 &5073139076334548104
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981515529944}
+=======
+  m_GameObject: {fileID: 5073139076334548107}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Father: {fileID: 8699131980986930739}
+=======
+  m_Father: {fileID: 2546948876723632152}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4083,21 +6147,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
 --- !u!222 &8699131981515529943
+=======
+--- !u!222 &5073139076334548110
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981515529944}
   m_CullTransparentMesh: 0
 --- !u!114 &8699131981515529942
+=======
+  m_GameObject: {fileID: 5073139076334548107}
+  m_CullTransparentMesh: 0
+--- !u!114 &5073139076334548105
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_GameObject: {fileID: 8699131981515529944}
+=======
+  m_GameObject: {fileID: 5073139076334548107}
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -4111,7 +6189,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< Updated upstream:Assets/Prefabs/Building Canvas.prefab
   m_Sprite: {fileID: -5235539755981621657, guid: 87c2f002b796dce468324c6bf40a2054,
+=======
+  m_Sprite: {fileID: 5385244961274227231, guid: 87c2f002b796dce468324c6bf40a2054,
+>>>>>>> Stashed changes:Assets/Prefabs/UI-Controllers/Building Canvas.prefab
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0

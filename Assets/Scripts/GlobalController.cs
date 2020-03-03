@@ -12,6 +12,15 @@ public class GlobalController : MonoBehaviour
 	bool isBuilding = true; //when true building UI enabled, when false playing level.
 	[SerializeField]
 	bool isSaving = false;
+<<<<<<< Updated upstream
+=======
+	[SerializeField]
+	bool isGameplay = false;
+	[SerializeField]
+	bool needsUIUpdate = false;
+	[SerializeField]
+	bool needPlayerSpawn = false;
+>>>>>>> Stashed changes
 	#endregion
 	#region UI Elements
 	[Header("UI Elements")]

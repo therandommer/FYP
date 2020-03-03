@@ -11,6 +11,10 @@ public class BuildSettings : MonoBehaviour
 	float time = 200.0f; //this will need to be rounded for the UI display
 	[SerializeField]
 	Vector2 playerSpawnPoint; //on play initialise player to this location
+	[SerializeField]
+	bool hasSpawnedPlayer = false; //ensure only one player is instantiated on play
+	[SerializeField]
+	GameObject player;
 	[Header("Level Limiters")]
 	[SerializeField]
 	Vector2 levelLimits; //will need to set min and max to this
@@ -52,6 +56,8 @@ public class BuildSettings : MonoBehaviour
 	#region Object lists
 	[SerializeField]
 	List<GameObject> Doors; //used to link positions
+	[SerializeField]
+	GlobalController gc;
 	#endregion
 
 	#region Setters and Getters
@@ -89,7 +95,10 @@ public class BuildSettings : MonoBehaviour
 		{
 			playerSpawnPoint = _newSpawn;
 		}
-		
+	}
+	public Vector2 GetPlayerSpawn()
+	{
+		return playerSpawnPoint;
 	}
 	public void SetLevelLimitX(int _x)
 	{
@@ -138,13 +147,20 @@ public class BuildSettings : MonoBehaviour
 		Doors.Add(_door);
 	}
 	#endregion
-	void Start()
-    {
-        
-    }
 
-    void Update()
+	private void Awake()
+	{
+		gc = FindObjectOfType<GlobalController>();
+	}
+	void Update()
     {
-        
+        if(!gc.GetIsBuilding() && !hasSpawnedPlayer)
+		{
+
+		}
+		if(gc.GetIsBuilding() && hasSpawnedPlayer)
+		{
+			Destroy(GameObject.Find("Player"));
+		}
     }
 }
