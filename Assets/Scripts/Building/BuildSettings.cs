@@ -15,6 +15,8 @@ public class BuildSettings : MonoBehaviour
 	float time = 200.0f; //this will need to be rounded for the UI display
 	[SerializeField]
 	Vector2 playerSpawnPoint; //on play initialise player to this location
+	[SerializeField]
+	bool playerSpawned = false;
 	[Header("Level Limiters")]
 	[SerializeField]
 	Vector2 levelLimits; //will need to set min and max to this
@@ -145,7 +147,10 @@ public class BuildSettings : MonoBehaviour
 		{
 			playerSpawnPoint = _newSpawn;
 		}
-		
+	}
+	public Vector2 GetPlayerSpawn()
+	{
+		return playerSpawnPoint;
 	}
 	public void SetLevelLimitX(int _x)
 	{
@@ -184,6 +189,14 @@ public class BuildSettings : MonoBehaviour
 	public Vector2 GetLevelSmallest()
 	{
 		return minBaseLevelLimits;
+	}
+	public void SetPlayerSpawend(bool _spawned)
+	{
+		playerSpawned = _spawned;
+	}
+	public bool GetPlayerSpawned()
+	{
+		return playerSpawned;
 	}
 	public List<GameObject> GetDoorList()
 	{
