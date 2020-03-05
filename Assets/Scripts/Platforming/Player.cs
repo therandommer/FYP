@@ -32,7 +32,18 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	float moveHorizontal = 0;
 	float moveVertical = 0;
+	[SerializeField]
 	Vector2 movementVector = new Vector2();
+	[SerializeField]
+	Vector3 thisVelocity = new Vector3();
+	[SerializeField]
+	float maxXVelocity = 6.0f;
+	[SerializeField]
+	float minXVelocity = -6.0f;
+	[SerializeField]
+	float maxYVelocity = 10.0f;
+	[SerializeField]
+	float minYVelocity = -10.0f;
 
 	[Header("Other Values")]
 	[SerializeField]
@@ -64,13 +75,14 @@ public class Player : MonoBehaviour
 				isGrounded = true;
 			}
 		}
-		//movement
+		//modifying movement vector based on input
 		float moveHorizontal = Input.GetAxis("Horizontal") * moveScalar;
 		if (Input.GetAxis("Jump") != 0 && isGrounded)
 		{
 			moveVertical = Input.GetAxis("Jump") * jumpForce;
 		}
 		movementVector = new Vector2(moveHorizontal, moveVertical);
+		//flipping sprite to look like it's moving the correct direction
 		if(movementVector.x>0 && !isFacingRight)
 		{
 			Flip();
@@ -79,7 +91,31 @@ public class Player : MonoBehaviour
 		{
 			Flip();
 		}
+		if(movementVector.x>10.0f)
+		{
+			movementVector.x = 10.0f;
+		}
 		rb.AddForce(movementVector);
+		moveVertical = 0.0f;
+		thisVelocity = rb.velocity;
+		//clamping velocities to limit max speeds
+		if(thisVelocity.x > maxXVelocity)
+		{
+			thisVelocity.x = maxXVelocity;
+		}
+		if (thisVelocity.x < minXVelocity)
+		{
+			thisVelocity.x = minXVelocity;
+		}
+		if(thisVelocity.y > maxYVelocity)
+		{
+			thisVelocity.y = maxYVelocity;
+		}
+		if(thisVelocity.y < minYVelocity)
+		{
+			thisVelocity.y = minYVelocity;
+		}
+		rb.velocity = thisVelocity;
 	}
 
 	

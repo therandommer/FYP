@@ -157,19 +157,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ad31ed7f295a447848d252c968ee0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 7
+  jumpForce: 150
   moveScalar: 10
   crouchSpeed: 0.3
-  groundRadius: 0.2
+  groundRadius: 0.1
   isGrounded: 0
-  ceilingRadius: 0.2
+  ceilingRadius: 0.1
   isCeiling: 0
   isFacingRight: 1
   isAirControl: 0
   moveHorizontal: 0
+  movementVector: {x: 0, y: 0}
+  thisVelocity: {x: 0, y: 0, z: 0}
+  maxXVelocity: 6
+  minXVelocity: -6
+  maxYVelocity: 10
+  minYVelocity: -10
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   groundCheck: {fileID: 156034079528076657}
   ceilingCheck: {fileID: 156034078918419200}
   crouchCollider: {fileID: 156034080728169249}
@@ -190,7 +196,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a19a81af8f6278f4bb860db8ad161633, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -204,11 +210,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 156034080728169255}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 611c23f61fae2c74ba5e26ebb839df00, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.0025233924}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -219,7 +225,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18, y: 0.29}
+  m_Size: {x: 0.18, y: 0.28495324}
   m_EdgeRadius: 0
 --- !u!61 &156034080728169254
 BoxCollider2D:
@@ -228,9 +234,9 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156034080728169255}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 16641d1c1d14b0e468003f3df11123ed, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

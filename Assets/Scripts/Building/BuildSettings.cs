@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// This script keeps various values for gameplay stored in a convenient location.
@@ -59,9 +61,15 @@ public class BuildSettings : MonoBehaviour
 	List<GameObject> Favourites = new List<GameObject>(); //save the player prefered tiles here
 	#endregion
 
-	#region Object lists
+	#region Object lists/error UI
 	[SerializeField]
 	List<GameObject> Doors; //used to link positions
+	[SerializeField]
+	GlobalController gc;
+	[SerializeField]
+	TextMeshProUGUI errorText;
+	[SerializeField]
+	Button playerSpawnButton;
 	#endregion
 
 	#region Setters and Getters
@@ -207,13 +215,29 @@ public class BuildSettings : MonoBehaviour
 		Doors.Add(_door);
 	}
 	#endregion
-	void Start()
+	void Awake()
     {
-        
+        errorText.
     }
 
     void Update()
     {
-        
-    }
+		if(!gc.GetIsBuilding() && placedPlayer != maxPlayer)
+		{
+			errorText.text = "Need to place a player to play!";
+			gc.SetIsBuilding(true);
+		}
+		if(gc.GetIsBuilding() && placedPlayer == maxPlayer && playerSpawnButton.enabled == true)
+		{
+			playerSpawnButton.enabled = false;
+		}
+		else if(gc.GetIsBuilding() && placedPlayer != maxPlayer && playerSpawnButton.enabled == false)
+		{
+			playerSpawnButton.enabled = true;
+		}
+		if (gc.GetIsBuilding() && GetPlayerSpawned())
+		{
+			Destroy(GameObject.Find("Player"));
+		}
+	}
 }

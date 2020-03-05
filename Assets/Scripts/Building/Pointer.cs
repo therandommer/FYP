@@ -26,7 +26,7 @@ public class Pointer : MonoBehaviour
     [SerializeField]
     bool isHoveringInteractable = false;
 	[SerializeField]
-	float buildDelay = 0.2f;
+	float buildDelay = 0.001f;
 	[SerializeField]
 	float currentBuildDelay;
 	#endregion
@@ -83,7 +83,7 @@ public class Pointer : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D other)
 	{
 		isLocationValid = true;
-        isHoveringInteractable = false;
+		isHoveringInteractable = false;
 		Debug.Log("Exited trigger");
 		heldObject.color = baseColour;
 	}
@@ -109,9 +109,13 @@ public class Pointer : MonoBehaviour
 		this.transform.position = roundedLocation;
         if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonDown(0) && isLocationValid && currentBuildDelay <= 0)
+            if (Input.GetMouseButton(0) && isLocationValid && currentBuildDelay <= 0)
             {
 				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation);
+				if(heldID == 12) //reset to first block after player is placed, prevents multiple spawns
+				{
+					heldID = 0;
+				}
 				currentBuildDelay = buildDelay;
             }  
         }

@@ -12,10 +12,10 @@ public class BaseObject : MonoBehaviour
     Vector2 defaultPosition;
     [SerializeField]
     BuildSettings build;
-    // Start is called before the first frame update
+
     void Awake()
     {
-
+		build = FindObjectOfType<BuildSettings>();
         if(build.GetCurrentObjects(objectType) + objectValue <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
         {
             build.IncrementObject(objectType, objectValue);

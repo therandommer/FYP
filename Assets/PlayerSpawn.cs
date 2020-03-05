@@ -7,6 +7,7 @@ public class PlayerSpawn : MonoBehaviour
 	Vector2 thisPosition;
 	BuildSettings build;
 	GlobalController gc;
+	[SerializeField]
 	Player player;
     void Awake()
     {
@@ -25,13 +26,15 @@ public class PlayerSpawn : MonoBehaviour
 		{
 			build.SetPlayerSpawn(thisPosition);
 		}
-        if(gc.GetIsBuilding() && build.GetPlayerSpawned())
+		//hide any collisions/graphics
+		if(!gc.GetIsBuilding())
 		{
-			Destroy(GameObject.Find("Player"));
+			
 		}
-		else if(!gc.GetIsBuilding() && !build.GetPlayerSpawned())
+		else if(gc.GetIsBuilding())
 		{
-			Instantiate(player);
+			
 		}
+
     }
 }

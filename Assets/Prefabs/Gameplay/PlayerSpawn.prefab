@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7896243883763922452}
   - component: {fileID: 7896243883763922455}
   - component: {fileID: 7896243883763922454}
+  - component: {fileID: 7857494956702061138}
   m_Layer: 0
   m_Name: PlayerSpawn
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7896243883763922457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.256205, y: 10.238227, z: -6.5546875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,3 +93,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86444fc307d8ba14891b81ae9f671281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7857494956702061138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7896243883763922457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd0f75f17349e24a912001fdb8e2cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 6
+  objectValue: 1
+  defaultPosition: {x: 0, y: 0}
+  build: {fileID: 0}
