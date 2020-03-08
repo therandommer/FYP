@@ -165,13 +165,13 @@ MonoBehaviour:
   ceilingRadius: 0.1
   isCeiling: 0
   isFacingRight: 1
-  isAirControl: 0
+  isNormalJump: 1
   moveHorizontal: 0
   movementVector: {x: 0, y: 0}
   thisVelocity: {x: 0, y: 0, z: 0}
   maxXVelocity: 6
   minXVelocity: -6
-  maxYVelocity: 10
+  maxYVelocity: 6
   minYVelocity: -10
   whatIsGround:
     serializedVersion: 2

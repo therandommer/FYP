@@ -23,7 +23,7 @@ public class BuildSettings : MonoBehaviour
 	[SerializeField]
 	Vector2 levelLimits; //will need to set min and max to this
 	Vector2 minBaseLevelLimits = new Vector2Int(0,0);
-	Vector2 maxBaseLevelLimits = new Vector2Int(128,32);
+	Vector2 maxBaseLevelLimits = new Vector2Int(512,256);
 	Vector2 maxModifiedLevelLimits = new Vector2Int(512,256); //when player determines how long the level is
 	[SerializeField]
 	int placedTerrain = 0;
@@ -46,7 +46,18 @@ public class BuildSettings : MonoBehaviour
     [SerializeField]
     int placedDoors = 0;
     int maxDoors = 10;
-    [Space(10)]
+	//door links
+	[SerializeField]
+	bool isLink1Available = true;
+	[SerializeField]
+	bool isLink2Available = true;
+	[SerializeField]
+	bool isLink3Available = true;
+	[SerializeField]
+	bool isLink4Available = true;
+	[SerializeField]
+	bool isLink5Available = true;
+	[Space(10)]
 	[SerializeField]
 	bool isClearConditionEnabled = false; //if true then restrict end point access till following completed
 	[SerializeField]
@@ -64,6 +75,8 @@ public class BuildSettings : MonoBehaviour
 	#region Object lists/error UI
 	[SerializeField]
 	List<GameObject> Doors; //used to link positions
+	[SerializeField]
+	Player player;
 	[SerializeField]
 	GlobalController gc;
 	[SerializeField]
@@ -217,7 +230,7 @@ public class BuildSettings : MonoBehaviour
 	#endregion
 	void Awake()
     {
-        errorText.
+		errorText.enabled = false;
     }
 
     void Update()
@@ -226,6 +239,12 @@ public class BuildSettings : MonoBehaviour
 		{
 			errorText.text = "Need to place a player to play!";
 			gc.SetIsBuilding(true);
+		}
+		if(!gc.GetIsBuilding() && placedPlayer == maxPlayer && !GetPlayerSpawned())
+		{
+			Vector3 tmp = new Vector3(playerSpawnPoint.x, playerSpawnPoint.y, 0);
+			Instantiate(player, tmp,this.transform.rotation,this.gameObject.transform);
+			playerSpawned = true;
 		}
 		if(gc.GetIsBuilding() && placedPlayer == maxPlayer && playerSpawnButton.enabled == true)
 		{
@@ -238,6 +257,83 @@ public class BuildSettings : MonoBehaviour
 		if (gc.GetIsBuilding() && GetPlayerSpawned())
 		{
 			Destroy(GameObject.Find("Player"));
+		}
+	}
+	//setting which links can be used by the player, used to set the default links for each object
+	public void CheckLinks()
+	{
+		int tmp1 = 0;
+		int tmp2 = 0;
+		int tmp3 = 0;
+		int tmp4 = 0;
+		int tmp5 = 0;
+		for (int i = 0; i < GetDoorList().Count; i++)
+		{
+			switch (GetDoorList()[i].GetComponent<Door>().GetLinkNo())
+			{
+				case 1:
+					tmp1++;
+					if (tmp1 > 2)
+					{
+						isLink1Available = false;
+
+					}
+					break;
+				case 2:
+					tmp2++;
+					if (tmp2 > 2)
+					{
+						isLink2Available = false;
+
+					}
+					break;
+				case 3:
+					tmp3++;
+					if (tmp3 > 2)
+					{
+						isLink3Available = false;
+
+					}
+					break;
+				case 4:
+					tmp4++;
+					if (tmp4 > 2)
+					{
+						isLink4Available = false;
+
+					}
+					break;
+				case 5:
+					tmp5++;
+					if (tmp5 > 2)
+					{
+						isLink5Available = false;
+
+					}
+					break;
+				default:
+					break;
+			}
+			if(isLink1Available)
+			{
+				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(1);
+			}
+			if (isLink2Available)
+			{
+				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(2);
+			}
+			if (isLink3Available)
+			{
+				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(3);
+			}
+			if (isLink4Available)
+			{
+				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(4);
+			}
+			if (isLink5Available)
+			{
+				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(5);
+			}
 		}
 	}
 }

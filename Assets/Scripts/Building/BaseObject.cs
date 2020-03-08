@@ -25,7 +25,15 @@ public class BaseObject : MonoBehaviour
             Erase();
         }
         defaultPosition = this.transform.position;
-    }
+		if (defaultPosition.x < build.GetLevelSmallest().x || defaultPosition.y < build.GetLevelSmallest().y)
+		{
+			Erase();
+		}
+		if (defaultPosition.x > build.GetLevelLimit().x || defaultPosition.y > build.GetLevelLimit().y)
+		{
+			Erase();
+		}
+	}
 
     //will be called when player returns from gameplay to building
     private void Reset()
@@ -34,7 +42,8 @@ public class BaseObject : MonoBehaviour
     }
     void Erase()
     {
-        //erase from arrays and whatnot
+		//erase from arrays and whatnot
+		build.IncrementObject(objectType, -objectValue); 
         Destroy(this.gameObject);
     }
 }

@@ -46,17 +46,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 200
   playerSpawnPoint: {x: 0, y: 0}
+  playerSpawned: 0
   levelLimits: {x: 0, y: 0}
   placedTerrain: 0
   placedFriendly: 0
   placedHazards: 0
   placedInteractables: 0
   placedOther: 0
+  placedPlayer: 0
+  placedDoors: 0
   isClearConditionEnabled: 0
   clearObject: {fileID: 0}
   clearConditionRequired: 0
-  isPlayerValid: 0
   Doors: []
+  player: {fileID: 156034080728169251, guid: d5f965b541c9a5047996fe8f42f26b01, type: 3}
+  gc: {fileID: 1063021635103689790}
+  errorText: {fileID: 0}
+  playerSpawnButton: {fileID: 0}
 --- !u!114 &1063021635103689790
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	bool isFacingRight = true;
 	[SerializeField]
-	bool isAirControl = false; //if the player can move while not grounded
+	bool isNormalJump = true; //if the player can move while not grounded
 	[SerializeField]
 	float moveHorizontal = 0;
 	float moveVertical = 0;
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	float minXVelocity = -6.0f;
 	[SerializeField]
-	float maxYVelocity = 10.0f;
+	float maxYVelocity = 6.0f;
 	[SerializeField]
 	float minYVelocity = -10.0f;
 
@@ -61,7 +61,21 @@ public class Player : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>();
 	}
-
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(collision.tag=="Ladder" && this.transform.position.y<collision.transform.position.y + 0.5f)
+		{
+			isNormalJump = false;
+		}
+	}
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if(other.tag=="Ladder" && this.transform.position.y>other.transform.position.y + 0.5)
+		{
+			isNormalJump = true;
+			isGrounded = true;
+		}
+	}
 	private void FixedUpdate()
 	{
 		//ground check
@@ -75,11 +89,37 @@ public class Player : MonoBehaviour
 				isGrounded = true;
 			}
 		}
-		//modifying movement vector based on input
+
+		///modifying movement vector based on input
+		//horizontal movement
 		float moveHorizontal = Input.GetAxis("Horizontal") * moveScalar;
-		if (Input.GetAxis("Jump") != 0 && isGrounded)
+		//vertical movement
+		if (Input.GetAxis("Jump") != 0 || Input.GetAxis("Vertical") !=0)
 		{
-			moveVertical = Input.GetAxis("Jump") * jumpForce;
+			//regular jumps
+			if(isNormalJump && isGrounded)
+			{
+				moveVertical = Input.GetAxis("Jump") * jumpForce;
+				isGrounded = false;
+			}
+			if(isNormalJump && Input.GetAxis("Vertical") > 0 && isGrounded)
+			{
+				moveVertical = Input.GetAxis("Vertical") * jumpForce;
+				isGrounded = false;
+			}
+			/*if (!isNormalJump && Input.GetAxis("Vertical") != 0) //only for ladders/vines, etc.
+			{
+				Vector3 tmpVelocity = new Vector3(0, rb.velocity.y, 0);
+				moveHorizontal = 0;
+				if (Input.GetAxis("Vertical") < 0)
+				{
+					moveVertical = Input.GetAxis("Vertical") * -(jumpForce / 2);
+				}
+				else if (Input.GetAxis("Vertical") > 0)
+				{
+					moveVertical = Input.GetAxis("Vertical") * (jumpForce / 2);
+				}
+			}*/
 		}
 		movementVector = new Vector2(moveHorizontal, moveVertical);
 		//flipping sprite to look like it's moving the correct direction
@@ -118,7 +158,6 @@ public class Player : MonoBehaviour
 		rb.velocity = thisVelocity;
 	}
 
-	
 	private void Flip()
 	{
 		//switches isFacingRight to other value

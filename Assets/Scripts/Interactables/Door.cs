@@ -26,6 +26,7 @@ public class Door : MonoBehaviour
 	private void Awake()
 	{
 		buildSettings = FindObjectOfType<BuildSettings>();
+		buildSettings.CheckLinks();
 		buildSettings.AddToDoors(this.gameObject);
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -45,6 +46,7 @@ public class Door : MonoBehaviour
 
 	void Update()
     {
+		//linking to other doors 1-1, 2-2, etc.
         if(!isLinkedToDoor)
 		{
 			Debug.Log("actually reaching other door");

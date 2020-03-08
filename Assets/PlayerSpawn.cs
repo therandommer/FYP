@@ -6,6 +6,10 @@ public class PlayerSpawn : MonoBehaviour
 {
 	Vector2 thisPosition;
 	BuildSettings build;
+	[SerializeField]
+	SpriteRenderer sprite;
+	[SerializeField]
+	BoxCollider2D col;
 	GlobalController gc;
 	[SerializeField]
 	Player player;
@@ -29,11 +33,13 @@ public class PlayerSpawn : MonoBehaviour
 		//hide any collisions/graphics
 		if(!gc.GetIsBuilding())
 		{
-			
+			sprite.enabled = false;
+			col.enabled = false;
 		}
 		else if(gc.GetIsBuilding())
 		{
-			
+			sprite.enabled = true;
+			col.enabled = true;
 		}
 
     }

@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class Pointer : MonoBehaviour
 {
 	BuildSettings buildSettings;
+	GlobalController gc;
+	[SerializeField]
+	BoxCollider2D box;
 	#region held Object
 	[SerializeField]
 	SpriteRenderer heldObject;
@@ -33,6 +36,7 @@ public class Pointer : MonoBehaviour
 
 	void Start()
     {
+		gc = FindObjectOfType<GlobalController>();
 		buildSettings = FindObjectOfType<BuildSettings>();
 		heldObject = gameObject.GetComponent<SpriteRenderer>();
 		baseColour = heldObject.color;
@@ -90,6 +94,16 @@ public class Pointer : MonoBehaviour
 
 	void Update()
     {
+		if (!gc.GetIsBuilding() && heldID != 13)
+		{
+			SetHeldID(13);
+			box.enabled = false;
+		}
+		if(gc.GetIsBuilding() && heldID == 13)
+		{
+			SetHeldID(0);
+			box.enabled = true;
+		}
 		if(heldID == 12)
 		{
 			transform.localScale = new Vector3(3, 3, 3);
@@ -111,10 +125,10 @@ public class Pointer : MonoBehaviour
         {
             if (Input.GetMouseButton(0) && isLocationValid && currentBuildDelay <= 0)
             {
-				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation);
-				if(heldID == 12) //reset to first block after player is placed, prevents multiple spawns
+				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation,parentObject.transform);
+				if(heldID == 12) //reset to empty block after player is placed, prevents multiple spawns
 				{
-					heldID = 0;
+					SetHeldID(13);
 				}
 				currentBuildDelay = buildDelay;
             }  
