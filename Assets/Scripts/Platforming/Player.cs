@@ -8,6 +8,9 @@ using UnityEngine.Events;
 /// </summary>
 public class Player : MonoBehaviour
 {
+	#region movement and collision values
+	[Header ("Movement and Collision")]
+
 	[Header("Core Values")]
 	[SerializeField]
 	float jumpForce = 7.0f;
@@ -56,9 +59,22 @@ public class Player : MonoBehaviour
 	Collider2D crouchCollider; //determines which collider to disable while crouching
 	[SerializeField]
 	Rigidbody2D rb;
+	#endregion
+
+	BuildSettings build;
+	[SerializeField]
+	private int maxHealth = 5;
+	private int health = 0;
+	private bool isPowered = false;
+	private bool needsPowerup = false;
+	private float maxITime = 1.0f; //time can't be hit
+	private float currentITime = 0.0f; //used for timer
+
 
 	private void Awake()
 	{
+		health = maxHealth;
+		build = FindObjectOfType<BuildSettings>();
 		rb = GetComponent<Rigidbody2D>();
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -78,6 +94,7 @@ public class Player : MonoBehaviour
 	}
 	private void FixedUpdate()
 	{
+		#region movement and grounding
 		//ground check
 		isGrounded = false;
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundRadius, whatIsGround);
@@ -156,8 +173,41 @@ public class Player : MonoBehaviour
 			thisVelocity.y = minYVelocity;
 		}
 		rb.velocity = thisVelocity;
+		#endregion
 	}
-
+	private void Update()
+	{
+		if(currentITime > 0.0f)
+		{
+			currentITime -= Time.deltaTime;
+		}
+	}
+	public void Damaged(int _amount)
+	{
+		if(currentITime <= 0.0f)
+		{
+			if (!isPowered)
+			{
+				health -= _amount;
+				if(health <= 0)
+				{
+					Defeat();
+				}
+				currentITime = maxITime;
+			}
+			if (isPowered)
+			{
+				isPowered = false;
+				currentITime = maxITime;
+			}
+		}
+	}
+	public void Defeat()
+	{
+		//some animation maybe?
+		health = maxHealth;
+		this.transform.position = build.GetPlayerSpawn();
+	}
 	private void Flip()
 	{
 		//switches isFacingRight to other value

@@ -86,10 +86,6 @@ public class BuildSettings : MonoBehaviour
 	#endregion
 
 	#region Setters and Getters
-	public void SetTime(float _newTime)
-	{
-		time = _newTime;
-	}
 	public void IncrementObject(int _type,int _amount)
 	{
 		switch(_type)
@@ -227,7 +223,17 @@ public class BuildSettings : MonoBehaviour
 	{
 		Doors.Add(_door);
 	}
+	public void SetTime(float _time)
+	{
+		time = _time;
+	}
+	public float GetTime()
+	{
+		return time;
+	}
+
 	#endregion
+
 	void Awake()
     {
 		errorText.enabled = false;
@@ -259,6 +265,7 @@ public class BuildSettings : MonoBehaviour
 			Destroy(GameObject.Find("Player"));
 		}
 	}
+	#region doors
 	//setting which links can be used by the player, used to set the default links for each object
 	public void CheckLinks()
 	{
@@ -336,4 +343,5 @@ public class BuildSettings : MonoBehaviour
 			}
 		}
 	}
+	#endregion
 }
