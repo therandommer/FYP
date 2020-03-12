@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
 	[Header("Core Values")]
 	[SerializeField]
-	float jumpForce = 7.0f;
+	float jumpForce = 7.0f; ///add defaults to be used while checking if swimming
 	[SerializeField]
 	float moveScalar = 10.0f;
 	[SerializeField] [Range(0,1)]
@@ -65,8 +65,10 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	private int maxHealth = 5;
 	private int health = 0;
+    private bool isSwimming = false;
 	private bool isPowered = false;
 	private bool needsPowerup = false;
+    private bool isDefeated = false;
 	private float maxITime = 1.0f; //time can't be hit
 	private float currentITime = 0.0f; //used for timer
 
@@ -83,14 +85,27 @@ public class Player : MonoBehaviour
 		{
 			isNormalJump = false;
 		}
+        if(collision.tag == "Liquid" && this.transform.position.y < collision.transform.position.y + 0.5f)
+        {
+            moveScalar /= 2;
+            jumpForce /= 2;
+            isSwimming = true;
+        }
 	}
-	private void OnTriggerExit2D(Collider2D other)
+
+    private void OnTriggerExit2D(Collider2D other)
 	{
 		if(other.tag=="Ladder" && this.transform.position.y>other.transform.position.y + 0.5)
 		{
 			isNormalJump = true;
 			isGrounded = true;
 		}
+        if(other.tag == "Liquid" && this.transform.position.y > other.transform.position.y + 0.5)
+        {
+            moveScalar *= 2;
+            jumpForce *= 2;
+            isSwimming = false;
+        }
 	}
 	private void FixedUpdate()
 	{
@@ -181,6 +196,10 @@ public class Player : MonoBehaviour
 		{
 			currentITime -= Time.deltaTime;
 		}
+        if(isSwimming)
+        {
+
+        }
 	}
 	public void Damaged(int _amount)
 	{
@@ -206,6 +225,7 @@ public class Player : MonoBehaviour
 	{
 		//some animation maybe?
 		health = maxHealth;
+        isDefeated = true;
 		this.transform.position = build.GetPlayerSpawn();
 	}
 	private void Flip()
@@ -217,4 +237,13 @@ public class Player : MonoBehaviour
 		theScale.x *= -1; //inverts x scale
 		transform.localScale = theScale;
 	}
+
+    public bool GetIsDefeated()
+    {
+        return isDefeated;
+    }
+    public void SetIsDefeated(bool _state)
+    {
+        isDefeated = _state;
+    }
 }

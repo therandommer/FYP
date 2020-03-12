@@ -9,6 +9,7 @@ TagManager:
   - Cursor
   - Camera
   - Ladder
+  - Liquid
   layers:
   - Default
   - TransparentFX

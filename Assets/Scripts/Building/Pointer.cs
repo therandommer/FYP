@@ -29,7 +29,7 @@ public class Pointer : MonoBehaviour
     [SerializeField]
     bool isHoveringInteractable = false;
 	[SerializeField]
-	float buildDelay = 0.001f;
+	float buildDelay = 0.01f;
 	[SerializeField]
 	float currentBuildDelay;
 	#endregion
@@ -94,12 +94,12 @@ public class Pointer : MonoBehaviour
 
 	void Update()
     {
-		if (!gc.GetIsBuilding() && heldID != 13)
+		if (!gc.GetIsBuilding() && heldID != 14)
 		{
-			SetHeldID(13);
+			SetHeldID(14);
 			box.enabled = false;
 		}
-		if(gc.GetIsBuilding() && heldID == 13)
+		if(gc.GetIsBuilding() && heldID == 14)
 		{
 			SetHeldID(0);
 			box.enabled = true;
@@ -123,7 +123,7 @@ public class Pointer : MonoBehaviour
 		this.transform.position = roundedLocation;
         if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButton(0) && isLocationValid && currentBuildDelay <= 0)
+            if (Input.GetMouseButton(0) && isLocationValid && currentBuildDelay <= 0 && heldID <= 12) //probably change this limitter later
             {
 				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation,parentObject.transform);
 				if(heldID == 12) //reset to empty block after player is placed, prevents multiple spawns

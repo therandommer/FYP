@@ -265,9 +265,10 @@ public class BuildSettings : MonoBehaviour
 			Destroy(GameObject.Find("Player"));
 		}
 	}
-	#region doors
-	//setting which links can be used by the player, used to set the default links for each object
-	public void CheckLinks()
+    ///not used right now
+    #region doors 
+    //setting which links can be used by the player, used to set the default links for each object
+    public void CheckLinks()
 	{
 		int tmp1 = 0;
 		int tmp2 = 0;
@@ -343,5 +344,5 @@ public class BuildSettings : MonoBehaviour
 			}
 		}
 	}
-	#endregion
+	#endregion //not used right now, keeping for 
 }

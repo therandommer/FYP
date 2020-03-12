@@ -26,7 +26,6 @@ public class PlatformingManager : MonoBehaviour
 		timeLeft = build.GetTime();
     }
 
-    // Update is called once per frame
     void Update()
     {
 		if (gc.GetIsGameplay()) //gameplay specific in here
@@ -36,6 +35,7 @@ public class PlatformingManager : MonoBehaviour
 				player = FindObjectOfType<Player>();
 				needPlayer = false;
 			}
+            timeLeft -= Time.deltaTime;
 		}
 		if (gc.GetIsBuilding() && needReset) //resets, etc. here
 		{
@@ -44,4 +44,27 @@ public class PlatformingManager : MonoBehaviour
 			timeLeft = 0.0f;
 		} 
     }
+
+    #region setters and getters
+    public void IncrementCoins(int _amount)
+    {
+        coins += _amount;
+    }
+    public int GetCoins()
+    {
+        return coins;
+    }
+    public void IncrementScore(int _amount)
+    {
+        score += _amount;
+    }
+    public int GetScore()
+    {
+        return score;
+    }
+    public void ResetTime()
+    {
+        timeLeft = build.GetTime();
+    }
+    #endregion
 }

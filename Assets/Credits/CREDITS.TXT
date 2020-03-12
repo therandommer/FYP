@@ -359,4 +359,24 @@ File(s):
 
 ----------------------------------------
 
+Title:
+	Backgrounds for 2D Platformers
+
+Author:
+	greggman
+	RenZeyu
+URL:
+	https://opengameart.org/content/backgrounds-for-2d-platformers
+
+License(s):
+	* CC-BY 3.0 https://creativecommons.org/licenses/by/3.0/
+
+File(s):
+	* background0.png
+	* background1-720.png
+	* backgound3-720.png
+	* rock.png
+	* snow.png
+
+----------------------------------------
 
