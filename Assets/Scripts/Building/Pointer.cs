@@ -139,6 +139,10 @@ public class Pointer : MonoBehaviour
     {
         heldID = _id;
     }
+	public int GetHeldID()
+	{
+		return heldID;
+	}
     public void DisablePlacement()
     {
         isLocationValid = false;
@@ -147,5 +151,9 @@ public class Pointer : MonoBehaviour
     {
         isLocationValid = true;
     }
+	public List<GameObject> GetPlaceableObjects()
+	{
+		return placeableObjects;
+	}
     #endregion
 }

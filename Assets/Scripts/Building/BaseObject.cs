@@ -8,13 +8,22 @@ public class BaseObject : MonoBehaviour
     int objectType = 0;
     [SerializeField]
     int objectValue = 1;
+	[SerializeField]
+	int thisID = 0;
     [SerializeField]
-    Vector2 defaultPosition;
+    Vector3 defaultPosition;
     [SerializeField]
     BuildSettings build;
+	[SerializeField]
+	Pointer pointer;
+	[SerializeField]
+	TotalObjects parentObject;
 
     void Awake()
     {
+		parentObject = FindObjectOfType<TotalObjects>();
+		pointer = FindObjectOfType<Pointer>();
+		thisID = pointer.GetHeldID();
 		build = FindObjectOfType<BuildSettings>();
         if(build.GetCurrentObjects(objectType) + objectValue <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
         {
@@ -34,16 +43,27 @@ public class BaseObject : MonoBehaviour
 			Erase();
 		}
 	}
-
     //will be called when player returns from gameplay to building
     private void Reset()
     {
         this.transform.position = defaultPosition;
     }
-    void Erase()
+    public void Erase()
     {
 		//erase from arrays and whatnot
 		build.IncrementObject(objectType, -objectValue); 
         Destroy(this.gameObject);
     }
+	public Vector3 GetDefaultPosition() //in case an object has moved from its original spot, called when creating saves
+	{
+		return defaultPosition;
+	}
+	public int GetID()
+	{
+		return thisID;
+	}
+	public void SetID(int _id)
+	{
+		thisID = _id;
+	}
 }

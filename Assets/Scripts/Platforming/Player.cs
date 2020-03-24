@@ -92,7 +92,6 @@ public class Player : MonoBehaviour
             isSwimming = true;
         }
 	}
-
     private void OnTriggerExit2D(Collider2D other)
 	{
 		if(other.tag=="Ladder" && this.transform.position.y>other.transform.position.y + 0.5)

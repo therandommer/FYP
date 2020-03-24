@@ -157,6 +157,23 @@ public class BuildSettings : MonoBehaviour
         Debug.Log("Object incorrectly defined");
         return 0;
     }
+	public void ResetAllObjects()
+	{
+		placedTerrain = 0;
+		placedFriendly = 0;
+		placedHazards = 0;
+		placedInteractables = 0;
+		placedOther = 0;
+		placedPlayer = 0;
+		Doors = new List<GameObject>();
+		playerSpawned = false;
+		time = 200.0f;
+		/*bool isLink1Available = true;
+		bool isLink2Available = true;
+		bool isLink3Available = true;
+		bool isLink4Available = true;
+		bool isLink5Available = true;*/
+}
 	public void SetPlayerSpawn(Vector2 _newSpawn)
 	{
 		if(_newSpawn.x > minBaseLevelLimits.x && _newSpawn.y > minBaseLevelLimits.y &&
