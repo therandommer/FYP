@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TotalObjects : MonoBehaviour
 {
 	[SerializeField]
@@ -23,9 +24,13 @@ public class TotalObjects : MonoBehaviour
 	public List<GameObject> GetObjectsInScene()
 	{
 		totalObjects();
+		CleanList();
 		return objects;
 	}
-
+	public void CleanList()
+	{
+		objects.RemoveAll(GameObject => GameObject == null); //check if any entries are null and removes them from the list, helps clean it
+	}
 	public void DestroyAll()
 	{
 		for(int i = 0; i<objects.Count; i++)

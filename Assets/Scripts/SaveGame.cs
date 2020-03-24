@@ -9,4 +9,5 @@ public class SaveGame //no monobehabiour inheritance
 	public List<float> objectPositionsY = new List<float>();
 	public List<float> objectPositionsZ = new List<float>();
 	public List<int> objectTypes = new List<int>();
+	public int backgroundID = 0;
 }

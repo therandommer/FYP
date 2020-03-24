@@ -59,7 +59,7 @@ public class Pointer : MonoBehaviour
         {
             other.SendMessage("AltInteraction");
         }
-        Debug.Log("Entered trigger");
+        //Debug.Log("Entered trigger");
 		heldObject.color = Color.red;
 	}
 	private void OnTriggerStay2D(Collider2D other)
@@ -81,14 +81,14 @@ public class Pointer : MonoBehaviour
         {
             other.gameObject.SendMessage("Erase"); //need to put this function in every object somewhere
         }
-        Debug.Log("Currently Colliding");
+        //Debug.Log("Currently Colliding");
 		heldObject.color = Color.red;
 	}
 	private void OnTriggerExit2D(Collider2D other)
 	{
 		isLocationValid = true;
 		isHoveringInteractable = false;
-		Debug.Log("Exited trigger");
+		//Debug.Log("Exited trigger");
 		heldObject.color = baseColour;
 	}
 

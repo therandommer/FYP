@@ -26,13 +26,23 @@ public class Background : MonoBehaviour
     {
         if(activeBackground != backgroundSlider.value)
         {
-            activeBackground = (int)backgroundSlider.value;
-            sprite.sprite = backgrounds[(int)backgroundSlider.value];
-            backgroundText.text = "Background: " + ((int)backgroundSlider.value + 1);
+			UpdateBackground();
         }
     }
+	private void UpdateBackground()
+	{
+		activeBackground = (int)backgroundSlider.value;
+		sprite.sprite = backgrounds[(int)backgroundSlider.value];
+		backgroundText.text = "Background: " + ((int)backgroundSlider.value + 1);
+	}
     public int GetBackgroundID()
     {
         return activeBackground;
     }
+	public void SetBackgroundID(int _id) //only called on load
+	{
+		activeBackground = _id;
+		backgroundSlider.value = _id;
+		UpdateBackground();
+	}
 }

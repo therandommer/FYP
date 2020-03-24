@@ -19,6 +19,8 @@ public class GlobalController : MonoBehaviour
 	[SerializeField]
 	bool isSaving = false;
 	[SerializeField]
+	bool isLoading = false;
+	[SerializeField]
 	bool isGameplay = false;
 	[SerializeField]
 	bool needsUIUpdate = false;
@@ -47,10 +49,12 @@ public class GlobalController : MonoBehaviour
 	BuildSettings build;
 	[SerializeField]
 	Pointer pointer;
+	Background bG;
 	#endregion
 
 	private void Awake()
 	{
+		bG = FindObjectOfType<Background>();
 		build = FindObjectOfType<BuildSettings>();
 		tO = FindObjectOfType<TotalObjects>();
 		pointer = FindObjectOfType<Pointer>();
@@ -68,6 +72,8 @@ public class GlobalController : MonoBehaviour
 			save.objectPositionsY.Add(tile.GetDefaultPosition().y);
 			save.objectPositionsZ.Add(tile.GetDefaultPosition().z);
 			save.objectTypes.Add(tile.GetID()); //Object Id for instantiating
+			save.backgroundID = bG.GetComponent<Background>().GetBackgroundID();
+			Debug.Log("Saving tile with ID: " + tile.GetID());
 			i++;
 		}
 		//could save the limits for each block later
@@ -95,9 +101,12 @@ public class GlobalController : MonoBehaviour
 	{
 		if (File.Exists(Application.persistentDataPath + "/SaveData.a")) //game save data must exist for this to read
 		{
-			isSaving = true;
-			//ResetLevel(); //resets the level to a blank state
+			isLoading = true;
 			List<GameObject> objects = tO.GetObjectsInScene();
+			for(int i = 0; i < objects.Count; i++) //erases all placed objects in the scene
+			{
+				objects[i].GetComponent<BaseObject>().Erase();
+			}
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/SaveData.a", FileMode.Open);
 			SaveGame save = (SaveGame)bf.Deserialize(file); //creates the save object based on the data read from the file
@@ -108,14 +117,16 @@ public class GlobalController : MonoBehaviour
 				Vector3 position = new Vector3(save.objectPositionsX[i], save.objectPositionsY[i], save.objectPositionsZ[i]);
 				int objectType = save.objectTypes[i];
 				GameObject tmp = Instantiate(pointer.GetPlaceableObjects()[objectType], position, transform.rotation, tO.transform);
+				tmp.GetComponent<BaseObject>().SetID(objectType);
+				Debug.Log("Loading id: " + objectType);
 			}
 
 			//remove graphic or something
-
 			Debug.Log("Game Loaded");
-
+			objects = tO.GetObjectsInScene();
+			bG.SetBackgroundID(save.backgroundID);
 			//remove pause state
-			isSaving = false;
+			isLoading = false;
 			isPaused = false;
 		}
 		else
@@ -211,6 +222,14 @@ public class GlobalController : MonoBehaviour
 	public bool GetIsSaving()
 	{
 		return isSaving;
+	}
+	public bool GetIsLoading()
+	{
+		return isLoading;
+	}
+	public void GetIsLoading(bool _isLoading)
+	{
+		isLoading = _isLoading;
 	}
 	#endregion
 }
