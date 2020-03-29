@@ -26,10 +26,12 @@ public class Pointer : MonoBehaviour
 	Vector2 roundedLocation;
 	[SerializeField]
 	bool isLocationValid = true;
+	[SerializeField]
+	bool isColliding = false;
     [SerializeField]
     bool isHoveringInteractable = false;
 	[SerializeField]
-	float buildDelay = 0.01f;
+	float buildDelay = 0.005f;
 	[SerializeField]
 	float currentBuildDelay;
 	#endregion
@@ -46,7 +48,8 @@ public class Pointer : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		isLocationValid = false;
+		DisablePlacement();
+		isColliding = true;
         if(other.gameObject.tag == "Interactable")
         {
             isHoveringInteractable = true;
@@ -64,7 +67,8 @@ public class Pointer : MonoBehaviour
 	}
 	private void OnTriggerStay2D(Collider2D other)
 	{
-		isLocationValid = false;
+		DisablePlacement();
+		isColliding = true;
         if (other.gameObject.tag == "Interactable")
         {
             isHoveringInteractable = true;
@@ -86,7 +90,10 @@ public class Pointer : MonoBehaviour
 	}
 	private void OnTriggerExit2D(Collider2D other)
 	{
-		isLocationValid = true;
+		if (this.roundedLocation != new Vector2(other.transform.position.x, other.transform.position.y))
+		{
+			EnablePlacement();
+		}
 		isHoveringInteractable = false;
 		//Debug.Log("Exited trigger");
 		heldObject.color = baseColour;
@@ -94,7 +101,7 @@ public class Pointer : MonoBehaviour
 
 	void Update()
     {
-		if (!gc.GetIsBuilding() && heldID != 14)
+		if (!gc.GetIsBuilding() && heldID != 14) //sets the cursor to a null object while in gameplay or paused
 		{
 			SetHeldID(14);
 			box.enabled = false;
@@ -116,17 +123,23 @@ public class Pointer : MonoBehaviour
 		{
 			currentBuildDelay -= Time.deltaTime;
 		}
+		if(currentBuildDelay <= 0.0f && isLocationValid)
+		{
+			EnablePlacement();
+		}
 		pointingLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		roundedLocation.x = Mathf.RoundToInt(pointingLocation.x);
 		roundedLocation.y = Mathf.RoundToInt(pointingLocation.y);
 		heldObject.sprite = placeableObjects[heldID].GetComponent<SpriteRenderer>().sprite;
 		this.transform.position = roundedLocation;
-        if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) 
         {
-            if (Input.GetMouseButton(0) && isLocationValid && currentBuildDelay <= 0 && heldID <= 12) //probably change this limitter later
+            if (Input.GetMouseButton(0) && isLocationValid && heldID <= 12) //probably change this limitter later
             {
 				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation,parentObject.transform);
-				if(heldID == 12) //reset to empty block after player is placed, prevents multiple spawns
+				DisablePlacement();
+				currentBuildDelay = buildDelay;
+				if (heldID == 12) //reset to empty block after player is placed, prevents multiple spawns
 				{
 					SetHeldID(13);
 				}
@@ -145,10 +158,12 @@ public class Pointer : MonoBehaviour
 	}
     public void DisablePlacement()
     {
+		Debug.Log("Disabling");
         isLocationValid = false;
     }
     public void EnablePlacement()
     {
+		Debug.Log("Enabling");
         isLocationValid = true;
     }
 	public List<GameObject> GetPlaceableObjects()

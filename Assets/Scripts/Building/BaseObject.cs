@@ -47,6 +47,7 @@ public class BaseObject : MonoBehaviour
             Erase();
         }
         defaultPosition = this.transform.position;
+		//ensuring object is placed within bounds
 		if (defaultPosition.x < build.GetLevelSmallest().x || defaultPosition.y < build.GetLevelSmallest().y)
 		{
 			Erase();
@@ -56,14 +57,23 @@ public class BaseObject : MonoBehaviour
 			Erase();
 		}
 	}
-    //will be called when player returns from gameplay to building
-    private void Reset()
+	private void OnCollisionEnter(Collision collision)
+	{
+		if(gc.GetIsBuilding())
+		{
+			Debug.Log("Reached here");
+			collision.gameObject.GetComponent<BaseObject>().Erase();
+		}
+	}
+	//will be called when player returns from gameplay to building
+	private void Reset()
     {
         this.transform.position = defaultPosition;
     }
     public void Erase()
     {
 		//erase from arrays and whatnot
+		Debug.Log("Erase called");
 		build.IncrementObject(objectType, -objectValue); 
         Destroy(this.gameObject);
     }

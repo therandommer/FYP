@@ -81,30 +81,18 @@ public class Player : MonoBehaviour
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.tag=="Ladder" && this.transform.position.y<collision.transform.position.y + 0.5f)
+		if(collision.tag== "Ladder" && this.transform.position.y<collision.transform.position.y + 0.5f)
 		{
 			isNormalJump = false;
 		}
-        if(collision.tag == "Liquid" && this.transform.position.y < collision.transform.position.y + 0.5f)
-        {
-            moveScalar /= 2;
-            jumpForce /= 2;
-            isSwimming = true;
-        }
 	}
     private void OnTriggerExit2D(Collider2D other)
 	{
-		if(other.tag=="Ladder" && this.transform.position.y>other.transform.position.y + 0.5)
+		if(other.tag== "Ladder" && this.transform.position.y>other.transform.position.y + 0.5)
 		{
 			isNormalJump = true;
 			isGrounded = true;
 		}
-        if(other.tag == "Liquid" && this.transform.position.y > other.transform.position.y + 0.5)
-        {
-            moveScalar *= 2;
-            jumpForce *= 2;
-            isSwimming = false;
-        }
 	}
 	private void FixedUpdate()
 	{
@@ -222,10 +210,21 @@ public class Player : MonoBehaviour
 	}
 	public void Defeat()
 	{
-		//some animation maybe?
 		health = maxHealth;
         isDefeated = true;
+		Respawn();
+	}
+	void Respawn()
+	{
+		rb.velocity = Vector3.zero;
+		this.transform.position = build.GetPlayerSpawn(); //change this to moving to activated checkpoint position
+		isDefeated = false;
+	}
+	public void ResetPosition()
+	{
+		rb.velocity = Vector3.zero;
 		this.transform.position = build.GetPlayerSpawn();
+		isDefeated = false;
 	}
 	private void Flip()
 	{

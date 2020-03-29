@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3163763478164425205}
   - component: {fileID: 4703655404479694546}
   - component: {fileID: 5430153904741155122}
+  - component: {fileID: -7542812775466569684}
   m_Layer: 8
   m_Name: Water
-  m_TagString: Liquid
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +92,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3163763478164425204}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 611c23f61fae2c74ba5e26ebb839df00, type: 2}
+  m_Material: {fileID: 6200000, guid: 16641d1c1d14b0e468003f3df11123ed, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -120,7 +121,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0f75f17349e24a912001fdb8e2cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 3
+  objectType: 4
   objectValue: 1
-  defaultPosition: {x: 0, y: 0}
+  thisID: 0
+  hasLoaded: 0
+  defaultPosition: {x: 0, y: 0, z: 0}
   build: {fileID: 0}
+  pointer: {fileID: 0}
+  parentObject: {fileID: 0}
+--- !u!114 &-7542812775466569684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3163763478164425204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7036b877f31c0478337bf31aff58ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
