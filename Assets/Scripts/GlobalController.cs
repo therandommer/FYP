@@ -47,6 +47,7 @@ public class GlobalController : MonoBehaviour
 	#region References for saving/loading
 	TotalObjects tO;
 	BuildSettings build;
+	PlatformingManager platform;
 	[SerializeField]
 	Pointer pointer;
 	Background bG;
@@ -56,6 +57,7 @@ public class GlobalController : MonoBehaviour
 	{
 		bG = FindObjectOfType<Background>();
 		build = FindObjectOfType<BuildSettings>();
+		platform = FindObjectOfType<PlatformingManager>();
 		tO = FindObjectOfType<TotalObjects>();
 		pointer = FindObjectOfType<Pointer>();
 		needsUIUpdate = true;
@@ -157,6 +159,10 @@ public class GlobalController : MonoBehaviour
 				{
 					buildButton.enabled = false;
 				}
+				if(isGameplay)
+				{
+					buildButton.enabled = true;
+				}
 				//enable pause UI as an overlay
 				needsUIUpdate = false;
 			}
@@ -174,9 +180,9 @@ public class GlobalController : MonoBehaviour
 				//disable other UI elements, enable gameplay canvas
 				needsUIUpdate = false;
 			}
-			if(isSaving) //used for saving and loading I think
+			if(isSaving) //used for saving and loading
 			{
-				//save bar overlay
+				//save bar overlay, could be added. probably not needed
 			}
 			
 		}

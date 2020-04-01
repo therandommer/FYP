@@ -42,7 +42,12 @@ public class BuildSettings : MonoBehaviour
 	int maxOther = 1024;
     [SerializeField]
     int placedPlayer = 0;
-    int maxPlayer = 1;
+	[SerializeField]
+	int maxPlayer = 1;
+	[SerializeField]
+	int placedExit = 0;
+	[SerializeField]
+	int maxExit = 1;
     [SerializeField]
     int placedDoors = 0;
     int maxDoors = 10;
@@ -83,6 +88,8 @@ public class BuildSettings : MonoBehaviour
 	TextMeshProUGUI errorText;
 	[SerializeField]
 	Button playerSpawnButton;
+	[SerializeField]
+	Button exitButton;
 	#endregion
 
 	#region Setters and Getters
@@ -107,10 +114,15 @@ public class BuildSettings : MonoBehaviour
 				break;
             case 6:
                 placedPlayer += _amount;
+				Debug.Log(placedPlayer);
                 break;
             case 7:
-                placedDoors += _amount;
+                placedExit += _amount;
+				Debug.Log(placedExit);
                 break;
+			/*case 8:
+				placedDoors += _amount;
+				break;*/
 			default:
 				break;
 		}
@@ -131,6 +143,8 @@ public class BuildSettings : MonoBehaviour
                 return maxOther;
             case 6:
                 return maxPlayer;
+			case 7:
+				return maxExit;
             default:
                 break;
         }
@@ -153,6 +167,10 @@ public class BuildSettings : MonoBehaviour
                 return placedOther;
             case 6:
                 return placedPlayer;
+			case 7:
+				return maxExit;
+			default:
+				break;
         }
         Debug.Log("Object incorrectly defined");
         return 0;
@@ -258,12 +276,17 @@ public class BuildSettings : MonoBehaviour
 
     void Update()
     {
-		if(!gc.GetIsBuilding() && placedPlayer != maxPlayer)
+		if(!gc.GetIsBuilding() && placedPlayer != maxPlayer) //player required first
 		{
 			errorText.text = "Need to place a player to play!";
 			gc.SetIsBuilding(true);
 		}
-		if(!gc.GetIsBuilding() && placedPlayer == maxPlayer && !GetPlayerSpawned())
+		if(!gc.GetIsBuilding() && placedExit != maxExit) //exit required next
+		{
+			errorText.text = "Need to place an exit to play!";
+			gc.SetIsBuilding(true);
+		}
+		if(!gc.GetIsBuilding() && placedPlayer == maxPlayer && !GetPlayerSpawned()) //sets initial player spawn point
 		{
 			Vector3 tmp = new Vector3(playerSpawnPoint.x, playerSpawnPoint.y, 0);
 			Instantiate(player, tmp,this.transform.rotation,this.gameObject.transform);
@@ -276,6 +299,14 @@ public class BuildSettings : MonoBehaviour
 		else if(gc.GetIsBuilding() && placedPlayer != maxPlayer && playerSpawnButton.enabled == false)
 		{
 			playerSpawnButton.enabled = true;
+		}
+		if(gc.GetIsBuilding() && placedExit == maxExit && exitButton.enabled == true)
+		{
+			exitButton.enabled = false;
+		}
+		else if (gc.GetIsBuilding() && placedExit != maxExit && exitButton.enabled == false)
+		{
+			exitButton.enabled = true;
 		}
 		if (gc.GetIsBuilding() && GetPlayerSpawned())
 		{

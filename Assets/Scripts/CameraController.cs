@@ -46,7 +46,7 @@ public class CameraController : MonoBehaviour
 	}
 	void Update()
 	{
-		if (player == null && gc.GetIsGameplay())
+		if (gc.GetIsGameplay())
 		{
 			player = FindObjectOfType<Player>();
 		}
@@ -89,7 +89,7 @@ public class CameraController : MonoBehaviour
 			}
 			if(Input.GetAxis("Vertical") != 0)
 			{
-				if(Input.GetAxis("Horizontal") < 0)
+				if(Input.GetAxis("Vertical") < 0)
 				{
 					this.transform.position += new Vector3(0, -1 * moveScale, 0);
 				}

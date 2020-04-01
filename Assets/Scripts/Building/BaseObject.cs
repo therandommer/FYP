@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaseObject : MonoBehaviour
 {
 	
-    [SerializeField] [Range(1,6)] //object type number is the same as buildsettings
+    [SerializeField] [Range(1,7)] //1-terrain, 2-Friendly, 3-Hazards, 4-Interactables, 5-Other, 6-Player, 7-Exit
     int objectType = 0;
     [SerializeField]
     int objectValue = 1;
@@ -34,18 +34,34 @@ public class BaseObject : MonoBehaviour
 		pointer = FindObjectOfType<Pointer>();
 		if(!gc.GetIsLoading())
 		{
-			Debug.Log("Default ID Set to " + pointer.GetHeldID());
 			SetID(pointer.GetHeldID());
 		}
 		build = FindObjectOfType<BuildSettings>();
-        if(build.GetCurrentObjects(objectType) + objectValue <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
-        {
-            build.IncrementObject(objectType, objectValue);
-        }
-        else
-        {
-            Erase();
-        }
+		if(objectType <=5)
+		{
+			if (build.GetCurrentObjects(objectType) + objectValue <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
+			{
+				build.IncrementObject(objectType, objectValue);
+			}
+			if (build.GetCurrentObjects(objectType) + objectValue > build.GetMaxObjects(objectType))
+			{
+				Debug.Log(build.GetCurrentObjects(objectType));
+				Erase();
+			}
+		}
+		
+		if (objectType >= 6)
+		{
+			if (build.GetCurrentObjects(objectType) <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
+			{
+				build.IncrementObject(objectType, objectValue);
+			}
+			if (build.GetCurrentObjects(objectType) > build.GetMaxObjects(objectType))
+			{
+				Debug.Log(build.GetCurrentObjects(objectType));
+				Erase();
+			}
+		}
         defaultPosition = this.transform.position;
 		//ensuring object is placed within bounds
 		if (defaultPosition.x < build.GetLevelSmallest().x || defaultPosition.y < build.GetLevelSmallest().y)
@@ -61,7 +77,6 @@ public class BaseObject : MonoBehaviour
 	{
 		if(gc.GetIsBuilding())
 		{
-			Debug.Log("Reached here");
 			collision.gameObject.GetComponent<BaseObject>().Erase();
 		}
 	}

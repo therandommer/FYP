@@ -41,7 +41,8 @@ public class Pointer : MonoBehaviour
 		gc = FindObjectOfType<GlobalController>();
 		buildSettings = FindObjectOfType<BuildSettings>();
 		heldObject = gameObject.GetComponent<SpriteRenderer>();
-		baseColour = heldObject.color;
+		baseColour = Color.white;
+		errorColour = Color.red;
 		isLocationValid = true;
         isHoveringInteractable = false;
 	}
@@ -62,8 +63,8 @@ public class Pointer : MonoBehaviour
         {
             other.SendMessage("AltInteraction");
         }
-        //Debug.Log("Entered trigger");
-		heldObject.color = Color.red;
+		//Debug.Log("Entered trigger");
+		heldObject.color = errorColour;
 	}
 	private void OnTriggerStay2D(Collider2D other)
 	{
@@ -85,8 +86,8 @@ public class Pointer : MonoBehaviour
         {
             other.gameObject.SendMessage("Erase"); //need to put this function in every object somewhere
         }
-        //Debug.Log("Currently Colliding");
-		heldObject.color = Color.red;
+		//Debug.Log("Currently Colliding");
+		heldObject.color = errorColour;
 	}
 	private void OnTriggerExit2D(Collider2D other)
 	{
@@ -101,21 +102,29 @@ public class Pointer : MonoBehaviour
 
 	void Update()
     {
-		if (!gc.GetIsBuilding() && heldID != 14) //sets the cursor to a null object while in gameplay or paused
+		if (!gc.GetIsBuilding() || gc.GetIsPaused() && heldID != 16) //sets the cursor to a null object while in gameplay or paused
 		{
-			SetHeldID(14);
+			SetHeldID(16);
 			box.enabled = false;
 		}
-		if(gc.GetIsBuilding() && heldID == 14)
+		if(gc.GetIsBuilding() && !gc.GetIsPaused() && heldID == 16)
 		{
 			SetHeldID(0);
 			box.enabled = true;
 		}
-		if(heldID == 12)
+		if(heldID == 6) //base colour needed for green water
+		{
+			baseColour = new Color(0, 255, 0);
+		}
+		else if(heldID != 6) //every other object has white base colour
+		{
+			baseColour = Color.white;
+		}
+		if(heldID == 13) //player scaling
 		{
 			transform.localScale = new Vector3(3, 3, 3);
 		}
-		else if(heldID != 12)
+		else if(heldID != 13) //only player is scaled by 3x
 		{
 			transform.localScale = new Vector3(1, 1, 1);
 		}
@@ -123,25 +132,26 @@ public class Pointer : MonoBehaviour
 		{
 			currentBuildDelay -= Time.deltaTime;
 		}
-		if(currentBuildDelay <= 0.0f && isLocationValid)
+		if(currentBuildDelay <= 0.0f && isLocationValid) //prevents most duplicate placements atm
 		{
 			EnablePlacement();
 		}
 		pointingLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		//keeps objects to a grid based system
 		roundedLocation.x = Mathf.RoundToInt(pointingLocation.x);
 		roundedLocation.y = Mathf.RoundToInt(pointingLocation.y);
-		heldObject.sprite = placeableObjects[heldID].GetComponent<SpriteRenderer>().sprite;
+		heldObject.sprite = placeableObjects[heldID].GetComponent<SpriteRenderer>().sprite; //displays sprite render to player
 		this.transform.position = roundedLocation;
         if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) 
         {
-            if (Input.GetMouseButton(0) && isLocationValid && heldID <= 12) //probably change this limitter later
+            if (Input.GetMouseButton(0) && isLocationValid && heldID <= 14) //probably change this limitter later
             {
 				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation,parentObject.transform);
 				DisablePlacement();
 				currentBuildDelay = buildDelay;
-				if (heldID == 12) //reset to empty block after player is placed, prevents multiple spawns
+				if (heldID == 13 || heldID == 14) //reset to empty block after player is placed, prevents multiple spawns
 				{
-					SetHeldID(13);
+					SetHeldID(15); //allows player to specify next block
 				}
 				currentBuildDelay = buildDelay;
             }  
@@ -158,17 +168,19 @@ public class Pointer : MonoBehaviour
 	}
     public void DisablePlacement()
     {
-		Debug.Log("Disabling");
         isLocationValid = false;
     }
     public void EnablePlacement()
     {
-		Debug.Log("Enabling");
         isLocationValid = true;
     }
 	public List<GameObject> GetPlaceableObjects()
 	{
 		return placeableObjects;
+	}
+	public Color GetErrorColour()
+	{
+		return errorColour;
 	}
     #endregion
 }

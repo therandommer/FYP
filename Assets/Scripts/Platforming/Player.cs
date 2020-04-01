@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
 	Rigidbody2D rb;
 	#endregion
 
+	GlobalController gc;
 	BuildSettings build;
 	[SerializeField]
 	private int maxHealth = 5;
@@ -76,6 +77,7 @@ public class Player : MonoBehaviour
 	private void Awake()
 	{
 		health = maxHealth;
+		gc = FindObjectOfType<GlobalController>();
 		build = FindObjectOfType<BuildSettings>();
 		rb = GetComponent<Rigidbody2D>();
 	}
@@ -187,6 +189,10 @@ public class Player : MonoBehaviour
         {
 
         }
+		if(!gc.GetIsGameplay())
+		{
+			Debug.Log("Gameplay ended");
+		}
 	}
 	public void Damaged(int _amount)
 	{
@@ -214,6 +220,10 @@ public class Player : MonoBehaviour
         isDefeated = true;
 		Respawn();
 	}
+	void Erase()
+	{
+		Destroy(this.gameObject);
+	}
 	void Respawn()
 	{
 		rb.velocity = Vector3.zero;
@@ -236,7 +246,8 @@ public class Player : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-    public bool GetIsDefeated()
+	#region setters and getters
+	public bool GetIsDefeated()
     {
         return isDefeated;
     }
@@ -244,4 +255,13 @@ public class Player : MonoBehaviour
     {
         isDefeated = _state;
     }
+	public int GetHealth()
+	{
+		return health;
+	}
+	public int GetMaxHealth()
+	{
+		return maxHealth;
+	}
+	#endregion
 }

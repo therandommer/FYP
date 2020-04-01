@@ -10,6 +10,7 @@ TagManager:
   - Camera
   - Ladder
   - Liquid
+  - Coins
   layers:
   - Default
   - TransparentFX
