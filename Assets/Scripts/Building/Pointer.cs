@@ -82,12 +82,14 @@ public class Pointer : MonoBehaviour
         {
             other.SendMessage("AltInteraction");
         }
-        if (Input.GetMouseButtonDown(2) || Input.GetMouseButton(2) && !isLocationValid)
-        {
-            other.gameObject.SendMessage("Erase"); //need to put this function in every object somewhere
-        }
 		//Debug.Log("Currently Colliding");
 		heldObject.color = errorColour;
+		if (Input.GetMouseButtonDown(2) || Input.GetMouseButton(2) && !isLocationValid)
+		{
+			other.gameObject.SendMessage("Erase"); //need to put this function in every object somewhere
+			isLocationValid = true;
+			heldObject.color = baseColour;
+		}
 	}
 	private void OnTriggerExit2D(Collider2D other)
 	{
