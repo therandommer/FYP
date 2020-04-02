@@ -53,6 +53,7 @@ public class Coins : MonoBehaviour
 		}
 		else if (gc.GetIsBuilding()) //re-enables in the build screen
 		{
+			hasCollected = false;
 			sprite.enabled = true;
 			col.enabled = true;
 		}

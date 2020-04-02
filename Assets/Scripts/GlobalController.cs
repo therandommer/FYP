@@ -24,6 +24,8 @@ public class GlobalController : MonoBehaviour
 	bool isGameplay = false;
 	[SerializeField]
 	bool needsUIUpdate = false;
+	[SerializeField]
+	bool buildClicked = false;
 	#endregion
 	#region UI Objects
 	[Header("UI Elements")]
@@ -164,10 +166,15 @@ public class GlobalController : MonoBehaviour
 					buildButton.enabled = true;
 				}
 				//enable pause UI as an overlay
-				needsUIUpdate = false;
+				if(!buildClicked)
+				{
+					needsUIUpdate = false;
+				}
+				
 			}
 			if(isBuilding)
 			{
+				buildClicked = false;
 				BuildUI.SetActive(true);
 				GamePlayUI.SetActive(false);
 				//disable other UI elements, enable building canvas
@@ -175,6 +182,7 @@ public class GlobalController : MonoBehaviour
 			}
 			if(isGameplay)
 			{
+				buildClicked = false;
 				GamePlayUI.SetActive(true);
 				BuildUI.SetActive(false);
 				//disable other UI elements, enable gameplay canvas
@@ -224,6 +232,10 @@ public class GlobalController : MonoBehaviour
 	public void SetIsSaving(bool _isSaving)
 	{
 		isSaving = _isSaving;
+	}
+	public void SetBuildClicked(bool _buildClick)
+	{
+		buildClicked = _buildClick;
 	}
 	public bool GetIsSaving()
 	{

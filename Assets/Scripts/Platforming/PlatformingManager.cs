@@ -17,7 +17,6 @@ public class PlatformingManager : MonoBehaviour
 	int score = 0;
 	bool needPlayer = true; //allows proper linking to the player
 	bool needReset = true; //determines when the platforming stats need resetting
-	bool hasReset = false; //limits to 1 reset
 	bool hasInitialised = false;
 	#endregion
 
@@ -50,38 +49,53 @@ public class PlatformingManager : MonoBehaviour
     {
 		if (gc.GetIsGameplay()) //gameplay specific in here
 		{
-			if(hasReset) //allows for a reset when the player goes to build
+			if(!needReset) //allows for a reset when the player goes to gameplay
 			{
-				hasReset = false;
+				needReset = true;
 			}
 			if (build.GetPlayerSpawned() && needPlayer) //initialises the player this loop
 			{
+				Debug.Log("Initialising player(Platforming)");
 				player = FindObjectOfType<Player>();
 				needPlayer = false;
 			}
-			if(!hasInitialised) //initalises the values of the ui on play
+			if(!hasInitialised) //initalises values for this script on play
 			{
+				player = null;
+				timeLeft = build.GetTime();
+				timeText.text = "Time: " + timeLeft;
 				coinText.text = "Coins: " + coins;
 				scoreText.text = "Score: " + score;
-				healthText.text = "Health: " + player.GetComponent<Player>().GetMaxHealth();
 				hasInitialised = true;
 			}
-			
-            timeLeft -= Time.deltaTime;
+			if(player == null)
+			{
+				player = FindObjectOfType<Player>();
+			}
+			timeLeft -= Time.deltaTime;
 			roundedTime = Mathf.FloorToInt(timeLeft);
-			timeText.text = "Time: " + roundedTime;
+			if(player != null)
+			{
+				UpdateUI();
+			}
 		}
-		if (gc.GetIsBuilding() && needReset && !hasReset) //resets, etc. here
+		if (gc.GetIsBuilding() && needReset) //resets, etc. here when entering building
 		{
 			ResetPlatformStats();
 		} 
     }
 
     #region setters and getters
+	public void UpdateUI()
+	{
+		coinText.text = "Coins: " + coins;
+		scoreText.text = "Score: " + score;
+		timeText.text = "Time: " + roundedTime;
+		healthText.text = "Health: " + player.GetComponent<Player>().GetHealth() + "/" + player.GetComponent<Player>().GetMaxHealth();
+	}
     public void IncrementCoins(int _amount)
     {
         coins += _amount;
-		coinText.text = "Coins: " + coins;
     }
     public int GetCoins()
     {
@@ -90,7 +104,6 @@ public class PlatformingManager : MonoBehaviour
     public void IncrementScore(int _amount)
     {
         score += _amount;
-		scoreText.text = "Score: " + score;
     }
     public int GetScore()
     {
@@ -102,17 +115,17 @@ public class PlatformingManager : MonoBehaviour
     }
 	public void ResetPlatformStats()
 	{
+		player = null;
 		needPlayer = true;
 		needReset = false;
-		hasReset = true;
 		hasInitialised = false;
-		timeLeft = 0.0f;
+		timeLeft = build.GetTime();
 		coins = 0;
 		score = 0;
 	}
 	public bool GetHasReset()
 	{
-		return hasReset;
+		return needReset;
 	}
     #endregion
 }

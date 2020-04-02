@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
 	[Header("Core Values")]
 	[SerializeField]
-	float jumpForce = 7.0f; ///add defaults to be used while checking if swimming
+	float jumpForce = 8.0f; ///add defaults to be used while checking if swimming
 	[SerializeField]
 	float moveScalar = 10.0f;
 	[SerializeField] [Range(0,1)]
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	float minXVelocity = -6.0f;
 	[SerializeField]
-	float maxYVelocity = 6.0f;
+	float maxYVelocity = 7.0f;
 	[SerializeField]
 	float minYVelocity = -10.0f;
 
@@ -192,6 +192,7 @@ public class Player : MonoBehaviour
 		if(!gc.GetIsGameplay())
 		{
 			Debug.Log("Gameplay ended");
+			Erase();
 		}
 	}
 	public void Damaged(int _amount)

@@ -81,7 +81,7 @@ public class BuildSettings : MonoBehaviour
 	[SerializeField]
 	List<GameObject> Doors; //used to link positions
 	[SerializeField]
-	Player player;
+	Player player; //hold the reference to the player object
 	[SerializeField]
 	GlobalController gc;
 	[SerializeField]
@@ -311,6 +311,7 @@ public class BuildSettings : MonoBehaviour
 		if (gc.GetIsBuilding() && GetPlayerSpawned())
 		{
 			Destroy(GameObject.Find("Player"));
+			playerSpawned = false;
 		}
 	}
     ///not used right now

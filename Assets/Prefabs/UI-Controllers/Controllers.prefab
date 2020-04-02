@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1063021635103689784}
   - component: {fileID: 1063021635103689791}
   - component: {fileID: 1063021635103689790}
+  - component: {fileID: 1435545458}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -54,7 +55,15 @@ MonoBehaviour:
   placedInteractables: 0
   placedOther: 0
   placedPlayer: 0
+  maxPlayer: 1
+  placedExit: 0
+  maxExit: 1
   placedDoors: 0
+  isLink1Available: 1
+  isLink2Available: 1
+  isLink3Available: 1
+  isLink4Available: 1
+  isLink5Available: 1
   isClearConditionEnabled: 0
   clearObject: {fileID: 0}
   clearConditionRequired: 0
@@ -63,6 +72,7 @@ MonoBehaviour:
   gc: {fileID: 1063021635103689790}
   errorText: {fileID: 0}
   playerSpawnButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!114 &1063021635103689790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,8 +88,36 @@ MonoBehaviour:
   isPaused: 0
   isBuilding: 1
   isSaving: 0
+  isLoading: 0
   isGameplay: 0
   needsUIUpdate: 0
   BuildUI: {fileID: 0}
   GamePlayUI: {fileID: 0}
   PauseUI: {fileID: 0}
+  buildButton: {fileID: 0}
+  toggle: {fileID: 0}
+  backgroundAudio: {fileID: 0}
+  pointer: {fileID: 0}
+--- !u!114 &1435545458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063021635103689785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932f5e52eb7fdad458839a880257e18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 0
+  roundedTime: 0
+  coins: 0
+  score: 0
+  gc: {fileID: 1063021635103689790}
+  build: {fileID: 1063021635103689791}
+  player: {fileID: 0}
+  scoreText: {fileID: 0}
+  coinText: {fileID: 0}
+  timeText: {fileID: 0}
+  healthText: {fileID: 0}

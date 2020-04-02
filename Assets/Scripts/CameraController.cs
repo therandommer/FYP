@@ -48,8 +48,9 @@ public class CameraController : MonoBehaviour
 	{
 		if (gc.GetIsGameplay())
 		{
-			player = FindObjectOfType<Player>();
+			player = null;
 		}
+		
 		//switching states of camera
 		if (gc.GetIsGameplay() && isGameplay == false)
 		{
@@ -60,7 +61,11 @@ public class CameraController : MonoBehaviour
 			isGameplay = false;
 			ResetPosition();
 		}
-		if (isGameplay) //follows the payer location with a slight offset to allow for visibility
+		if (player == null && isGameplay)
+		{
+			player = FindObjectOfType<Player>();
+		}
+		if (isGameplay && player != null) //follows the payer location with a slight offset to allow for visibility
 		{
 			MoveToPlayer();
 		}
