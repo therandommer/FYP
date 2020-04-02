@@ -36,7 +36,7 @@ public class GlobalController : MonoBehaviour
 	[SerializeField]
 	GameObject PauseUI;
 	[SerializeField]
-	Button buildButton; //only enable this on pause AND gameplay
+	GameObject buildButton; //only enable this on pause AND gameplay
 	#endregion
 
 	#region This Object
@@ -89,11 +89,14 @@ public class GlobalController : MonoBehaviour
 		SaveGame save = CreateSaveGameObject(); //getting the data for the save
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/SaveData.a"); //creating file name
+		Debug.Log(file);
 		bf.Serialize(file, save); //mounting the data to the file
 		file.Close();
 
 		///can do some cleanup if needed, probably display something to the player?
 		Debug.Log("Game Saved");
+		System.Diagnostics.Process.Start("explorer.exe", (true ? "/root," : "/select,") + Application.dataPath + "/SaveData.a");
+		//Application.OpenURL(Application.dataPath + "/SaveData.a");
 		isSaving = false;
 	}
 	public void ResetLevel() //used to clear absolutely everything
@@ -113,6 +116,7 @@ public class GlobalController : MonoBehaviour
 			}
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/SaveData.a", FileMode.Open);
+			Debug.Log("File loaded from: " + Application.persistentDataPath + "/SaveData.a");
 			SaveGame save = (SaveGame)bf.Deserialize(file); //creates the save object based on the data read from the file
 			file.Close();
 
@@ -159,11 +163,11 @@ public class GlobalController : MonoBehaviour
 				PauseUI.SetActive(true);
 				if(!isGameplay)
 				{
-					buildButton.enabled = false;
+					buildButton.SetActive(false);
 				}
 				if(isGameplay)
 				{
-					buildButton.enabled = true;
+					buildButton.SetActive(true);
 				}
 				//enable pause UI as an overlay
 				if(!buildClicked)
@@ -224,6 +228,10 @@ public class GlobalController : MonoBehaviour
 	{
 		isPaused = _isPaused;
 		needsUIUpdate = true;
+	}
+	public void SetNeedsUIUpdate(bool _update)
+	{
+		needsUIUpdate = _update;
 	}
 	public bool GetIsPaused()
 	{

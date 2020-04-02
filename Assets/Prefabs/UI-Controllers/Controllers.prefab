@@ -91,6 +91,7 @@ MonoBehaviour:
   isLoading: 0
   isGameplay: 0
   needsUIUpdate: 0
+  buildClicked: 0
   BuildUI: {fileID: 0}
   GamePlayUI: {fileID: 0}
   PauseUI: {fileID: 0}

@@ -58,23 +58,27 @@ MonoBehaviour:
   - {fileID: 1512265398153004962, guid: 581dd8160d3c5f945b2fd331ae0fa3a2, type: 3}
   - {fileID: 1086226590119985730, guid: 8a8397136657a564faeea3a42c51261d, type: 3}
   - {fileID: 7520152654895856571, guid: 7c94497373f443e4c84a279e2a6958d8, type: 3}
-  - {fileID: 290491067480232184, guid: 70de4137d8ede6f4ca53df3e3c55a3b7, type: 3}
   - {fileID: 6489335515998271165, guid: 96416d305dedd5046a8471ac96365eb2, type: 3}
   - {fileID: 7505619241126135646, guid: db0cbc013499ea84da2217242bd70a32, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3163763478164425204, guid: 5dfe27104c6ab8b4da19e3982762d44d, type: 3}
+  - {fileID: 4132285708002586870, guid: f0686db22cb84e34894034499b0844aa, type: 3}
+  - {fileID: 3394337082289513278, guid: 68ee4ec9d78aeba4aa6cb2e1543677c4, type: 3}
+  - {fileID: 3965084131876845116, guid: c5faf648d2480724c837a82e1f3ea5e0, type: 3}
+  - {fileID: 3965084131876845116, guid: c5faf648d2480724c837a82e1f3ea5e0, type: 3}
+  - {fileID: 1512265398153004962, guid: 581dd8160d3c5f945b2fd331ae0fa3a2, type: 3}
+  - {fileID: 1512265398153004962, guid: 581dd8160d3c5f945b2fd331ae0fa3a2, type: 3}
+  - {fileID: 1512265398153004962, guid: 581dd8160d3c5f945b2fd331ae0fa3a2, type: 3}
   - {fileID: 7896243883763922457, guid: c89a069b1c884ea4294e0e467e083cc0, type: 3}
-  - {fileID: 0}
+  - {fileID: 8872567504576921221, guid: 3aa238ba1a1d08843860fd58075fdb9d, type: 3}
+  - {fileID: 2530169104351001003, guid: fa00c575a3731e14da6fbf298e6ba7bc, type: 3}
+  - {fileID: 2530169104351001003, guid: fa00c575a3731e14da6fbf298e6ba7bc, type: 3}
   heldID: 0
   pointingLocation: {x: 0, y: 0}
   roundedLocation: {x: 0, y: 0}
   isLocationValid: 0
+  isColliding: 0
   isHoveringInteractable: 0
-  buildDelay: 0.01
+  buildDelay: 0.1
   currentBuildDelay: 0
 --- !u!212 &5766196322548864221
 SpriteRenderer:
