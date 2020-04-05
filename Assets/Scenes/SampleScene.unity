@@ -1135,6 +1135,21 @@ PrefabInstance:
       propertyPath: backgroundText
       value: 
       objectReference: {fileID: 513916808}
+    - target: {fileID: 5856855056217735179, guid: 29c3b78b33fe31540826e766d01dbde9,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 932578e39d4157444bdf2f8809438c3e, type: 2}
+    - target: {fileID: 5856855056739289947, guid: 29c3b78b33fe31540826e766d01dbde9,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 932578e39d4157444bdf2f8809438c3e, type: 2}
+    - target: {fileID: 5856855057766771454, guid: 29c3b78b33fe31540826e766d01dbde9,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 932578e39d4157444bdf2f8809438c3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29c3b78b33fe31540826e766d01dbde9, type: 3}
 --- !u!1001 &6468847929331624034

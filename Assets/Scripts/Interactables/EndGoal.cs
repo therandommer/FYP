@@ -23,9 +23,4 @@ public class EndGoal : MonoBehaviour
 			collision.SendMessage("Erase"); //replace with victory animation, which erases the player
 		}
 	}
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 }
