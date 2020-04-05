@@ -8,16 +8,16 @@ public class Pointer : MonoBehaviour
 	BuildSettings buildSettings;
 	GlobalController gc;
 	[SerializeField]
-	BoxCollider2D box;
+	BoxCollider2D box = null;
 	#region held Object
 	[SerializeField]
-	SpriteRenderer heldObject;
+	SpriteRenderer heldObject = null;
 	Color baseColour;
 	Color errorColour;
 	[SerializeField]
-	GameObject parentObject;
+	GameObject parentObject = null;
 	[SerializeField]
-	List<GameObject> placeableObjects;
+	List<GameObject> placeableObjects = null;
 	[SerializeField]
 	int heldID = 0;
 	[SerializeField]

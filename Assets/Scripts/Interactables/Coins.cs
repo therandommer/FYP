@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-	BuildSettings build;
+	BuildSettings build = null;
 	[SerializeField]
-	SpriteRenderer sprite;
+	SpriteRenderer sprite = null;
 	[SerializeField]
 	BoxCollider2D col;
 	GlobalController gc;
