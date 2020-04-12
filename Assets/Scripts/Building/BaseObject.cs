@@ -14,14 +14,14 @@ public class BaseObject : MonoBehaviour
 	[SerializeField]
 	bool hasLoaded = false; //set to true if this is created while loading the scene
     [SerializeField]
-    Vector3 defaultPosition;
+    Vector3 defaultPosition = new Vector3(0,0,0);
     [SerializeField]
-    BuildSettings build;
+    BuildSettings build = null;
 	[SerializeField]
-	Pointer pointer;
+	Pointer pointer = null;
 	[SerializeField]
-	TotalObjects parentObject;
-	GlobalController gc;
+	TotalObjects parentObject = null;
+	GlobalController gc = null;
 
 	public BaseObject(bool _hasLoaded)
 	{

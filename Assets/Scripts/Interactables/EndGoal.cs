@@ -17,6 +17,7 @@ public class EndGoal : MonoBehaviour
 	{
 		if(collision.tag == "Player")
 		{
+			Debug.Log("Finished the game");
 			isFinished = true;
 			gc.SetIsGameplay(false);
 			gc.SetIsBuilding(true);

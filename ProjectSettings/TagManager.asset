@@ -11,6 +11,7 @@ TagManager:
   - Ladder
   - Liquid
   - Coins
+  - Hazard
   layers:
   - Default
   - TransparentFX
