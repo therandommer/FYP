@@ -25,6 +25,7 @@ public class QuickErase : MonoBehaviour
     {
 		if (gc.GetIsGameplay() && hasDisabled == false && timerSet == false)
 		{
+			box.GetComponent<BoxCollider2D>().enabled = false;
 			currentTimer = defaultTimer;
 			timerSet = true;
 		}
@@ -41,10 +42,13 @@ public class QuickErase : MonoBehaviour
 		{
 			ResetThis();
 		}
+		if(gc.GetIsBuilding() && box.GetComponent<BoxCollider2D>().enabled == true) //ensures the box is disabled during building.
+		{
+			box.GetComponent<BoxCollider2D>().enabled = false;
+		}
     }
 	void ResetThis()
 	{
-		box.GetComponent<BoxCollider2D>().enabled = false;
 		hasDisabled = false;
 		timerSet = false;
 		currentTimer = 0.0f;
