@@ -8,7 +8,7 @@ public class InteractableBaseObject : MonoBehaviour
     [SerializeField]
     int objectType = 0;
     [SerializeField]
-    Canvas options;
+    Canvas options = null;
     [SerializeField]
     bool isDisplaying = false; //used to help search through arrays and enable/disable ui elements
 

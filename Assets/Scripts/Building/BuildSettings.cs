@@ -48,6 +48,8 @@ public class BuildSettings : MonoBehaviour
 	int placedExit = 0;
 	[SerializeField]
 	int maxExit = 1;
+	#region door stuff
+	/*
     [SerializeField]
     int placedDoors = 0;
     int maxDoors = 10;
@@ -61,7 +63,8 @@ public class BuildSettings : MonoBehaviour
 	[SerializeField]
 	bool isLink4Available = true;
 	[SerializeField]
-	bool isLink5Available = true;
+	bool isLink5Available = true;*/
+	#endregion
 	[Space(10)]
 	[SerializeField]
 	bool isClearConditionEnabled = false; //if true then restrict end point access till following completed
@@ -78,18 +81,18 @@ public class BuildSettings : MonoBehaviour
 	#endregion
 
 	#region Object lists/error UI
+	/*[SerializeField]
+	List<GameObject> Doors = new List<GameObject>(); //used to link positions */
 	[SerializeField]
-	List<GameObject> Doors; //used to link positions
+	Player player = null; //hold the reference to the player object
 	[SerializeField]
-	Player player; //hold the reference to the player object
+	GlobalController gc = null;
 	[SerializeField]
-	GlobalController gc;
+	TextMeshProUGUI errorText = null;
 	[SerializeField]
-	TextMeshProUGUI errorText;
+	Button playerSpawnButton = null;
 	[SerializeField]
-	Button playerSpawnButton;
-	[SerializeField]
-	Button exitButton;
+	Button exitButton = null;
 	#endregion
 
 	#region Setters and Getters
@@ -114,11 +117,9 @@ public class BuildSettings : MonoBehaviour
 				break;
             case 6:
                 placedPlayer += _amount;
-				Debug.Log(placedPlayer);
                 break;
             case 7:
                 placedExit += _amount;
-				Debug.Log(placedExit);
                 break;
 			/*case 8:
 				placedDoors += _amount;
@@ -183,7 +184,7 @@ public class BuildSettings : MonoBehaviour
 		placedInteractables = 0;
 		placedOther = 0;
 		placedPlayer = 0;
-		Doors = new List<GameObject>();
+		//Doors = new List<GameObject>();
 		playerSpawned = false;
 		time = 200.0f;
 		/*bool isLink1Available = true;
@@ -250,14 +251,14 @@ public class BuildSettings : MonoBehaviour
 	{
 		return playerSpawned;
 	}
-	public List<GameObject> GetDoorList()
+	/*public List<GameObject> GetDoorList()
 	{
 		return Doors;
 	}
 	public void AddToDoors(GameObject _door)
 	{
 		Doors.Add(_door);
-	}
+	} */
 	public void SetTime(float _time)
 	{
 		time = _time;
@@ -317,7 +318,7 @@ public class BuildSettings : MonoBehaviour
     ///not used right now
     #region doors 
     //setting which links can be used by the player, used to set the default links for each object
-    public void CheckLinks()
+   /* public void CheckLinks()
 	{
 		int tmp1 = 0;
 		int tmp2 = 0;
@@ -392,6 +393,6 @@ public class BuildSettings : MonoBehaviour
 				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(5);
 			}
 		}
-	}
+	} */
 	#endregion //not used right now, keeping for 
 }

@@ -30,13 +30,13 @@ public class GlobalController : MonoBehaviour
 	#region UI Objects
 	[Header("UI Elements")]
 	[SerializeField]
-	GameObject BuildUI;
+	GameObject BuildUI = null;
 	[SerializeField]
-	GameObject GamePlayUI;
+	GameObject GamePlayUI = null;
 	[SerializeField]
-	GameObject PauseUI;
+	GameObject PauseUI = null;
 	[SerializeField]
-	GameObject buildButton; //only enable this on pause AND gameplay
+	GameObject buildButton = null; //only enable this on pause AND gameplay
 	#endregion
 
 	#region This Object
@@ -47,12 +47,12 @@ public class GlobalController : MonoBehaviour
 	#endregion
 
 	#region References for saving/loading
-	TotalObjects tO;
-	BuildSettings build;
-	PlatformingManager platform;
+	TotalObjects tO = null;
+	BuildSettings build = null;
+	PlatformingManager platform = null;
 	[SerializeField]
-	Pointer pointer;
-	Background bG;
+	Pointer pointer = null;
+	Background bG = null;
 	#endregion
 
 	private void Awake()

@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class Background : MonoBehaviour
 {
     [SerializeField]
-    List<Sprite> backgrounds; //holds potential backgrounds for player to choose
+    List<Sprite> backgrounds = new List<Sprite>(); //holds potential backgrounds for player to choose
     int activeBackground = 0;
     [SerializeField]
-    SpriteRenderer sprite;
+    SpriteRenderer sprite = null;
     [SerializeField]
-    Slider backgroundSlider;
+    Slider backgroundSlider = null;
     [SerializeField]
-    Text backgroundText;
+    Text backgroundText = null;
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();

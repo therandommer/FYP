@@ -10,5 +10,9 @@ public class DeathTrigger : MonoBehaviour
 		{
 			collision.SendMessage("Defeat");
 		}
+		if (collision.gameObject.tag == "Hazard")
+		{
+			collision.SendMessage("StartTimer");
+		}
 	}
 }

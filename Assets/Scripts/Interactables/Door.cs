@@ -5,24 +5,21 @@ using TMPro;
 
 public class Door : MonoBehaviour
 {
-	[SerializeField]
+	/*[SerializeField]
 	int linkNo = 1; //used to change where each door links to. 1-1 2-2, etc.
 	[SerializeField]
 	bool isAddedToList = false;
 	[SerializeField]
 	bool isLinkedToDoor = false;
     [SerializeField]
-    TextMeshPro linkText;
+    TextMeshPro linkText = null;
 	[SerializeField]
-    Vector2 otherDoor;
+	Vector2 otherDoor;
 	[SerializeField]
-	BuildSettings buildSettings;
+	BuildSettings buildSettings = null;
 	[SerializeField]
-	InteractableBaseObject thisBaseObject;
-	void Start()
-    {
-		
-	}
+	InteractableBaseObject thisBaseObject = null;
+
 	private void Awake()
 	{
 		buildSettings = FindObjectOfType<BuildSettings>();
@@ -76,5 +73,5 @@ public class Door : MonoBehaviour
 	public int GetLinkNo()
 	{
 		return linkNo;
-	}
+	} */
 }

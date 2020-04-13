@@ -26,8 +26,6 @@ public class Pointer : MonoBehaviour
 	Vector2 roundedLocation;
 	[SerializeField]
 	bool isLocationValid = true;
-	[SerializeField]
-	bool isColliding = false;
     [SerializeField]
     bool isHoveringInteractable = false;
 	[SerializeField]
@@ -50,7 +48,6 @@ public class Pointer : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		DisablePlacement();
-		isColliding = true;
         if(other.gameObject.tag == "Interactable")
         {
             isHoveringInteractable = true;
@@ -69,7 +66,6 @@ public class Pointer : MonoBehaviour
 	private void OnTriggerStay2D(Collider2D other)
 	{
 		DisablePlacement();
-		isColliding = true;
         if (other.gameObject.tag == "Interactable")
         {
             isHoveringInteractable = true;

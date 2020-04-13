@@ -8,9 +8,9 @@ public class Coins : MonoBehaviour
 	[SerializeField]
 	SpriteRenderer sprite = null;
 	[SerializeField]
-	BoxCollider2D col;
-	GlobalController gc;
-	PlatformingManager platform;
+	BoxCollider2D col = null;
+	GlobalController gc = null;
+	PlatformingManager platform = null;
 
 	[SerializeField]
 	bool hasCollected = false;
@@ -23,6 +23,7 @@ public class Coins : MonoBehaviour
 		build = FindObjectOfType<BuildSettings>();
 		platform = FindObjectOfType<PlatformingManager>();
 		gc = FindObjectOfType<GlobalController>();
+		col = GetComponent<BoxCollider2D>();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

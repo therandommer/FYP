@@ -8,15 +8,13 @@ public class Fireball : MonoBehaviour
 	GlobalController gc = null;
 	Rigidbody2D rb = null;
 	[SerializeField]
-	bool isGameplay = false; //triggered to allow for resets when building
-	[SerializeField]
 	bool isMoving = false; //triggered while paused/building
 	[SerializeField]
 	bool hasActivated = false; //will only move while activated
 	[SerializeField]
-	bool isFacingForward = true; //determines the direction this object travels
+	bool initialFlip = false;
 	[SerializeField]
-	bool hasFlipped = false;
+	bool isFacingForward = true; //determines the direction this object travels
 	[SerializeField]
 	bool isVertical = true;
 	[SerializeField]
@@ -44,27 +42,18 @@ public class Fireball : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == "Camera" && isGameplay && !hasActivated)
+		if(collision.gameObject.tag == "Camera" && gc.GetIsGameplay() && !hasActivated)
 		{
 			Debug.Log("1");
 			hasActivated = true;
 			isMoving = true;
 			isFacingForward ^= true; //inverts the flip
-			hasFlipped = false;
-			FlipThis();
-		}
-		if(collision.gameObject.tag == "Camera" && hasActivated && isMoving && currentDelay <= 0.0f) 
-		{
-			currentDelay = stopDelay;
-			currentCharges--;
-			isFacingForward ^= true; //inverts the flip
-			hasFlipped = false;
 			FlipThis();
 		}
 	}
 	private void OnCollisionExit2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Camera" && isGameplay && !hasActivated)
+		if (collision.gameObject.tag == "Camera" || gc.GetIsGameplay() && !hasActivated)
 		{
 			Debug.Log("2");
 			hasActivated = true;
@@ -73,6 +62,11 @@ public class Fireball : MonoBehaviour
 	}
 	void Update()
     {
+		if(gc.GetIsGameplay() && !initialFlip)
+		{
+			FlipThis();
+			initialFlip = true;
+		}
 		if(isMoving && currentDelay > 0.0f)
 		{
 			isMoving = false;
@@ -81,7 +75,7 @@ public class Fireball : MonoBehaviour
 		{
 			currentDelay -= Time.deltaTime;
 		}
-		if(currentDelay <= 0.0f)
+		if(currentDelay <= 0.0f && !gc.GetIsPaused())
 		{
 			isMoving = true;
 		}
@@ -95,9 +89,10 @@ public class Fireball : MonoBehaviour
 		}
 		if(!gc.GetIsPaused() && hasActivated)
 		{
+			Debug.Log("Moving");
 			isMoving = true;
 		}
-		if (isGameplay && isMoving) //allows projectile to move at a static rate
+		if (gc.GetIsGameplay() && isMoving) //allows projectile to move at a static rate
 		{
 			thisVelocity = rb.velocity;
 			if (isFacingForward)
@@ -110,8 +105,9 @@ public class Fireball : MonoBehaviour
 			}
 			if (this.transform.position == obj.GetDefaultPosition() && thisVelocity != Vector3.zero) //prevents spazzing while stopped
 			{
+				Debug.Log("Rotating");
 				thisVelocity = Vector3.zero;
-				isFacingForward ^= true; //rotates object
+				FlipThis();
 			}
 			else
 			{
@@ -126,24 +122,35 @@ public class Fireball : MonoBehaviour
 			}
 			rb.velocity = thisVelocity;
 		}
-		if (gc.GetIsGameplay() && !isGameplay) //setting the tag for gameplay updates and build resets later.
-		{
-			isGameplay = true;
-		}
     }
+	void StartTimer()
+	{
+		if(currentDelay<=0.0f)
+		{
+			currentDelay = stopDelay;
+			isMoving = false;
+			FlipThis();
+		}
+	}
 	void FlipThis()
 	{
+		Debug.Log("Flip");
 		this.transform.Rotate(0, 0, 180.0f, Space.Self);
-		hasFlipped = true;
+		if(isFacingForward == true)
+		{
+			isFacingForward = false;
+		}
+		else if(isFacingForward == false)
+		{
+			isFacingForward = true;
+		}
 	}
 	void ResetThis()
 	{
 		Debug.Log("1");
 		currentCharges = maxCharges;
-		isGameplay = false;
 		isMoving = false;
 		isFacingForward = true;
-		hasFlipped = false;
 		hasActivated = false;
 		this.transform.position = obj.GetDefaultPosition();
 	}

@@ -19,9 +19,14 @@ public class EndGoal : MonoBehaviour
 		{
 			Debug.Log("Finished the game");
 			isFinished = true;
+			
+		}
+		if(isFinished)
+		{
 			gc.SetIsGameplay(false);
 			gc.SetIsBuilding(true);
 			collision.SendMessage("Erase"); //replace with victory animation, which erases the player
+			//do end goal animation or something here
 		}
 	}
 }

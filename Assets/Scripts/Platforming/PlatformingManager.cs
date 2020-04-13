@@ -22,22 +22,22 @@ public class PlatformingManager : MonoBehaviour
 
 	#region References
 	[SerializeField]
-	GlobalController gc;
+	GlobalController gc = null;
 	[SerializeField]
-	BuildSettings build;
+	BuildSettings build = null;
 	[SerializeField]
-	Player player;
+	Player player = null;
 	#endregion
 
 	#region UI
 	[SerializeField]
-	TextMeshProUGUI scoreText;
+	TextMeshProUGUI scoreText = null;
 	[SerializeField]
-	TextMeshProUGUI coinText;
+	TextMeshProUGUI coinText = null;
 	[SerializeField]
-	TextMeshProUGUI timeText;
+	TextMeshProUGUI timeText = null;
 	[SerializeField]
-	TextMeshProUGUI healthText; //may end up changing to a bar or other graphic
+	TextMeshProUGUI healthText = null; //may end up changing to a bar or other graphic
 	#endregion
 
 	void Awake()

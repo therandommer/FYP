@@ -16,18 +16,12 @@ public class Player : MonoBehaviour
 	float jumpForce = 8.0f; ///add defaults to be used while checking if swimming
 	[SerializeField]
 	float moveScalar = 10.0f;
-	[SerializeField] [Range(0,1)]
-	float crouchSpeed = 0.3f; //scalar for movement while crouching
 
 	[Header("Guard Conditions")]
 	[SerializeField]
 	float groundRadius = 0.2f;
 	[SerializeField]
 	bool isGrounded = false; //checks if touching ground
-	[SerializeField]
-	float ceilingRadius = 0.2f;
-	[SerializeField]
-	bool isCeiling = false; //checks if touching ceiling. If both true, die.
 	[SerializeField]
 	bool isFacingRight = true;
 	[SerializeField]
@@ -52,27 +46,22 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	LayerMask whatIsGround;
 	[SerializeField]
-	Transform groundCheck; //where player finds floor
+	Transform groundCheck = null; //where player finds floor
 	[SerializeField]
-	Transform ceilingCheck; //where player finds ceiling
-	[SerializeField]
-	Collider2D crouchCollider; //determines which collider to disable while crouching
-	[SerializeField]
-	Rigidbody2D rb;
+	Rigidbody2D rb = null;
 	#endregion
 
-	GlobalController gc;
-	BuildSettings build;
+	GlobalController gc = null;
+	BuildSettings build = null;
 	[SerializeField]
 	private int maxHealth = 5;
 	private int health = 0;
     private bool isSwimming = false;
 	private bool isPowered = false;
-	private bool needsPowerup = false;
+	//private bool needsPowerup = false;
     private bool isDefeated = false;
 	private float maxITime = 1.0f; //time can't be hit
 	private float currentITime = 0.0f; //used for timer
-
 
 	private void Awake()
 	{
@@ -106,11 +95,9 @@ public class Player : MonoBehaviour
 		{
 			if(colliders[i].gameObject != gameObject)
 			{
-				Debug.Log("Setting grounded to true");
 				isGrounded = true;
 			}
 		}
-
 		///modifying movement vector based on input
 		//horizontal movement
 		float moveHorizontal = Input.GetAxis("Horizontal") * moveScalar;
@@ -128,19 +115,6 @@ public class Player : MonoBehaviour
 				moveVertical = Input.GetAxis("Vertical") * jumpForce;
 				isGrounded = false;
 			}
-			/*if (!isNormalJump && Input.GetAxis("Vertical") != 0) //only for ladders/vines, etc.
-			{
-				Vector3 tmpVelocity = new Vector3(0, rb.velocity.y, 0);
-				moveHorizontal = 0;
-				if (Input.GetAxis("Vertical") < 0)
-				{
-					moveVertical = Input.GetAxis("Vertical") * -(jumpForce / 2);
-				}
-				else if (Input.GetAxis("Vertical") > 0)
-				{
-					moveVertical = Input.GetAxis("Vertical") * (jumpForce / 2);
-				}
-			}*/
 		}
 		movementVector = new Vector2(moveHorizontal, moveVertical);
 		//flipping sprite to look like it's moving the correct direction
