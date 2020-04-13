@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+///will go between original location and the bottom/side of the camera
 public class Fireball : MonoBehaviour
 {
 	BaseObject obj = null;
@@ -19,6 +20,7 @@ public class Fireball : MonoBehaviour
 	bool isVertical = true;
 	[SerializeField]
 	bool hasReachedMax = true; //inverts on camera minimum/original placement
+	bool didReachMax = false; //used for the states, will be set to false on hitting the bottom
 	[SerializeField]
 	Vector3 thisVelocity = new Vector3();
 	[SerializeField]
@@ -103,11 +105,19 @@ public class Fireball : MonoBehaviour
 			{
 				tmp = -1;
 			}
-			if (this.transform.position == obj.GetDefaultPosition() && thisVelocity != Vector3.zero) //prevents spazzing while stopped
+			if (this.transform.position.y >= obj.GetDefaultPosition().y && thisVelocity != Vector3.zero) //prevents spazzing while stopped
 			{
-				Debug.Log("Rotating");
+				Debug.Log("Offset");
+				this.transform.position -= Vector3.up * 0.15f; 
 				thisVelocity = Vector3.zero;
+				hasReachedMax = true;
+				didReachMax = true;
+			}
+			if(hasReachedMax == true)
+			{
+				Debug.Log("Reached Max");
 				FlipThis();
+				hasReachedMax = false;
 			}
 			else
 			{
@@ -122,27 +132,35 @@ public class Fireball : MonoBehaviour
 			}
 			rb.velocity = thisVelocity;
 		}
+		if(!isMoving) //stops object when not moving
+		{
+			rb.velocity = Vector3.zero;
+		}
     }
-	void StartTimer()
+	void StartTimer() //called at the bottom of the screen atm. Could also be called from the side of the screen.
 	{
-		if(currentDelay<=0.0f)
+		if(currentDelay<=0.0f && didReachMax) //ensures this only happens once
 		{
 			currentDelay = stopDelay;
-			isMoving = false;
+			speed /= 2;
+			didReachMax = false;
+			//isMoving = false;
 			FlipThis();
 		}
 	}
 	void FlipThis()
 	{
-		Debug.Log("Flip");
 		this.transform.Rotate(0, 0, 180.0f, Space.Self);
-		if(isFacingForward == true)
+		if(gc.GetIsGameplay())
 		{
-			isFacingForward = false;
-		}
-		else if(isFacingForward == false)
-		{
-			isFacingForward = true;
+			if (isFacingForward == true)
+			{
+				isFacingForward = false;
+			}
+			else if (isFacingForward == false)
+			{
+				isFacingForward = true;
+			}
 		}
 	}
 	void ResetThis()
@@ -151,6 +169,11 @@ public class Fireball : MonoBehaviour
 		currentCharges = maxCharges;
 		isMoving = false;
 		isFacingForward = true;
+		initialFlip = false;
+		if(this.transform.rotation.z == 180)
+		{
+			this.transform.Rotate(0, 0, 180.0f, Space.Self);
+		}
 		hasActivated = false;
 		this.transform.position = obj.GetDefaultPosition();
 	}

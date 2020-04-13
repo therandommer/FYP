@@ -26,9 +26,11 @@ public class Player : MonoBehaviour
 	bool isFacingRight = true;
 	[SerializeField]
 	bool isNormalJump = true; //if the player can move while not grounded
+#pragma warning disable 219 //219 is the error for unused variables
 	[SerializeField]
-	float moveHorizontal = 0;
+	float moveHorizontal = 0; //actually used in code later on
 	float moveVertical = 0;
+#pragma warning restore 219
 	[SerializeField]
 	Vector2 movementVector = new Vector2();
 	[SerializeField]
