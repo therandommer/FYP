@@ -198,6 +198,20 @@ public class GlobalController : MonoBehaviour
 			}
 			
 		}
+		if(isGameplay && !GamePlayUI.activeInHierarchy)
+		{
+			GamePlayUI.SetActive(true);
+			BuildUI.SetActive(false);
+		}
+		if (isBuilding && !BuildUI.activeInHierarchy)
+		{
+			GamePlayUI.SetActive(false);
+			BuildUI.SetActive(true);
+		}
+		if(isGameplay && isBuilding)
+		{
+			isGameplay = false;
+		}
 		if (!isPaused && PauseUI.activeInHierarchy)
 		{
 			PauseUI.SetActive(false);
