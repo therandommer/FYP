@@ -24,10 +24,12 @@ public class QuickErase : MonoBehaviour
 		{
 			if (gc.GetIsGameplay() && box.GetComponent<BoxCollider2D>().enabled == false) //enables during gameplay
 			{
+				Debug.Log("Enabled trigger box");
 				box.GetComponent<BoxCollider2D>().enabled = true;
 			}
 			if (gc.GetIsBuilding() && box.GetComponent<BoxCollider2D>().enabled == true) //disabled during building
 			{
+				Debug.Log("Disabled trigger box");
 				box.GetComponent<BoxCollider2D>().enabled = false;
 			}
 		}
@@ -37,10 +39,12 @@ public class QuickErase : MonoBehaviour
 			{
 				if (gc.GetIsGameplay() && box.GetComponent<BoxCollider2D>().enabled == true) //enables during gameplay
 				{
+					Debug.Log("Disabled trigger box");
 					box.GetComponent<BoxCollider2D>().enabled = false;
 				}
 				if (gc.GetIsBuilding() && box.GetComponent<BoxCollider2D>().enabled == false) //enabled during building
 				{
+					Debug.Log("Enabled trigger box");
 					box.GetComponent<BoxCollider2D>().enabled = true;
 				}
 			}

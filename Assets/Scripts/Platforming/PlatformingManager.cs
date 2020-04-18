@@ -72,7 +72,10 @@ public class PlatformingManager : MonoBehaviour
 			{
 				player = FindObjectOfType<Player>();
 			}
-			timeLeft -= Time.deltaTime;
+			if(!gc.GetIsPaused())
+			{
+				timeLeft -= Time.deltaTime;
+			}
 			roundedTime = Mathf.FloorToInt(timeLeft);
 			if (player != null)
 			{

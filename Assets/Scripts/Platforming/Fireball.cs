@@ -98,18 +98,10 @@ public class Fireball : MonoBehaviour
 		{
 			rb.velocity = Vector3.zero;
 			thisVelocity = rb.velocity;
-			if (isFacingForward)
-			{
-				tmp = 1;
-			}
-			else if (!isFacingForward)
-			{
-				tmp = -1;
-			}
-			if (transform.position.y >= obj.GetDefaultPosition().y && thisVelocity != Vector3.zero) //prevents spazzing while stopped
+			
+			if (transform.position.y >= obj.GetDefaultPosition().y && isFacingForward) //prevents spazzing while stopped
 			{
 				Debug.Log("Offset");
-				transform.position -= Vector3.up * 0.15f;
 				thisVelocity = Vector3.zero;
 				hasReachedMax = true;
 				didReachMax = true;
@@ -120,16 +112,21 @@ public class Fireball : MonoBehaviour
 				FlipThis();
 				hasReachedMax = false;
 			}
-			else
+			if (isFacingForward)
 			{
-				if (isVertical)
-				{
-					thisVelocity.y = speed * tmp;
-				}
-				else if (!isVertical)
-				{
-					thisVelocity.x = speed * tmp;
-				}
+				tmp = 1;
+			}
+			else if (!isFacingForward)
+			{
+				tmp = -1;
+			}
+			if (isVertical)
+			{
+				thisVelocity.y = speed * tmp;
+			}
+			else if (!isVertical)
+			{
+				thisVelocity.x = speed * tmp;
 			}
 		}
 		rb.velocity = thisVelocity;

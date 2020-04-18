@@ -56,7 +56,7 @@ MonoBehaviour:
   placedOther: 0
   placedPlayer: 0
   placedExit: 0
-  player: {fileID: 0}
+  player: {fileID: 156034080728169251, guid: d5f965b541c9a5047996fe8f42f26b01, type: 3}
   gc: {fileID: 1063021635103689790}
   playerSpawnButton: {fileID: 0}
   exitButton: {fileID: 0}
