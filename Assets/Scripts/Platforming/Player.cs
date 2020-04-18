@@ -74,14 +74,18 @@ public class Player : MonoBehaviour
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.tag== "Ladder" && this.transform.position.y<collision.transform.position.y + 0.5f)
+		if(collision.tag == "Ladder" && this.transform.position.y<collision.transform.position.y + 0.5f)
 		{
 			isNormalJump = false;
+		}
+		if(collision.tag == "Hazard") //placeholder, could be replaced by a hazard base class
+		{
+			Damaged(1);
 		}
 	}
     private void OnTriggerExit2D(Collider2D other)
 	{
-		if(other.tag== "Ladder" && this.transform.position.y>other.transform.position.y + 0.5)
+		if(other.tag == "Ladder" && this.transform.position.y>other.transform.position.y + 0.5)
 		{
 			isNormalJump = true;
 			isGrounded = true;
@@ -95,65 +99,68 @@ public class Player : MonoBehaviour
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundRadius, whatIsGround);
 		for (int i = 0; i < colliders.Length; ++i) //if the groundcheck circle collides with the correct layer, sets grounded to true
 		{
-			if(colliders[i].gameObject != gameObject)
+			if (colliders[i].gameObject != gameObject)
 			{
 				isGrounded = true;
 			}
 		}
 		///modifying movement vector based on input
-		//horizontal movement
-		float moveHorizontal = Input.GetAxis("Horizontal") * moveScalar;
-		//vertical movement
-		if (Input.GetAxis("Jump") != 0 || Input.GetAxis("Vertical") !=0)
+		if (!gc.GetIsPaused())
 		{
-			//regular jumps
-			if(isNormalJump && isGrounded)
+			//horizontal movement
+			float moveHorizontal = Input.GetAxis("Horizontal") * moveScalar;
+			//vertical movement
+			if (Input.GetAxis("Jump") != 0 || Input.GetAxis("Vertical") != 0)
 			{
-				moveVertical = Input.GetAxis("Jump") * jumpForce;
-				isGrounded = false;
+				//regular jumps
+				if (isNormalJump && isGrounded)
+				{
+					moveVertical = Input.GetAxis("Jump") * jumpForce;
+					isGrounded = false;
+				}
+				if (isNormalJump && Input.GetAxis("Vertical") > 0 && isGrounded)
+				{
+					moveVertical = Input.GetAxis("Vertical") * jumpForce;
+					isGrounded = false;
+				}
 			}
-			if(isNormalJump && Input.GetAxis("Vertical") > 0 && isGrounded)
+			movementVector = new Vector2(moveHorizontal, moveVertical);
+			//flipping sprite to look like it's moving the correct direction
+			if (movementVector.x > 0 && !isFacingRight)
 			{
-				moveVertical = Input.GetAxis("Vertical") * jumpForce;
-				isGrounded = false;
+				Flip();
 			}
+			else if (movementVector.x < 0 && isFacingRight)
+			{
+				Flip();
+			}
+			if (movementVector.x > 10.0f)
+			{
+				movementVector.x = 10.0f;
+			}
+			rb.AddForce(movementVector);
+			moveVertical = 0.0f;
+			thisVelocity = rb.velocity;
+			//clamping velocities to limit max speeds
+			if (thisVelocity.x > maxXVelocity)
+			{
+				thisVelocity.x = maxXVelocity;
+			}
+			if (thisVelocity.x < minXVelocity)
+			{
+				thisVelocity.x = minXVelocity;
+			}
+			if (thisVelocity.y > maxYVelocity)
+			{
+				thisVelocity.y = maxYVelocity;
+			}
+			if (thisVelocity.y < minYVelocity)
+			{
+				thisVelocity.y = minYVelocity;
+			}
+			rb.velocity = thisVelocity;
+			#endregion
 		}
-		movementVector = new Vector2(moveHorizontal, moveVertical);
-		//flipping sprite to look like it's moving the correct direction
-		if(movementVector.x>0 && !isFacingRight)
-		{
-			Flip();
-		}
-		else if(movementVector.x<0 && isFacingRight)
-		{
-			Flip();
-		}
-		if(movementVector.x>10.0f)
-		{
-			movementVector.x = 10.0f;
-		}
-		rb.AddForce(movementVector);
-		moveVertical = 0.0f;
-		thisVelocity = rb.velocity;
-		//clamping velocities to limit max speeds
-		if(thisVelocity.x > maxXVelocity)
-		{
-			thisVelocity.x = maxXVelocity;
-		}
-		if (thisVelocity.x < minXVelocity)
-		{
-			thisVelocity.x = minXVelocity;
-		}
-		if(thisVelocity.y > maxYVelocity)
-		{
-			thisVelocity.y = maxYVelocity;
-		}
-		if(thisVelocity.y < minYVelocity)
-		{
-			thisVelocity.y = minYVelocity;
-		}
-		rb.velocity = thisVelocity;
-		#endregion
 	}
 	private void Update()
 	{

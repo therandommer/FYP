@@ -1,43 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BaseObject : MonoBehaviour
 {
-	
-    [SerializeField] [Range(1,7)] //1-terrain, 2-Friendly, 3-Hazards, 4-Interactables, 5-Other, 6-Player, 7-Exit
-    int objectType = 0;
-    [SerializeField]
-    int objectValue = 1;
+	[SerializeField]
+	[Range(1, 7)] //1-terrain, 2-Friendly, 3-Hazards, 4-Interactables, 5-Other, 6-Player, 7-Exit
+	private int objectType = 0;
+	[SerializeField]
+	private int objectValue = 1;
 	[SerializeField]
 	int thisID = 0;
 	[SerializeField]
-	bool hasLoaded = false; //set to true if this is created while loading the scene
-    [SerializeField]
-    Vector3 defaultPosition = new Vector3(0,0,0);
-    [SerializeField]
-    BuildSettings build = null;
+	Vector3 defaultPosition = new Vector3(0, 0, 0);
+	[SerializeField]
+	BuildSettings build = null;
 	[SerializeField]
 	Pointer pointer = null;
 	[SerializeField]
 	TotalObjects parentObject = null;
 	GlobalController gc = null;
 
-	public BaseObject(bool _hasLoaded)
-	{
-		hasLoaded = _hasLoaded;
-	}
 	void Awake()
-    {
+	{
 		gc = FindObjectOfType<GlobalController>();
 		parentObject = FindObjectOfType<TotalObjects>();
 		pointer = FindObjectOfType<Pointer>();
-		if(!gc.GetIsLoading())
+		if (!gc.GetIsLoading())
 		{
 			SetID(pointer.GetHeldID());
 		}
 		build = FindObjectOfType<BuildSettings>();
-		if(objectType <=5)
+
+		if (objectType <= 5)
 		{
 			if (build.GetCurrentObjects(objectType) + objectValue <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
 			{
@@ -49,7 +42,6 @@ public class BaseObject : MonoBehaviour
 				Erase();
 			}
 		}
-		
 		if (objectType >= 6)
 		{
 			if (build.GetCurrentObjects(objectType) <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
@@ -62,7 +54,7 @@ public class BaseObject : MonoBehaviour
 				Erase();
 			}
 		}
-        defaultPosition = this.transform.position;
+		defaultPosition = transform.position;
 		//ensuring object is placed within bounds
 		if (defaultPosition.x < build.GetLevelSmallest().x || defaultPosition.y < build.GetLevelSmallest().y)
 		{
@@ -75,23 +67,23 @@ public class BaseObject : MonoBehaviour
 	}
 	private void OnCollisionEnter(Collision collision)
 	{
-		if(gc.GetIsBuilding())
+		if (gc.GetIsBuilding())
 		{
 			collision.gameObject.GetComponent<BaseObject>().Erase();
 		}
 	}
 	//will be called when player returns from gameplay to building
 	private void Reset()
-    {
-        this.transform.position = defaultPosition;
-    }
-    public void Erase()
-    {
+	{
+		transform.position = defaultPosition;
+	}
+	public void Erase()
+	{
 		//erase from arrays and whatnot
 		Debug.Log("Erase called");
-		build.IncrementObject(objectType, -objectValue); 
-        Destroy(this.gameObject);
-    }
+		build.IncrementObject(objectType, -objectValue);
+		Destroy(gameObject);
+	}
 	public Vector3 GetDefaultPosition() //in case an object has moved from its original spot, called when creating saves
 	{
 		return defaultPosition;

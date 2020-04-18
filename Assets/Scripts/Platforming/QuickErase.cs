@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class QuickErase : MonoBehaviour
 {
-	float defaultTimer = 0.1f;
-	[SerializeField]
-	float currentTimer = 0.0f;
 	[SerializeField]
 	bool hasDisabled = false;
 	[SerializeField]
-	bool timerSet = false;
+	bool isEnabledGameplay = true; //for colliders enabled during gameplay
 	[SerializeField]
 	BoxCollider2D box = null;
 	[SerializeField]
@@ -23,34 +20,30 @@ public class QuickErase : MonoBehaviour
     }
     void Update()
     {
-		if (gc.GetIsGameplay() && hasDisabled == false && timerSet == false)
+		if(isEnabledGameplay)
 		{
-			box.GetComponent<BoxCollider2D>().enabled = false;
-			currentTimer = defaultTimer;
-			timerSet = true;
+			if (gc.GetIsGameplay() && box.GetComponent<BoxCollider2D>().enabled == false) //enables during gameplay
+			{
+				box.GetComponent<BoxCollider2D>().enabled = true;
+			}
+			if (gc.GetIsBuilding() && box.GetComponent<BoxCollider2D>().enabled == true) //disabled during building
+			{
+				box.GetComponent<BoxCollider2D>().enabled = false;
+			}
 		}
-		if (currentTimer > 0.0f)
+		if(!isEnabledGameplay)
 		{
-			currentTimer -= Time.deltaTime;
-		}
-		if (gc.GetIsGameplay() && currentTimer <= 0.0f && hasDisabled == false && timerSet == true)
-		{
-			box.GetComponent<BoxCollider2D>().enabled = false;
-			hasDisabled = true;
-		}
-		if (gc.GetIsBuilding() && hasDisabled == true)
-		{
-			ResetThis();
-		}
-		if(gc.GetIsBuilding() && box.GetComponent<BoxCollider2D>().enabled == true) //ensures the box is disabled during building.
-		{
-			box.GetComponent<BoxCollider2D>().enabled = false;
+			if (isEnabledGameplay)
+			{
+				if (gc.GetIsGameplay() && box.GetComponent<BoxCollider2D>().enabled == true) //enables during gameplay
+				{
+					box.GetComponent<BoxCollider2D>().enabled = false;
+				}
+				if (gc.GetIsBuilding() && box.GetComponent<BoxCollider2D>().enabled == false) //enabled during building
+				{
+					box.GetComponent<BoxCollider2D>().enabled = true;
+				}
+			}
 		}
     }
-	void ResetThis()
-	{
-		hasDisabled = false;
-		timerSet = false;
-		currentTimer = 0.0f;
-	}
 }

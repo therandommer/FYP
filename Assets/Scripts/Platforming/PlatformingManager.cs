@@ -22,34 +22,34 @@ public class PlatformingManager : MonoBehaviour
 
 	#region References
 	[SerializeField]
-	GlobalController gc = null;
+	GlobalController gc;
 	[SerializeField]
-	BuildSettings build = null;
+	BuildSettings build;
 	[SerializeField]
-	Player player = null;
+	Player player;
 	#endregion
 
 	#region UI
 	[SerializeField]
-	TextMeshProUGUI scoreText = null;
+	TextMeshProUGUI scoreText;
 	[SerializeField]
-	TextMeshProUGUI coinText = null;
+	TextMeshProUGUI coinText;
 	[SerializeField]
-	TextMeshProUGUI timeText = null;
+	TextMeshProUGUI timeText;
 	[SerializeField]
-	TextMeshProUGUI healthText = null; //may end up changing to a bar or other graphic
+	TextMeshProUGUI healthText; //may end up changing to a bar or other graphic
 	#endregion
 
 	void Awake()
-    {
+	{
 		timeLeft = build.GetTime();
-    }
+	}
 
-    void Update()
-    {
+	void Update()
+	{
 		if (gc.GetIsGameplay()) //gameplay specific in here
 		{
-			if(!needReset) //allows for a reset when the player goes to gameplay
+			if (!needReset) //allows for a reset when the player goes to gameplay
 			{
 				needReset = true;
 			}
@@ -59,8 +59,9 @@ public class PlatformingManager : MonoBehaviour
 				player = FindObjectOfType<Player>();
 				needPlayer = false;
 			}
-			if(!hasInitialised) //initalises values for this script on play
+			if (!hasInitialised) //initalises values for this script on play
 			{
+				Debug.Log("Initialising");
 				player = null;
 				timeLeft = build.GetTime();
 				timeText.text = "Time: " + timeLeft;
@@ -68,13 +69,13 @@ public class PlatformingManager : MonoBehaviour
 				scoreText.text = "Score: " + score;
 				hasInitialised = true;
 			}
-			if(player == null)
+			if (player == null)
 			{
 				player = FindObjectOfType<Player>();
 			}
 			timeLeft -= Time.deltaTime;
 			roundedTime = Mathf.FloorToInt(timeLeft);
-			if(player != null)
+			if (player != null)
 			{
 				UpdateUI();
 			}
@@ -82,10 +83,10 @@ public class PlatformingManager : MonoBehaviour
 		if (gc.GetIsBuilding() && needReset) //resets, etc. here when entering building
 		{
 			ResetPlatformStats();
-		} 
-    }
+		}
+	}
 
-    #region setters and getters
+	#region setters and getters
 	public void UpdateUI()
 	{
 		coinText.text = "Coins: " + coins;
@@ -93,26 +94,26 @@ public class PlatformingManager : MonoBehaviour
 		timeText.text = "Time: " + roundedTime;
 		healthText.text = "Health: " + player.GetComponent<Player>().GetHealth() + "/" + player.GetComponent<Player>().GetMaxHealth();
 	}
-    public void IncrementCoins(int _amount)
-    {
-        coins += _amount;
-    }
-    public int GetCoins()
-    {
-        return coins;
-    }
-    public void IncrementScore(int _amount)
-    {
-        score += _amount;
-    }
-    public int GetScore()
-    {
-        return score;
-    }
-    public void ResetTime()
-    {
-        timeLeft = build.GetTime();
-    }
+	public void IncrementCoins(int _amount)
+	{
+		coins += _amount;
+	}
+	public int GetCoins()
+	{
+		return coins;
+	}
+	public void IncrementScore(int _amount)
+	{
+		score += _amount;
+	}
+	public int GetScore()
+	{
+		return score;
+	}
+	public void ResetTime()
+	{
+		timeLeft = build.GetTime();
+	}
 	public void ResetPlatformStats()
 	{
 		player = null;
@@ -127,5 +128,5 @@ public class PlatformingManager : MonoBehaviour
 	{
 		return needReset;
 	}
-    #endregion
+	#endregion
 }

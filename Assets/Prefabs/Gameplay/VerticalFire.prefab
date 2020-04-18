@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201810962362812334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.06, y: 6.57, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 201810963116336518}
@@ -48,9 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 3
-  objectValue: 0
+  objectValue: 1
   thisID: 0
-  hasLoaded: 0
   defaultPosition: {x: 0, y: 0, z: 0}
   build: {fileID: 0}
   pointer: {fileID: 0}
@@ -97,13 +96,9 @@ MonoBehaviour:
   hasActivated: 0
   initialFlip: 0
   isFacingForward: 1
-  isVertical: 1
   hasReachedMax: 1
   thisVelocity: {x: 0, y: 0, z: 0}
-  speed: 4
-  stopDelay: 2.5
   currentDelay: 0
-  maxCharges: 10
   currentCharges: 0
 --- !u!50 &201810962362812331
 Rigidbody2D:

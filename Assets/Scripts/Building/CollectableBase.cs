@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollectableBase : MonoBehaviour
 {
 	[SerializeField]
 	[Range(1, 3)]
-	int collectableType = 1;
+	readonly int collectableType = 1;
 	PlatformingManager platform;
 
 	private void Awake()
@@ -16,7 +14,7 @@ public class CollectableBase : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.gameObject.tag == "Player")
+		if (other.gameObject.tag == "Player")
 		{
 			CollectThis();
 		}
@@ -36,7 +34,7 @@ public class CollectableBase : MonoBehaviour
 		}
 	}
 	void Update()
-    {
-        
-    }
+	{
+
+	}
 }

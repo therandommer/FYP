@@ -55,22 +55,9 @@ MonoBehaviour:
   placedInteractables: 0
   placedOther: 0
   placedPlayer: 0
-  maxPlayer: 1
   placedExit: 0
-  maxExit: 1
-  placedDoors: 0
-  isLink1Available: 1
-  isLink2Available: 1
-  isLink3Available: 1
-  isLink4Available: 1
-  isLink5Available: 1
-  isClearConditionEnabled: 0
-  clearObject: {fileID: 0}
-  clearConditionRequired: 0
-  Doors: []
-  player: {fileID: 156034080728169251, guid: d5f965b541c9a5047996fe8f42f26b01, type: 3}
+  player: {fileID: 0}
   gc: {fileID: 1063021635103689790}
-  errorText: {fileID: 0}
   playerSpawnButton: {fileID: 0}
   exitButton: {fileID: 0}
 --- !u!114 &1063021635103689790
@@ -96,8 +83,6 @@ MonoBehaviour:
   GamePlayUI: {fileID: 0}
   PauseUI: {fileID: 0}
   buildButton: {fileID: 0}
-  toggle: {fileID: 0}
-  backgroundAudio: {fileID: 0}
   pointer: {fileID: 0}
 --- !u!114 &1435545458
 MonoBehaviour:
@@ -117,7 +102,7 @@ MonoBehaviour:
   score: 0
   gc: {fileID: 1063021635103689790}
   build: {fileID: 1063021635103689791}
-  player: {fileID: 0}
+  player: {fileID: 156034080728169251, guid: d5f965b541c9a5047996fe8f42f26b01, type: 3}
   scoreText: {fileID: 0}
   coinText: {fileID: 0}
   timeText: {fileID: 0}

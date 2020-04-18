@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
@@ -15,11 +13,11 @@ public class Coins : MonoBehaviour
 	[SerializeField]
 	bool hasCollected = false;
 	[SerializeField]
-	bool isSpecial = false; //gold coins are special, red aren't
+	private bool isSpecial = false; //gold coins are special, red aren't
 
 	// Start is called before the first frame update
 	void Start()
-    {
+	{
 		build = FindObjectOfType<BuildSettings>();
 		platform = FindObjectOfType<PlatformingManager>();
 		gc = FindObjectOfType<GlobalController>();
@@ -28,15 +26,15 @@ public class Coins : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.tag == "Player")
+		if (collision.tag == "Player")
 		{
 			hasCollected = true;
-			if(!isSpecial)
+			if (!isSpecial)
 			{
 				platform.IncrementCoins(1);
 				platform.IncrementScore(100);
 			}
-			else if(isSpecial)
+			else if (isSpecial)
 			{
 				platform.IncrementCoins(2);
 				platform.IncrementScore(500);
@@ -46,7 +44,7 @@ public class Coins : MonoBehaviour
 
 	// Update is called once per frame
 	void Update()
-    { 
+	{
 		if (!gc.GetIsBuilding() && hasCollected) //disables object when collected
 		{
 			sprite.enabled = false;

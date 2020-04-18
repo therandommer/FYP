@@ -122,10 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0f75f17349e24a912001fdb8e2cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 4
-  objectValue: 1
+  objectType: 3
+  objectValue: 0
   thisID: 0
-  hasLoaded: 0
   defaultPosition: {x: 0, y: 0, z: 0}
   build: {fileID: 0}
   pointer: {fileID: 0}

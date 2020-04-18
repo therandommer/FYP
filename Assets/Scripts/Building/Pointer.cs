@@ -26,8 +26,10 @@ public class Pointer : MonoBehaviour
 	Vector2 roundedLocation;
 	[SerializeField]
 	bool isLocationValid = true;
-    [SerializeField]
-    bool isHoveringInteractable = false;
+	[SerializeField]
+	bool isColliding = false;
+	[SerializeField]
+	bool isHoveringInteractable = false;
 	[SerializeField]
 	float buildDelay = 0.005f;
 	[SerializeField]
@@ -35,49 +37,51 @@ public class Pointer : MonoBehaviour
 	#endregion
 
 	void Start()
-    {
+	{
 		gc = FindObjectOfType<GlobalController>();
 		buildSettings = FindObjectOfType<BuildSettings>();
 		heldObject = gameObject.GetComponent<SpriteRenderer>();
 		baseColour = Color.white;
 		errorColour = Color.red;
 		isLocationValid = true;
-        isHoveringInteractable = false;
+		isHoveringInteractable = false;
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		DisablePlacement();
-        if(other.gameObject.tag == "Interactable")
-        {
-            isHoveringInteractable = true;
-        }
-        else if(other.gameObject.tag != "Interactable")
-        {
-            isHoveringInteractable = false;
-        }
-        if (Input.GetMouseButtonDown(1) && isHoveringInteractable)
-        {
-            other.SendMessage("AltInteraction");
-        }
+		isColliding = true;
+		if (other.gameObject.tag == "Interactable")
+		{
+			isHoveringInteractable = true;
+		}
+		else if (other.gameObject.tag != "Interactable")
+		{
+			isHoveringInteractable = false;
+		}
+		if (Input.GetMouseButtonDown(1) && isHoveringInteractable)
+		{
+			other.SendMessage("AltInteraction");
+		}
 		//Debug.Log("Entered trigger");
 		heldObject.color = errorColour;
 	}
 	private void OnTriggerStay2D(Collider2D other)
 	{
 		DisablePlacement();
-        if (other.gameObject.tag == "Interactable")
-        {
-            isHoveringInteractable = true;
-        }
-        else if (other.gameObject.tag != "Interactable")
-        {
-            isHoveringInteractable = false;
-        }
-        if (Input.GetMouseButtonDown(1) && isHoveringInteractable)
-        {
-            other.SendMessage("AltInteraction");
-        }
+		isColliding = true;
+		if (other.gameObject.tag == "Interactable")
+		{
+			isHoveringInteractable = true;
+		}
+		else if (other.gameObject.tag != "Interactable")
+		{
+			isHoveringInteractable = false;
+		}
+		if (Input.GetMouseButtonDown(1) && isHoveringInteractable)
+		{
+			other.SendMessage("AltInteraction");
+		}
 		//Debug.Log("Currently Colliding");
 		heldObject.color = errorColour;
 		if (Input.GetMouseButtonDown(2) || Input.GetMouseButton(2) && !isLocationValid)
@@ -99,38 +103,47 @@ public class Pointer : MonoBehaviour
 	}
 
 	void Update()
-    {
+	{
 		if (!gc.GetIsBuilding() || gc.GetIsPaused() && heldID != 16) //sets the cursor to a null object while in gameplay or paused
 		{
 			SetHeldID(16);
 			box.enabled = false;
 		}
-		if(gc.GetIsBuilding() && !gc.GetIsPaused() && heldID == 16)
+		if (gc.GetIsBuilding() && !gc.GetIsPaused() && heldID == 16)
 		{
 			SetHeldID(0);
 			box.enabled = true;
 		}
-		if(heldID == 6) //base colour needed for green water
+		if (heldID == 6) //base colour needed for green water
 		{
 			baseColour = new Color(0, 255, 0);
 		}
-		else if(heldID != 6) //every other object has white base colour
+		else if (heldID != 6) //every other object has white base colour
 		{
 			baseColour = Color.white;
 		}
-		if(heldID == 13) //player scaling
+		if (heldID == 13 || heldID == 9) //player scaling
 		{
 			transform.localScale = new Vector3(3, 3, 3);
 		}
-		else if(heldID != 13) //only player is scaled by 3x
+		else if (heldID != 13 || heldID != 9) //only player is scaled by 3x
 		{
 			transform.localScale = new Vector3(1, 1, 1);
 		}
-		if(currentBuildDelay>0.0f)
+		if (heldID == 9)
+		{
+			transform.rotation = Quaternion.Euler(0, 0, 90);
+		}
+		else if (heldID != 9) //fireball only one rotated
+		{
+			transform.rotation = Quaternion.Euler(0, 0, 0);
+		}
+
+		if (currentBuildDelay > 0.0f)
 		{
 			currentBuildDelay -= Time.deltaTime;
 		}
-		if(currentBuildDelay <= 0.0f && isLocationValid) //prevents most duplicate placements atm
+		if (currentBuildDelay <= 0.0f && isLocationValid) //prevents most duplicate placements atm
 		{
 			EnablePlacement();
 		}
@@ -138,13 +151,13 @@ public class Pointer : MonoBehaviour
 		//keeps objects to a grid based system
 		roundedLocation.x = Mathf.RoundToInt(pointingLocation.x);
 		roundedLocation.y = Mathf.RoundToInt(pointingLocation.y);
-		heldObject.sprite = placeableObjects[heldID].GetComponent<SpriteRenderer>().sprite; //displays sprite render to player
+		heldObject.sprite = placeableObjects[heldID].GetComponentInChildren<SpriteRenderer>().sprite; //displays sprite render to player
 		this.transform.position = roundedLocation;
-        if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) 
-        {
-            if (Input.GetMouseButton(0) && isLocationValid && heldID <= 14) //probably change this limitter later
-            {
-				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation,parentObject.transform);
+		if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+		{
+			if (Input.GetMouseButton(0) && isLocationValid && heldID <= 14) //probably change this limitter later
+			{
+				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation, parentObject.transform);
 				DisablePlacement();
 				currentBuildDelay = buildDelay;
 				if (heldID == 13 || heldID == 14) //reset to empty block after player is placed, prevents multiple spawns
@@ -152,26 +165,26 @@ public class Pointer : MonoBehaviour
 					SetHeldID(15); //allows player to specify next block
 				}
 				currentBuildDelay = buildDelay;
-            }  
-        }
+			}
+		}
 	}
-    #region setters and getters
-    public void SetHeldID(int _id)
-    {
-        heldID = _id;
-    }
+	#region setters and getters
+	public void SetHeldID(int _id)
+	{
+		heldID = _id;
+	}
 	public int GetHeldID()
 	{
 		return heldID;
 	}
-    public void DisablePlacement()
-    {
-        isLocationValid = false;
-    }
-    public void EnablePlacement()
-    {
-        isLocationValid = true;
-    }
+	public void DisablePlacement()
+	{
+		isLocationValid = false;
+	}
+	public void EnablePlacement()
+	{
+		isLocationValid = true;
+	}
 	public List<GameObject> GetPlaceableObjects()
 	{
 		return placeableObjects;
@@ -180,5 +193,5 @@ public class Pointer : MonoBehaviour
 	{
 		return errorColour;
 	}
-    #endregion
+	#endregion
 }

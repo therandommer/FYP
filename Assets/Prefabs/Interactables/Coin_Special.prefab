@@ -124,7 +124,6 @@ MonoBehaviour:
   objectType: 4
   objectValue: 1
   thisID: 0
-  hasLoaded: 0
   defaultPosition: {x: 0, y: 0, z: 0}
   build: {fileID: 0}
   pointer: {fileID: 0}

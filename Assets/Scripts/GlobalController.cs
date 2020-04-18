@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
@@ -41,9 +40,9 @@ public class GlobalController : MonoBehaviour
 
 	#region This Object
 	[SerializeField]
-	private Toggle toggle;
+	private readonly Toggle toggle;
 	[SerializeField]
-	private AudioSource backgroundAudio;
+	private readonly AudioSource backgroundAudio;
 	#endregion
 
 	#region References for saving/loading
@@ -110,7 +109,7 @@ public class GlobalController : MonoBehaviour
 		{
 			isLoading = true;
 			List<GameObject> objects = tO.GetObjectsInScene();
-			for(int i = 0; i < objects.Count; i++) //erases all placed objects in the scene
+			for (int i = 0; i < objects.Count; i++) //erases all placed objects in the scene
 			{
 				objects[i].GetComponent<BaseObject>().Erase();
 			}
@@ -147,36 +146,36 @@ public class GlobalController : MonoBehaviour
 		Application.Quit();
 	}
 	void Update()
-    {
+	{
 		if (Input.GetKeyDown(KeyCode.Escape) && isPaused == false)
 		{
 			SetIsPaused(true);
 		}
-		else if(Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
+		else if (Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
 		{
 			SetIsPaused(false);
 		}
-        if(needsUIUpdate)
+		if (needsUIUpdate)
 		{
-			if(isPaused)
+			if (isPaused)
 			{
 				PauseUI.SetActive(true);
-				if(!isGameplay)
+				if (!isGameplay)
 				{
 					buildButton.SetActive(false);
 				}
-				if(isGameplay)
+				if (isGameplay)
 				{
 					buildButton.SetActive(true);
 				}
 				//enable pause UI as an overlay
-				if(!buildClicked)
+				if (!buildClicked)
 				{
 					needsUIUpdate = false;
 				}
-				
+
 			}
-			if(isBuilding)
+			if (isBuilding)
 			{
 				buildClicked = false;
 				BuildUI.SetActive(true);
@@ -184,7 +183,7 @@ public class GlobalController : MonoBehaviour
 				//disable other UI elements, enable building canvas
 				needsUIUpdate = false;
 			}
-			if(isGameplay)
+			if (isGameplay)
 			{
 				buildClicked = false;
 				GamePlayUI.SetActive(true);
@@ -192,13 +191,13 @@ public class GlobalController : MonoBehaviour
 				//disable other UI elements, enable gameplay canvas
 				needsUIUpdate = false;
 			}
-			if(isSaving) //used for saving and loading
+			if (isSaving) //used for saving and loading
 			{
 				//save bar overlay, could be added. probably not needed
 			}
-			
+
 		}
-		if(isGameplay && !GamePlayUI.activeInHierarchy)
+		if (isGameplay && !GamePlayUI.activeInHierarchy)
 		{
 			GamePlayUI.SetActive(true);
 			BuildUI.SetActive(false);
@@ -208,7 +207,7 @@ public class GlobalController : MonoBehaviour
 			GamePlayUI.SetActive(false);
 			BuildUI.SetActive(true);
 		}
-		if(isGameplay && isBuilding)
+		if (isGameplay && isBuilding)
 		{
 			isGameplay = false;
 		}

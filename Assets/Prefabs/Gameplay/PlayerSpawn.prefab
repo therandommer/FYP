@@ -96,7 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 7896243883763922455}
   col: {fileID: 2871506867094793755}
-  player: {fileID: 156034080728169251, guid: d5f965b541c9a5047996fe8f42f26b01, type: 3}
 --- !u!114 &7857494956702061138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,8 +110,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectType: 6
   objectValue: 1
-  defaultPosition: {x: 0, y: 0}
+  thisID: 0
+  defaultPosition: {x: 0, y: 0, z: 0}
   build: {fileID: 0}
+  pointer: {fileID: 0}
+  parentObject: {fileID: 0}
 --- !u!61 &2871506867094793755
 BoxCollider2D:
   m_ObjectHideFlags: 0

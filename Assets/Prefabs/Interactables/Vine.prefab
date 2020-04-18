@@ -123,8 +123,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectType: 4
   objectValue: 1
-  defaultPosition: {x: 0, y: 0}
+  thisID: 0
+  defaultPosition: {x: 0, y: 0, z: 0}
   build: {fileID: 0}
+  pointer: {fileID: 0}
+  parentObject: {fileID: 0}
 --- !u!114 &8548847771846679848
 MonoBehaviour:
   m_ObjectHideFlags: 0

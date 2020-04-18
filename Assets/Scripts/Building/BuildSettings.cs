@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 /// <summary>
 /// This script keeps various values for gameplay stored in a convenient location.
@@ -22,32 +21,32 @@ public class BuildSettings : MonoBehaviour
 	[Header("Level Limiters")]
 	[SerializeField]
 	Vector2 levelLimits; //will need to set min and max to this
-	Vector2 minBaseLevelLimits = new Vector2Int(0,0);
-	Vector2 maxBaseLevelLimits = new Vector2Int(512,256);
-	Vector2 maxModifiedLevelLimits = new Vector2Int(512,256); //when player determines how long the level is
+	Vector2 minBaseLevelLimits = new Vector2Int(0, 0);
+	Vector2 maxBaseLevelLimits = new Vector2Int(512, 256);
+	Vector2 maxModifiedLevelLimits = new Vector2Int(512, 256); //when player determines how long the level is
 	[SerializeField]
 	int placedTerrain = 0;
-	int maxTerrain = 2048;
+	readonly int maxTerrain = 2048;
 	[SerializeField]
 	int placedFriendly = 0;
-	int maxFriendly = 256;
+	readonly int maxFriendly = 256;
 	[SerializeField]
 	int placedHazards = 0;
-	int maxHazards = 512;
+	readonly int maxHazards = 512;
 	[SerializeField]
 	int placedInteractables = 0;
-	int maxInteractables = 1024;
+	readonly int maxInteractables = 1024;
 	[SerializeField]
 	int placedOther = 0;
-	int maxOther = 1024;
-    [SerializeField]
-    int placedPlayer = 0;
+	readonly int maxOther = 1024;
 	[SerializeField]
-	int maxPlayer = 1;
+	int placedPlayer = 0;
+	[SerializeField]
+	readonly int maxPlayer = 1;
 	[SerializeField]
 	int placedExit = 0;
 	[SerializeField]
-	int maxExit = 1;
+	readonly int maxExit = 1;
 	#region door stuff
 	/*
     [SerializeField]
@@ -67,28 +66,26 @@ public class BuildSettings : MonoBehaviour
 	#endregion
 	[Space(10)]
 	[SerializeField]
-	bool isClearConditionEnabled = false; //if true then restrict end point access till following completed
+	readonly bool isClearConditionEnabled = false; //if true then restrict end point access till following completed
 	[SerializeField]
-	GameObject clearObject; //need a reference to a type of object, so they can be taken when the level is played.
+	readonly GameObject clearObject; //need a reference to a type of object, so they can be taken when the level is played.
 	[SerializeField]
-	int clearConditionRequired = 0; //this will probably change
+	readonly int clearConditionRequired = 0; //this will probably change
 	#endregion
 
 	#region User Settings
 	[Header("User Settings")]
 	[Space(10)]
-	List<GameObject> Favourites = new List<GameObject>(); //save the player prefered tiles here
+	readonly List<GameObject> Favourites = new List<GameObject>(); //save the player prefered tiles here
 	#endregion
 
 	#region Object lists/error UI
 	/*[SerializeField]
 	List<GameObject> Doors = new List<GameObject>(); //used to link positions */
 	[SerializeField]
-	Player player = null; //hold the reference to the player object
+	Player player; //hold the reference to the player object
 	[SerializeField]
 	GlobalController gc = null;
-	[SerializeField]
-	TextMeshProUGUI errorText = null;
 	[SerializeField]
 	Button playerSpawnButton = null;
 	[SerializeField]
@@ -96,13 +93,13 @@ public class BuildSettings : MonoBehaviour
 	#endregion
 
 	#region Setters and Getters
-	public void IncrementObject(int _type,int _amount)
+	public void IncrementObject(int _type, int _amount)
 	{
-		switch(_type)
+		switch (_type)
 		{
 			case 1:
-                placedTerrain += _amount;
-                break;
+				placedTerrain += _amount;
+				break;
 			case 2:
 				placedFriendly += _amount;
 				break;
@@ -115,12 +112,12 @@ public class BuildSettings : MonoBehaviour
 			case 5:
 				placedOther += _amount;
 				break;
-            case 6:
-                placedPlayer += _amount;
-                break;
-            case 7:
-                placedExit += _amount;
-                break;
+			case 6:
+				placedPlayer += _amount;
+				break;
+			case 7:
+				placedExit += _amount;
+				break;
 			/*case 8:
 				placedDoors += _amount;
 				break;*/
@@ -128,54 +125,54 @@ public class BuildSettings : MonoBehaviour
 				break;
 		}
 	}
-    public int GetMaxObjects(int _type)
-    {
-        switch(_type)
-        {
-            case 1:
-                return maxTerrain;
-            case 2:
-                return maxFriendly;
-            case 3:
-                return maxHazards;
-            case 4:
-                return maxInteractables;
-            case 5:
-                return maxOther;
-            case 6:
-                return maxPlayer;
-			case 7:
-				return maxExit;
-            default:
-                break;
-        }
-        Debug.Log("Object incorrectly defined");
-        return 0;
-    }
-    public int GetCurrentObjects(int _type)
-    {
-        switch(_type)
-        {
-            case 1:
-                return placedTerrain;
-            case 2:
-                return placedFriendly;
-            case 3:
-                return placedHazards;
-            case 4:
-                return placedInteractables;
-            case 5:
-                return placedOther;
-            case 6:
-                return placedPlayer;
+	public int GetMaxObjects(int _type)
+	{
+		switch (_type)
+		{
+			case 1:
+				return maxTerrain;
+			case 2:
+				return maxFriendly;
+			case 3:
+				return maxHazards;
+			case 4:
+				return maxInteractables;
+			case 5:
+				return maxOther;
+			case 6:
+				return maxPlayer;
 			case 7:
 				return maxExit;
 			default:
 				break;
-        }
-        Debug.Log("Object incorrectly defined");
-        return 0;
-    }
+		}
+		Debug.Log("Object incorrectly defined");
+		return 0;
+	}
+	public int GetCurrentObjects(int _type)
+	{
+		switch (_type)
+		{
+			case 1:
+				return placedTerrain;
+			case 2:
+				return placedFriendly;
+			case 3:
+				return placedHazards;
+			case 4:
+				return placedInteractables;
+			case 5:
+				return placedOther;
+			case 6:
+				return placedPlayer;
+			case 7:
+				return maxExit;
+			default:
+				break;
+		}
+		Debug.Log("Object incorrectly defined");
+		return 0;
+	}
 	public void ResetAllObjects()
 	{
 		placedTerrain = 0;
@@ -192,10 +189,10 @@ public class BuildSettings : MonoBehaviour
 		bool isLink3Available = true;
 		bool isLink4Available = true;
 		bool isLink5Available = true;*/
-}
+	}
 	public void SetPlayerSpawn(Vector2 _newSpawn)
 	{
-		if(_newSpawn.x > minBaseLevelLimits.x && _newSpawn.y > minBaseLevelLimits.y &&
+		if (_newSpawn.x > minBaseLevelLimits.x && _newSpawn.y > minBaseLevelLimits.y &&
 			_newSpawn.x < maxBaseLevelLimits.x && _newSpawn.y < maxBaseLevelLimits.y)
 		{
 			playerSpawnPoint = _newSpawn;
@@ -207,11 +204,11 @@ public class BuildSettings : MonoBehaviour
 	}
 	public void SetLevelLimitX(int _x)
 	{
-		if(_x<minBaseLevelLimits.x)
+		if (_x < minBaseLevelLimits.x)
 		{
 			levelLimits.x = minBaseLevelLimits.x;
 		}
-		if(_x>maxBaseLevelLimits.x)
+		if (_x > maxBaseLevelLimits.x)
 		{
 			levelLimits.x = maxBaseLevelLimits.x;
 		}
@@ -270,38 +267,34 @@ public class BuildSettings : MonoBehaviour
 
 	#endregion
 
-	void Awake()
-    {
-		errorText.enabled = false;
-    }
-
-    void Update()
-    {
-		if(!gc.GetIsBuilding() && placedPlayer != maxPlayer) //player required first
+	void Update()
+	{
+		//come back to this when error text is enabled properly
+		/*if (!gc.GetIsBuilding() && placedPlayer != maxPlayer) //player required first
 		{
 			errorText.text = "Need to place a player to play!";
 			gc.SetIsBuilding(true);
 		}
-		if(!gc.GetIsBuilding() && placedExit != maxExit) //exit required next
+		if (!gc.GetIsBuilding() && placedExit != maxExit) //exit required next
 		{
 			errorText.text = "Need to place an exit to play!";
 			gc.SetIsBuilding(true);
-		}
-		if(!gc.GetIsBuilding() && placedPlayer == maxPlayer && !GetPlayerSpawned()) //sets initial player spawn point
+		}*/
+		if (!gc.GetIsBuilding() && placedPlayer == maxPlayer && !GetPlayerSpawned()) //sets initial player spawn point
 		{
 			Vector3 tmp = new Vector3(playerSpawnPoint.x, playerSpawnPoint.y, 0);
-			Instantiate(player, tmp,this.transform.rotation,this.gameObject.transform);
+			Instantiate(player, tmp, transform.rotation, gameObject.transform);
 			playerSpawned = true;
 		}
-		if(gc.GetIsBuilding() && placedPlayer == maxPlayer && playerSpawnButton.enabled == true)
+		if (gc.GetIsBuilding() && placedPlayer == maxPlayer && playerSpawnButton.enabled == true)
 		{
 			playerSpawnButton.enabled = false;
 		}
-		else if(gc.GetIsBuilding() && placedPlayer != maxPlayer && playerSpawnButton.enabled == false)
+		else if (gc.GetIsBuilding() && placedPlayer != maxPlayer && playerSpawnButton.enabled == false)
 		{
 			playerSpawnButton.enabled = true;
 		}
-		if(gc.GetIsBuilding() && placedExit == maxExit && exitButton.enabled == true)
+		if (gc.GetIsBuilding() && placedExit == maxExit && exitButton.enabled == true)
 		{
 			exitButton.enabled = false;
 		}
@@ -315,84 +308,84 @@ public class BuildSettings : MonoBehaviour
 			playerSpawned = false;
 		}
 	}
-    ///not used right now
-    #region doors 
-    //setting which links can be used by the player, used to set the default links for each object
-   /* public void CheckLinks()
-	{
-		int tmp1 = 0;
-		int tmp2 = 0;
-		int tmp3 = 0;
-		int tmp4 = 0;
-		int tmp5 = 0;
-		for (int i = 0; i < GetDoorList().Count; i++)
-		{
-			switch (GetDoorList()[i].GetComponent<Door>().GetLinkNo())
-			{
-				case 1:
-					tmp1++;
-					if (tmp1 > 2)
-					{
-						isLink1Available = false;
+	///not used right now
+	#region doors 
+	//setting which links can be used by the player, used to set the default links for each object
+	/* public void CheckLinks()
+	 {
+		 int tmp1 = 0;
+		 int tmp2 = 0;
+		 int tmp3 = 0;
+		 int tmp4 = 0;
+		 int tmp5 = 0;
+		 for (int i = 0; i < GetDoorList().Count; i++)
+		 {
+			 switch (GetDoorList()[i].GetComponent<Door>().GetLinkNo())
+			 {
+				 case 1:
+					 tmp1++;
+					 if (tmp1 > 2)
+					 {
+						 isLink1Available = false;
 
-					}
-					break;
-				case 2:
-					tmp2++;
-					if (tmp2 > 2)
-					{
-						isLink2Available = false;
+					 }
+					 break;
+				 case 2:
+					 tmp2++;
+					 if (tmp2 > 2)
+					 {
+						 isLink2Available = false;
 
-					}
-					break;
-				case 3:
-					tmp3++;
-					if (tmp3 > 2)
-					{
-						isLink3Available = false;
+					 }
+					 break;
+				 case 3:
+					 tmp3++;
+					 if (tmp3 > 2)
+					 {
+						 isLink3Available = false;
 
-					}
-					break;
-				case 4:
-					tmp4++;
-					if (tmp4 > 2)
-					{
-						isLink4Available = false;
+					 }
+					 break;
+				 case 4:
+					 tmp4++;
+					 if (tmp4 > 2)
+					 {
+						 isLink4Available = false;
 
-					}
-					break;
-				case 5:
-					tmp5++;
-					if (tmp5 > 2)
-					{
-						isLink5Available = false;
+					 }
+					 break;
+				 case 5:
+					 tmp5++;
+					 if (tmp5 > 2)
+					 {
+						 isLink5Available = false;
 
-					}
-					break;
-				default:
-					break;
-			}
-			if(isLink1Available)
-			{
-				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(1);
-			}
-			if (isLink2Available)
-			{
-				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(2);
-			}
-			if (isLink3Available)
-			{
-				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(3);
-			}
-			if (isLink4Available)
-			{
-				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(4);
-			}
-			if (isLink5Available)
-			{
-				GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(5);
-			}
-		}
-	} */
+					 }
+					 break;
+				 default:
+					 break;
+			 }
+			 if(isLink1Available)
+			 {
+				 GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(1);
+			 }
+			 if (isLink2Available)
+			 {
+				 GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(2);
+			 }
+			 if (isLink3Available)
+			 {
+				 GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(3);
+			 }
+			 if (isLink4Available)
+			 {
+				 GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(4);
+			 }
+			 if (isLink5Available)
+			 {
+				 GetDoorList()[i].GetComponent<Door>().SetDoorlinkNo(5);
+			 }
+		 }
+	 } */
 	#endregion //not used right now, keeping for 
 }

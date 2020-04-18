@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EndGoal : MonoBehaviour
 {
@@ -8,25 +6,25 @@ public class EndGoal : MonoBehaviour
 
 	bool isFinished = false;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
+	// Start is called before the first frame update
+	void Awake()
+	{
 		gc = FindObjectOfType<GlobalController>().GetComponent<GlobalController>();
-    }
+	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.tag == "Player")
+		if (collision.tag == "Player")
 		{
 			Debug.Log("Finished the game");
 			isFinished = true;
-			
+
 		}
-		if(isFinished)
+		if (isFinished)
 		{
 			gc.SetIsGameplay(false);
 			gc.SetIsBuilding(true);
 			collision.SendMessage("Erase"); //replace with victory animation, which erases the player
-			//do end goal animation or something here
+											//do end goal animation or something here
 		}
 	}
 }
