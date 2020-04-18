@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Background : MonoBehaviour
 {
 	[SerializeField]
-	readonly List<Sprite> backgrounds = new List<Sprite>(); //holds potential backgrounds for player to choose
+	private List<Sprite> backgrounds = new List<Sprite>(); //holds potential backgrounds for player to choose
 	int activeBackground = 0;
 	[SerializeField]
 	SpriteRenderer sprite = null;

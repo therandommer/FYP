@@ -5,8 +5,6 @@ using UnityEngine;
 public class QuickErase : MonoBehaviour
 {
 	[SerializeField]
-	bool hasDisabled = false;
-	[SerializeField]
 	bool isEnabledGameplay = true; //for colliders enabled during gameplay
 	[SerializeField]
 	BoxCollider2D box = null;

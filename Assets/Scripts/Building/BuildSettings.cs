@@ -66,8 +66,6 @@ public class BuildSettings : MonoBehaviour
 	#endregion
 	[Space(10)]
 	[SerializeField]
-	readonly bool isClearConditionEnabled = false; //if true then restrict end point access till following completed
-	[SerializeField]
 	readonly GameObject clearObject; //need a reference to a type of object, so they can be taken when the level is played.
 	[SerializeField]
 	readonly int clearConditionRequired = 0; //this will probably change
@@ -83,7 +81,7 @@ public class BuildSettings : MonoBehaviour
 	/*[SerializeField]
 	List<GameObject> Doors = new List<GameObject>(); //used to link positions */
 	[SerializeField]
-	Player player; //hold the reference to the player object
+	Player player = null; //hold the reference to the player object
 	[SerializeField]
 	GlobalController gc = null;
 	[SerializeField]

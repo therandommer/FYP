@@ -26,11 +26,9 @@ public class Player : MonoBehaviour
 	bool isFacingRight = true;
 	[SerializeField]
 	bool isNormalJump = true; //if the player can move while not grounded
-#pragma warning disable 219 //219 is the error for unused variables
 	[SerializeField]
 	float moveHorizontal = 0; //actually used in code later on
 	float moveVertical = 0;
-#pragma warning restore 219
 	[SerializeField]
 	Vector2 movementVector = new Vector2();
 	[SerializeField]
@@ -71,6 +69,7 @@ public class Player : MonoBehaviour
 		gc = FindObjectOfType<GlobalController>();
 		build = FindObjectOfType<BuildSettings>();
 		rb = GetComponent<Rigidbody2D>();
+		moveHorizontal = moveVertical; //gets compiler to be quiet about these values
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
