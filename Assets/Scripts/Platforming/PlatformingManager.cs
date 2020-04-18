@@ -61,7 +61,6 @@ public class PlatformingManager : MonoBehaviour
 			}
 			if (!hasInitialised) //initalises values for this script on play
 			{
-				Debug.Log("Initialising");
 				player = null;
 				timeLeft = build.GetTime();
 				timeText.text = "Time: " + timeLeft;

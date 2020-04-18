@@ -102,7 +102,7 @@ MonoBehaviour:
   score: 0
   gc: {fileID: 1063021635103689790}
   build: {fileID: 1063021635103689791}
-  player: {fileID: 156034080728169251, guid: d5f965b541c9a5047996fe8f42f26b01, type: 3}
+  player: {fileID: 0}
   scoreText: {fileID: 0}
   coinText: {fileID: 0}
   timeText: {fileID: 0}
