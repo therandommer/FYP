@@ -88,6 +88,10 @@ public class BaseObject : MonoBehaviour
 	{
 		return defaultPosition;
 	}
+	public int GetObjectType()
+	{
+		return objectType;
+	}
 	public int GetID()
 	{
 		return thisID;

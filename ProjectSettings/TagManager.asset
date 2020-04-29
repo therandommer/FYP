@@ -12,6 +12,7 @@ TagManager:
   - Liquid
   - Coins
   - Hazard
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 3394337082289513278, guid: 68ee4ec9d78aeba4aa6cb2e1543677c4, type: 3}
   - {fileID: 3965084131876845116, guid: c5faf648d2480724c837a82e1f3ea5e0, type: 3}
   - {fileID: 201810962362812334, guid: a5c2c898b2d24b249a006a8b880b9caf, type: 3}
-  - {fileID: 201810962362812334, guid: a5c2c898b2d24b249a006a8b880b9caf, type: 3}
+  - {fileID: 5691263004764584103, guid: 64d95cafbdb4b8349967e06e443841f3, type: 3}
   - {fileID: 201810962362812334, guid: a5c2c898b2d24b249a006a8b880b9caf, type: 3}
   - {fileID: 201810962362812334, guid: a5c2c898b2d24b249a006a8b880b9caf, type: 3}
   - {fileID: 7896243883763922457, guid: c89a069b1c884ea4294e0e467e083cc0, type: 3}
@@ -76,7 +76,6 @@ MonoBehaviour:
   pointingLocation: {x: 0, y: 0}
   roundedLocation: {x: 0, y: 0}
   isLocationValid: 0
-  isColliding: 0
   isHoveringInteractable: 0
   buildDelay: 0.1
   currentBuildDelay: 0
