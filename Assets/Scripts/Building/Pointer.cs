@@ -118,15 +118,15 @@ public class Pointer : MonoBehaviour
 		{
 			baseColour = Color.white;
 		}
-		if (heldID == 13 || heldID == 9) //player scaling
+		if (heldID == 13 || heldID == 9 || heldID == 10) //player,etc. scaling
 		{
 			transform.localScale = new Vector3(3, 3, 3);
 		}
-		else if (heldID != 13 || heldID != 9) //only player is scaled by 3x
+		else if (heldID != 13 && heldID != 9 && heldID != 10) //only certain objects are scaled by 3x
 		{
 			transform.localScale = new Vector3(1, 1, 1);
 		}
-		if (heldID == 9)
+		if (heldID == 9) //certain objects need rotating, eg. Fireball
 		{
 			transform.rotation = Quaternion.Euler(0, 0, 90);
 		}
@@ -139,7 +139,7 @@ public class Pointer : MonoBehaviour
 		{
 			currentBuildDelay -= Time.deltaTime;
 		}
-		if (currentBuildDelay <= 0.0f && isLocationValid) //prevents most duplicate placements atm
+		if (currentBuildDelay <= 0.0f && isLocationValid) //prevents most duplicate placements
 		{
 			EnablePlacement();
 		}

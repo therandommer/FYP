@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
 	Rigidbody2D rb = null;
 	#endregion
 
+	Animator anim = null;
 	GlobalController gc = null;
 	BuildSettings build = null;
 	[SerializeField]
@@ -66,6 +67,7 @@ public class Player : MonoBehaviour
 	private void Awake()
 	{
 		health = maxHealth;
+		anim = GetComponent<Animator>();
 		gc = FindObjectOfType<GlobalController>();
 		build = FindObjectOfType<BuildSettings>();
 		rb = GetComponent<Rigidbody2D>();
@@ -88,6 +90,7 @@ public class Player : MonoBehaviour
 		{
 			isNormalJump = true;
 			isGrounded = true;
+			anim.SetBool("isGrounded", true);
 		}
 	}
 	private void FixedUpdate()
@@ -101,6 +104,11 @@ public class Player : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 			{
 				isGrounded = true;
+				anim.SetBool("isGrounded", true);
+			}
+			else
+			{
+				anim.SetBool("isGrounded", false); //help prevent animation short loops
 			}
 		}
 		///modifying movement vector based on input
@@ -116,11 +124,13 @@ public class Player : MonoBehaviour
 				{
 					moveVertical = Input.GetAxis("Jump") * jumpForce;
 					isGrounded = false;
+					anim.SetBool("isGrounded", false);
 				}
 				if (isNormalJump && Input.GetAxis("Vertical") > 0 && isGrounded)
 				{
 					moveVertical = Input.GetAxis("Vertical") * jumpForce;
 					isGrounded = false;
+					anim.SetBool("isGrounded", false);
 				}
 			}
 			movementVector = new Vector2(moveHorizontal, moveVertical);
@@ -136,6 +146,14 @@ public class Player : MonoBehaviour
 			if (movementVector.x > 10.0f)
 			{
 				movementVector.x = 10.0f;
+			}
+			if(movementVector.x != 0)
+			{
+				anim.SetBool("isWalking", true);
+			}
+			else
+			{
+				anim.SetBool("isWalking", false);
 			}
 			rb.AddForce(movementVector);
 			moveVertical = 0.0f;
@@ -194,6 +212,17 @@ public class Player : MonoBehaviour
 			{
 				isPowered = false;
 				currentITime = maxITime;
+			}
+		}
+	}
+	public void Heal (int _amount)
+	{
+		if(health < maxHealth)
+		{
+			health += _amount;
+			if(health > maxHealth)
+			{
+				health = maxHealth;
 			}
 		}
 	}

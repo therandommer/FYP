@@ -13,7 +13,13 @@ public class Coins : MonoBehaviour
 	[SerializeField]
 	bool hasCollected = false;
 	[SerializeField]
-	private bool isSpecial = false; //gold coins are special, red aren't
+	private int coinValue = 1;
+	[SerializeField]
+	private bool isHealth = false;
+	[SerializeField]
+	private int healthValue = 1;
+	[SerializeField]
+	private int scoreValue = 100;
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,16 +35,15 @@ public class Coins : MonoBehaviour
 		if (collision.tag == "Player")
 		{
 			hasCollected = true;
-			if (!isSpecial)
+			if (!isHealth)
 			{
-				platform.IncrementCoins(1);
-				platform.IncrementScore(100);
+				platform.IncrementCoins(coinValue);
 			}
-			else if (isSpecial)
+			if(isHealth)
 			{
-				platform.IncrementCoins(2);
-				platform.IncrementScore(500);
+				collision.gameObject.SendMessage("Heal", healthValue);
 			}
+			platform.IncrementScore(scoreValue);
 		}
 	}
 
