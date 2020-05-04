@@ -2,6 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 /// <summary>
 /// This script keeps a track of all the states that the game will go through.
@@ -52,6 +53,7 @@ public class GlobalController : MonoBehaviour
 	[SerializeField]
 	Pointer pointer = null;
 	Background bG = null;
+	string saveString = "Assets/SaveGames/";
 	#endregion
 
 	private void Awake()
@@ -82,19 +84,22 @@ public class GlobalController : MonoBehaviour
 		//could save the limits for each block later
 		return save;
 	}
-	public void SaveGame()
+	public void SaveGame(string affix)
 	{
 		isSaving = true;
+		if(!Directory.Exists (saveString))
+		{
+			Directory.CreateDirectory(saveString);
+		}
 		SaveGame save = CreateSaveGameObject(); //getting the data for the save
 		BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Create(Application.persistentDataPath + "/SaveData.a"); //creating file name
+		FileStream file = File.Create(saveString + "/SaveData" + affix + ".a"); //creating file name
 		Debug.Log(file);
 		bf.Serialize(file, save); //mounting the data to the file
 		file.Close();
-
+		AssetDatabase.Refresh();
 		///can do some cleanup if needed, probably display something to the player?
 		Debug.Log("Game Saved");
-		System.Diagnostics.Process.Start("explorer.exe", (true ? "/root," : "/select,") + Application.dataPath + "/SaveData.a");
 		//Application.OpenURL(Application.dataPath + "/SaveData.a");
 		isSaving = false;
 	}
@@ -103,9 +108,11 @@ public class GlobalController : MonoBehaviour
 		build.ResetAllObjects();
 		tO.DestroyAll();
 	}
-	public void LoadGame()
+	public void LoadGame(string affix)
 	{
-		if (File.Exists(Application.persistentDataPath + "/SaveData.a")) //game save data must exist for this to read
+		Debug.Log("Reached load");
+		//if (File.Exists(Application.persistentDataPath + "/SaveData.a")) //game save data must exist for this to read
+		if (File.Exists(saveString + "SaveData" + affix + ".a"))
 		{
 			isLoading = true;
 			List<GameObject> objects = tO.GetObjectsInScene();
@@ -114,8 +121,8 @@ public class GlobalController : MonoBehaviour
 				objects[i].GetComponent<BaseObject>().Erase();
 			}
 			BinaryFormatter bf = new BinaryFormatter();
-			FileStream file = File.Open(Application.persistentDataPath + "/SaveData.a", FileMode.Open);
-			Debug.Log("File loaded from: " + Application.persistentDataPath + "/SaveData.a");
+			FileStream file = File.Open(saveString + "/SaveData" + affix + ".a", FileMode.Open);
+			Debug.Log("File loaded from: " + saveString + "/SaveData" + affix + ".a");
 			SaveGame save = (SaveGame)bf.Deserialize(file); //creates the save object based on the data read from the file
 			file.Close();
 
