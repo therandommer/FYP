@@ -65,13 +65,15 @@ MonoBehaviour:
   - {fileID: 3394337082289513278, guid: 68ee4ec9d78aeba4aa6cb2e1543677c4, type: 3}
   - {fileID: 3965084131876845116, guid: c5faf648d2480724c837a82e1f3ea5e0, type: 3}
   - {fileID: 201810962362812334, guid: a5c2c898b2d24b249a006a8b880b9caf, type: 3}
-  - {fileID: 5691263004764584103, guid: 64d95cafbdb4b8349967e06e443841f3, type: 3}
+  - {fileID: 257007732203895023, guid: bcebf6d414d29644facc5bd2c09d0801, type: 3}
   - {fileID: 7318223281981087711, guid: 69e5078c27ce3d644b1928b4cd20764d, type: 3}
   - {fileID: 7730871886183250298, guid: e02a57dabcbced14d8f031036b48031c, type: 3}
   - {fileID: 7896243883763922457, guid: c89a069b1c884ea4294e0e467e083cc0, type: 3}
   - {fileID: 8872567504576921221, guid: 3aa238ba1a1d08843860fd58075fdb9d, type: 3}
   - {fileID: 2530169104351001003, guid: fa00c575a3731e14da6fbf298e6ba7bc, type: 3}
   - {fileID: 2530169104351001003, guid: fa00c575a3731e14da6fbf298e6ba7bc, type: 3}
+  - {fileID: 8958838665501196508, guid: cd0c311ca6a18f34f9aa155487f9c3d4, type: 3}
+  - {fileID: 8905114526164932192, guid: 64d95cafbdb4b8349967e06e443841f3, type: 3}
   heldID: 0
   pointingLocation: {x: 0, y: 0}
   roundedLocation: {x: 0, y: 0}
@@ -79,6 +81,7 @@ MonoBehaviour:
   isHoveringInteractable: 0
   buildDelay: 0.1
   currentBuildDelay: 0
+  isErasing: 0
 --- !u!212 &5766196322548864221
 SpriteRenderer:
   m_ObjectHideFlags: 0

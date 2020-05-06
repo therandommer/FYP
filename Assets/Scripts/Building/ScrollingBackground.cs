@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScrollingBackground : MonoBehaviour
 {
 	[SerializeField]
-	private Transform centerBackground;
+	private Transform centerBackground = null;
 	[SerializeField]
 	private float offset = 30.68f;
     void Update()

@@ -17,12 +17,13 @@ public class AIMovement : MonoBehaviour
 	private bool isDefeated = false;
 	private GlobalController gc;
 	[SerializeField]
-	private BaseObject thisObject; //link to self in prefab
+	private BaseObject thisObject = null; //link to self in prefab
 	[SerializeField]
-	private Rigidbody2D rb;
+	private Rigidbody2D rb = null;
 
 	private void Start()
 	{
+		rb = GetComponent<Rigidbody2D>();
 		gc = FindObjectOfType<GlobalController>();
 	}
 	private void Awake()

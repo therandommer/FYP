@@ -9,6 +9,7 @@ public class Pointer : MonoBehaviour
 	GlobalController gc;
 	[SerializeField]
 	BoxCollider2D box = null;
+	Vector3 boxSize = new Vector3(0, 0, 0); //default size to prevent large placement when not necessary
 	#region held Object
 	[SerializeField]
 	SpriteRenderer heldObject = null;
@@ -32,11 +33,14 @@ public class Pointer : MonoBehaviour
 	float buildDelay = 0.005f;
 	[SerializeField]
 	float currentBuildDelay;
+	[SerializeField]
+	bool isErasing = false; //only used for the erase button function, not middle click erase
 	#endregion
 
 	void Start()
 	{
 		gc = FindObjectOfType<GlobalController>();
+		boxSize = box.size; 
 		buildSettings = FindObjectOfType<BuildSettings>();
 		heldObject = gameObject.GetComponent<SpriteRenderer>();
 		baseColour = Color.white;
@@ -118,13 +122,15 @@ public class Pointer : MonoBehaviour
 		{
 			baseColour = Color.white;
 		}
-		if (heldID == 13 || heldID == 9 || heldID == 10) //player,etc. scaling
+		if (heldID == 13 || heldID == 9 || heldID == 10 || heldID == 18) //player,etc. scaling
 		{
 			transform.localScale = new Vector3(3, 3, 3);
+			box.size = boxSize;
 		}
-		else if (heldID != 13 && heldID != 9 && heldID != 10) //only certain objects are scaled by 3x
+		else if (heldID != 13 && heldID != 9 && heldID != 10 && heldID != 18) //only certain objects are scaled by 3x
 		{
 			transform.localScale = new Vector3(1, 1, 1);
+			box.size = boxSize;
 		}
 		if (heldID == 9) //certain objects need rotating, eg. Fireball
 		{
@@ -151,7 +157,7 @@ public class Pointer : MonoBehaviour
 		this.transform.position = roundedLocation;
 		if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
 		{
-			if (Input.GetMouseButton(0) && isLocationValid && heldID <= 14) //probably change this limitter later
+			if (Input.GetMouseButton(0) && isLocationValid && gc.GetIsBuilding() && !gc.GetIsPaused()) 
 			{
 				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation, parentObject.transform);
 				DisablePlacement();
