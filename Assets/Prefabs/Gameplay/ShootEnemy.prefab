@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 2
-  bullet: {fileID: 0}
+  bullet: {fileID: 534119052105196965, guid: 928a159e2770ffb4e99672a4383ae5bd, type: 3}
 --- !u!1 &7484260516769719117
 GameObject:
   m_ObjectHideFlags: 0
