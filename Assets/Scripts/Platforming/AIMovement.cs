@@ -21,12 +21,12 @@ public class AIMovement : MonoBehaviour
 	[SerializeField]
 	private Rigidbody2D rb = null;
 
-	private void Start()
+	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		gc = FindObjectOfType<GlobalController>();
 	}
-	private void Awake()
+	private void Start()
 	{
 		rb.simulated = false;
 		this.transform.localScale = new Vector3(3, 3, 3); //sets to correct scale once awakened

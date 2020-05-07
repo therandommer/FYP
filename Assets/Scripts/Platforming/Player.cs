@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
 		build = FindObjectOfType<BuildSettings>();
 		rb = GetComponent<Rigidbody2D>();
 		moveHorizontal = moveVertical; //gets compiler to be quiet about these values
+		whatIsGround = LayerMask.GetMask("Floor");
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{

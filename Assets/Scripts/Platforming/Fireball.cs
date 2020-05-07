@@ -132,7 +132,6 @@ public class Fireball : MonoBehaviour
 		rb.velocity = thisVelocity;
 		if (!isMoving) //stops object when not moving
 		{
-			Debug.Log("Stopping");
 			rb.velocity = Vector3.zero;
 		}
 	}
@@ -164,7 +163,6 @@ public class Fireball : MonoBehaviour
 	}
 	void ResetThis()
 	{
-		Debug.Log("1");
 		currentCharges = maxCharges;
 		isMoving = false;
 		isFacingForward = true;

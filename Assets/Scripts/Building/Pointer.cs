@@ -67,6 +67,13 @@ public class Pointer : MonoBehaviour
 		//Debug.Log("Entered trigger");
 		heldObject.color = errorColour;
 	}
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if(collision.gameObject.tag == "Enemy")
+		{
+			DisablePlacement();
+		}
+	}
 	private void OnTriggerStay2D(Collider2D other)
 	{
 		DisablePlacement();
@@ -181,6 +188,7 @@ public class Pointer : MonoBehaviour
 	}
 	public void DisablePlacement()
 	{
+		Debug.Log("Disabled");
 		isLocationValid = false;
 	}
 	public void EnablePlacement()

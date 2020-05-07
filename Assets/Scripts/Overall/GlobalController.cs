@@ -132,10 +132,9 @@ public class GlobalController : MonoBehaviour
 				int objectType = save.objectTypes[i];
 				GameObject tmp = Instantiate(pointer.GetPlaceableObjects()[objectType], position, transform.rotation, tO.transform);
 				tmp.GetComponent<BaseObject>().SetID(objectType);
-				Debug.Log("Loading id: " + objectType);
+				//Debug.Log("Loading id: " + objectType);
 			}
 
-			//remove graphic or something
 			Debug.Log("Game Loaded");
 			objects = tO.GetObjectsInScene();
 			bG.SetBackgroundID(save.backgroundID);
