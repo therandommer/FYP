@@ -9,6 +9,7 @@ public class Pointer : MonoBehaviour
 	GlobalController gc;
 	[SerializeField]
 	BoxCollider2D box = null;
+	Vector3 boxSize = new Vector3(0, 0, 0); //default size to prevent large placement when not necessary
 	#region held Object
 	[SerializeField]
 	SpriteRenderer heldObject = null;
@@ -32,11 +33,16 @@ public class Pointer : MonoBehaviour
 	float buildDelay = 0.005f;
 	[SerializeField]
 	float currentBuildDelay;
+	[SerializeField]
+	bool isErasing = false; //only used for the erase button function, not middle click erase
+	[SerializeField]
+	float eraseScale = 1.0f; //used explicitly for the erase function
 	#endregion
 
 	void Start()
 	{
 		gc = FindObjectOfType<GlobalController>();
+		boxSize = box.size; 
 		buildSettings = FindObjectOfType<BuildSettings>();
 		heldObject = gameObject.GetComponent<SpriteRenderer>();
 		baseColour = Color.white;
@@ -63,6 +69,7 @@ public class Pointer : MonoBehaviour
 		//Debug.Log("Entered trigger");
 		heldObject.color = errorColour;
 	}
+
 	private void OnTriggerStay2D(Collider2D other)
 	{
 		DisablePlacement();
@@ -80,11 +87,25 @@ public class Pointer : MonoBehaviour
 		}
 		//Debug.Log("Currently Colliding");
 		heldObject.color = errorColour;
-		if (Input.GetMouseButtonDown(2) || Input.GetMouseButton(2) && !isLocationValid)
+		if (Input.GetMouseButtonDown(0) && heldID == 19 && !isLocationValid || Input.GetMouseButton(0) && heldID == 19 && !isLocationValid)
 		{
+			Debug.Log("Mass erasing");
 			other.gameObject.SendMessage("Erase"); //need to put this function in every object somewhere
 			isLocationValid = true;
 			heldObject.color = baseColour;
+		}
+		if (Input.GetMouseButtonDown(2) && !isLocationValid || Input.GetMouseButton(2) && !isLocationValid)
+		{
+			if(heldID != 19)
+			{
+				other.gameObject.SendMessage("Erase"); //need to put this function in every object somewhere
+				isLocationValid = true;
+				heldObject.color = baseColour;
+			}
+			else
+			{
+				Debug.Log("Currently erasing is bound to main click");
+			}
 		}
 	}
 	private void OnTriggerExit2D(Collider2D other)
@@ -118,14 +139,23 @@ public class Pointer : MonoBehaviour
 		{
 			baseColour = Color.white;
 		}
-		if (heldID == 13 || heldID == 9 || heldID == 10) //player,etc. scaling
+		if (heldID != 19) //only certain objects are scaled by 3x
 		{
-			transform.localScale = new Vector3(3, 3, 3);
+			if (heldID == 13 || heldID == 9 || heldID == 10 || heldID == 18) //player,etc. scaling
+			{
+				transform.localScale = new Vector3(3, 3, 3);
+				box.size = boxSize;
+			}
+			else if (heldID != 13 && heldID != 9 && heldID != 10 && heldID != 18) 
+			{
+				transform.localScale = new Vector3(1, 1, 1);
+				box.size = boxSize;
+			}
 		}
-		else if (heldID != 13 && heldID != 9 && heldID != 10) //only certain objects are scaled by 3x
+		else if (heldID == 19 && transform.localScale != new Vector3(eraseScale, eraseScale, eraseScale)) //different while erasing
 		{
-			transform.localScale = new Vector3(1, 1, 1);
-		}
+			transform.localScale = new Vector3(eraseScale, eraseScale, eraseScale); 
+	}
 		if (heldID == 9) //certain objects need rotating, eg. Fireball
 		{
 			transform.rotation = Quaternion.Euler(0, 0, 90);
@@ -151,16 +181,23 @@ public class Pointer : MonoBehaviour
 		this.transform.position = roundedLocation;
 		if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
 		{
-			if (Input.GetMouseButton(0) && isLocationValid && heldID <= 14) //probably change this limitter later
+			if (Input.GetMouseButton(0) && isLocationValid && gc.GetIsBuilding() && !gc.GetIsPaused()) 
 			{
-				Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation, parentObject.transform);
-				DisablePlacement();
-				currentBuildDelay = buildDelay;
-				if (heldID == 13 || heldID == 14) //reset to empty block after player is placed, prevents multiple spawns
+				if(heldID != 19)
 				{
-					SetHeldID(15); //allows player to specify next block
+					Instantiate(placeableObjects[heldID], new Vector3(roundedLocation.x, roundedLocation.y, 0), transform.rotation, parentObject.transform);
+					DisablePlacement();
+					currentBuildDelay = buildDelay;
+					if (heldID == 13 || heldID == 14) //reset to empty block after player is placed, prevents multiple spawns
+					{
+						SetHeldID(15); //allows player to specify next block
+					}
+					currentBuildDelay = buildDelay;
 				}
-				currentBuildDelay = buildDelay;
+				else
+				{
+					Debug.Log("Doing something else with left click");
+				}
 			}
 		}
 	}
@@ -173,8 +210,17 @@ public class Pointer : MonoBehaviour
 	{
 		return heldID;
 	}
+	public void SetIsErasing(bool _isErasing)
+	{
+		isErasing = _isErasing;
+	}
+	public void SetEraseScale(float _eraseScale)
+	{
+		eraseScale = _eraseScale;
+	}
 	public void DisablePlacement()
 	{
+		Debug.Log("Disabled");
 		isLocationValid = false;
 	}
 	public void EnablePlacement()

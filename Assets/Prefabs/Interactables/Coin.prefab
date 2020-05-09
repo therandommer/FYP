@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394337082289513278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.804701, y: 4.6173425, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,9 +125,6 @@ MonoBehaviour:
   objectValue: 1
   thisID: 0
   defaultPosition: {x: 0, y: 0, z: 0}
-  build: {fileID: 0}
-  pointer: {fileID: 0}
-  parentObject: {fileID: 0}
 --- !u!114 &7559038939409380648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +140,7 @@ MonoBehaviour:
   sprite: {fileID: 3394337082289513279}
   col: {fileID: 5024420839312780312}
   hasCollected: 0
+  coinValue: 1
+  isHealth: 0
+  healthValue: 1
+  scoreValue: 100

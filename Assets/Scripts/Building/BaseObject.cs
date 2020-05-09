@@ -11,11 +11,8 @@ public class BaseObject : MonoBehaviour
 	int thisID = 0;
 	[SerializeField]
 	Vector3 defaultPosition = new Vector3(0, 0, 0);
-	[SerializeField]
 	BuildSettings build = null;
-	[SerializeField]
 	Pointer pointer = null;
-	[SerializeField]
 	TotalObjects parentObject = null;
 	GlobalController gc = null;
 

@@ -67,8 +67,6 @@ public class BuildSettings : MonoBehaviour
 	[Space(10)]
 	[SerializeField]
 	readonly GameObject clearObject; //need a reference to a type of object, so they can be taken when the level is played.
-	[SerializeField]
-	readonly int clearConditionRequired = 0; //this will probably change
 	#endregion
 
 	#region User Settings
