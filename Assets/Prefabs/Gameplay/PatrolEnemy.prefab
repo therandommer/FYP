@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5527731037192764189}
   - component: {fileID: 2744730267947447354}
   - component: {fileID: 4299846582260089927}
-  - component: {fileID: 71528350923988790}
   - component: {fileID: 7067691165033855766}
   - component: {fileID: 7887062829147112819}
+  - component: {fileID: 6730281908776587832}
   m_Layer: 8
   m_Name: PatrolEnemy
   m_TagString: Enemy
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,24 +127,6 @@ MonoBehaviour:
   objectValue: 1
   thisID: 0
   defaultPosition: {x: 0, y: 0, z: 0}
---- !u!68 &71528350923988790
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5527731037192764188}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: a19a81af8f6278f4bb860db8ad161633, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.5, y: 0}
-  - {x: 0.5, y: 0}
 --- !u!114 &7067691165033855766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,11 +141,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   currentTimer: 0
-  maxTimer: 2
+  maxTimer: 3.5
   isFacingRight: 0
   isDefeated: 0
   thisObject: {fileID: 4299846582260089927}
   rb: {fileID: 0}
+  needsEnable: 0
 --- !u!50 &7887062829147112819
 Rigidbody2D:
   serializedVersion: 4
@@ -175,7 +158,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -184,4 +167,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &6730281908776587832
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5527731037192764188}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4abb1c5c851e1b34897451adc8d218e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

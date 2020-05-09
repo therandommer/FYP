@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
@@ -23,6 +24,15 @@ public class CameraController : MonoBehaviour
 	[SerializeField]
 	float moveScale = 3.0f;
 
+	[SerializeField]
+	AudioSource buildMusic = null;
+	[SerializeField]
+	AudioSource playMusic = null;
+	[SerializeField]
+	float defaultVolume = 0.4f;
+	[SerializeField]
+	Slider musicSlider = null;
+
 	void Awake()
 	{
 		defaultPosition.x = transform.position.x;
@@ -30,6 +40,14 @@ public class CameraController : MonoBehaviour
 		defaultPosition.z = transform.position.z;
 		gc = FindObjectOfType<GlobalController>();
 		build = FindObjectOfType<BuildSettings>();
+		//ensuring music is set up correctly and ensures no deafening of user on start up
+		musicSlider.value = defaultVolume;
+		playMusic.volume = musicSlider.value;
+		playMusic.mute = true;
+		playMusic.Stop();
+		buildMusic.volume = musicSlider.value;
+		buildMusic.mute = false;
+		buildMusic.Play();
 	}
 
 	void ResetPosition()
@@ -48,7 +66,29 @@ public class CameraController : MonoBehaviour
 		{
 			player = null;
 		}
-
+		//music switch
+		if(gc.GetIsGameplay() && playMusic.mute == true)
+		{
+			buildMusic.mute = true;
+			buildMusic.Stop();
+			playMusic.mute = false;
+			playMusic.Play();
+		}
+		if (gc.GetIsBuilding() && buildMusic.mute == true)
+		{
+			playMusic.mute = true;
+			playMusic.Stop();
+			buildMusic.mute = false;
+			buildMusic.Play();
+		}
+		if(buildMusic.mute == false && buildMusic.volume != musicSlider.value)
+		{
+			buildMusic.volume = musicSlider.value;
+		}
+		if(playMusic.mute == false && playMusic.volume != musicSlider.value)
+		{
+			playMusic.volume = musicSlider.value;
+		}
 		//switching states of camera
 		if (gc.GetIsGameplay() && isGameplay == false)
 		{
@@ -114,5 +154,10 @@ public class CameraController : MonoBehaviour
 		{
 			transform.position = new Vector3(transform.position.x, 10.5f, zOffset);
 		}
+	}
+
+	public void SetDefaultVolume(int _volume)
+	{
+
 	}
 }

@@ -76,18 +76,25 @@ public class Player : MonoBehaviour
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.tag == "Ladder" && this.transform.position.y<collision.transform.position.y + 0.5f)
+		if(collision.tag == "Ladder" && this.transform.position.y<collision.transform.position.y + 0.5f) //prevents spam jumps up ladder
 		{
 			isNormalJump = false;
 		}
-		if(collision.tag == "Hazard") //placeholder, could be replaced by a hazard base class
+		if(collision.tag == "Hazard") //handles damage
 		{
 			Damaged(1);
 		}
 	}
-    private void OnTriggerExit2D(Collider2D other)
+	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(other.tag == "Ladder" && this.transform.position.y>other.transform.position.y + 0.5)
+		if(collision.gameObject.tag == "Enemy")
+		{
+			Damaged(1);
+		}
+	}
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if(other.tag == "Ladder" && this.transform.position.y>other.transform.position.y + 0.5) //reverts jump type to default
 		{
 			isNormalJump = true;
 			isGrounded = true;
@@ -198,6 +205,7 @@ public class Player : MonoBehaviour
 	}
 	public void Damaged(int _amount)
 	{
+		Debug.Log("Damaged player for: " + _amount);
 		if(currentITime <= 0.0f)
 		{
 			if (!isPowered)

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3149310172433862366}
   - component: {fileID: 4689891390668292601}
   - component: {fileID: 6678545032304996740}
-  - component: {fileID: 7493132548135381749}
   - component: {fileID: 366921696641617621}
   - component: {fileID: 753951782710227120}
   - component: {fileID: 3149310172433862364}
+  - component: {fileID: 543212874}
   m_Layer: 8
   m_Name: ShootEnemy
   m_TagString: Enemy
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,24 +128,6 @@ MonoBehaviour:
   objectValue: 1
   thisID: 0
   defaultPosition: {x: 0, y: 0, z: 0}
---- !u!68 &7493132548135381749
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3149310172433862367}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: a19a81af8f6278f4bb860db8ad161633, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.5, y: 0}
-  - {x: 0.5, y: 0}
 --- !u!114 &366921696641617621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,11 +142,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   currentTimer: 0
-  maxTimer: 2
+  maxTimer: 3.5
   isFacingRight: 0
   isDefeated: 0
   thisObject: {fileID: 6678545032304996740}
   rb: {fileID: 0}
+  needsEnable: 0
 --- !u!50 &753951782710227120
 Rigidbody2D:
   serializedVersion: 4
@@ -176,7 +159,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -185,7 +168,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &3149310172433862364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,5 +181,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71943f1ed1829b648a86dcd5a1bea157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 2
+  interval: 3.5
   bullet: {fileID: 534119052105196965, guid: 928a159e2770ffb4e99672a4383ae5bd, type: 3}
+--- !u!95 &543212874
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149310172433862367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3042106a4f208404784459da680cf004, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

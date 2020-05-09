@@ -87,13 +87,14 @@ public class Pointer : MonoBehaviour
 		}
 		//Debug.Log("Currently Colliding");
 		heldObject.color = errorColour;
-		if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(2) && heldID == 19 && !isLocationValid)
+		if (Input.GetMouseButtonDown(0) && heldID == 19 && !isLocationValid || Input.GetMouseButton(0) && heldID == 19 && !isLocationValid)
 		{
+			Debug.Log("Mass erasing");
 			other.gameObject.SendMessage("Erase"); //need to put this function in every object somewhere
 			isLocationValid = true;
 			heldObject.color = baseColour;
 		}
-		if (Input.GetMouseButtonDown(2) || Input.GetMouseButton(2) && !isLocationValid)
+		if (Input.GetMouseButtonDown(2) && !isLocationValid || Input.GetMouseButton(2) && !isLocationValid)
 		{
 			if(heldID != 19)
 			{

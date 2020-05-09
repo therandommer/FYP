@@ -20,42 +20,47 @@ public class AIMovement : MonoBehaviour
 	private BaseObject thisObject = null; //link to self in prefab
 	[SerializeField]
 	private Rigidbody2D rb = null;
+	[SerializeField]
+	bool needsEnable = false;
+	Animator anim = null;
 
 	private void Awake()
 	{
+		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
 		gc = FindObjectOfType<GlobalController>();
 	}
 	private void Start()
 	{
-		rb.simulated = false;
+		rb.constraints = RigidbodyConstraints2D.FreezePosition;
+		needsEnable = true;
+		anim.SetBool("isGameplay", false);
 		this.transform.localScale = new Vector3(3, 3, 3); //sets to correct scale once awakened
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
-		if(collision.gameObject.tag == "Player")
-		{
-			SendMessage("Damaged", 1);
-		}
-	}
 	void Update()
     {
-		if(gc.GetIsGameplay() && !rb.simulated && !isDefeated)
+		if(gc.GetIsGameplay() && needsEnable && !isDefeated && !gc.GetIsPaused())
 		{
 			Debug.Log("Waking rigidbody");
 			rb.velocity = new Vector2(0, 0);
 			currentTimer = 0.0f;
-			rb.simulated = true;
+			rb.constraints = RigidbodyConstraints2D.None;
+			anim.SetBool("isGameplay", true);
+			needsEnable = false;
 		}
-		else if(gc.GetIsBuilding() && rb.simulated || gc.GetIsPaused() && rb.simulated || isDefeated && gc.GetIsBuilding())
+		else if(gc.GetIsBuilding() && !needsEnable || gc.GetIsPaused() && !needsEnable || isDefeated)
 		{
 			Debug.Log("Sleeping rigidbody");
-			rb.simulated = false;
+			rb.constraints = RigidbodyConstraints2D.FreezePosition;
+			needsEnable = true;
+			anim.SetBool("isGameplay", false);
+
 			rb.velocity = new Vector2(0, 0);
 			isDefeated = false;
 			currentTimer = 0.0f;
 			this.transform.position = thisObject.GetDefaultPosition();
+			this.transform.rotation = Quaternion.Euler(0, 0, 0);
 		}
 		if(gc.GetIsGameplay() && !gc.GetIsPaused() && !isDefeated)
 		{
@@ -94,6 +99,8 @@ public class AIMovement : MonoBehaviour
 	{
 		Debug.Log("Enemy fell off map");
 		isDefeated = true;
-		rb.simulated = false;
+		rb.constraints = RigidbodyConstraints2D.FreezePosition;
+		needsEnable = true;
+		anim.SetBool("isGameplay", false);
 	}
 }
