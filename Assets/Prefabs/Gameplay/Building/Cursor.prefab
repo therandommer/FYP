@@ -74,6 +74,7 @@ MonoBehaviour:
   - {fileID: 2530169104351001003, guid: fa00c575a3731e14da6fbf298e6ba7bc, type: 3}
   - {fileID: 8958838665501196508, guid: cd0c311ca6a18f34f9aa155487f9c3d4, type: 3}
   - {fileID: 5527731037192764188, guid: 64d95cafbdb4b8349967e06e443841f3, type: 3}
+  - {fileID: 2268275400985350796, guid: d545216157903ea428219df0565ad3c2, type: 3}
   heldID: 0
   pointingLocation: {x: 0, y: 0}
   roundedLocation: {x: 0, y: 0}
@@ -82,6 +83,7 @@ MonoBehaviour:
   buildDelay: 0.1
   currentBuildDelay: 0
   isErasing: 0
+  eraseScale: 1
 --- !u!212 &5766196322548864221
 SpriteRenderer:
   m_ObjectHideFlags: 0
