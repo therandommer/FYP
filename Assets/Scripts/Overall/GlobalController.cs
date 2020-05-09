@@ -67,6 +67,12 @@ public class GlobalController : MonoBehaviour
 		pointer = FindObjectOfType<Pointer>();
 		needsUIUpdate = true;
 	}
+
+	private void Start()
+	{
+		SaveGame("655 DON'T TOUCH"); //ensures erase will work correctly
+	}
+
 	private SaveGame CreateSaveGameObject() //Currently saves anything with "BaseObject" attached to it
 	{
 		List<GameObject> Objects = tO.GetObjectsInScene();
