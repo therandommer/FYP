@@ -83,6 +83,7 @@ MonoBehaviour:
   GamePlayUI: {fileID: 0}
   PauseUI: {fileID: 0}
   buildButton: {fileID: 0}
+  eraseButton: {fileID: 0}
   pointer: {fileID: 0}
 --- !u!114 &1435545458
 MonoBehaviour:

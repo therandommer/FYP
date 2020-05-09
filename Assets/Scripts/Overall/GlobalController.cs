@@ -37,6 +37,8 @@ public class GlobalController : MonoBehaviour
 	GameObject PauseUI = null;
 	[SerializeField]
 	GameObject buildButton = null; //only enable this on pause AND gameplay
+	[SerializeField]
+	GameObject eraseButton = null; //only enable this on pause AND building
 	#endregion
 
 	#region This Object
@@ -97,10 +99,8 @@ public class GlobalController : MonoBehaviour
 		Debug.Log(file);
 		bf.Serialize(file, save); //mounting the data to the file
 		file.Close();
-		AssetDatabase.Refresh();
-		///can do some cleanup if needed, probably display something to the player?
+		//AssetDatabase.Refresh();
 		Debug.Log("Game Saved");
-		//Application.OpenURL(Application.dataPath + "/SaveData.a");
 		isSaving = false;
 	}
 	public void ResetLevel() //used to clear absolutely everything
@@ -169,10 +169,12 @@ public class GlobalController : MonoBehaviour
 				if (!isGameplay)
 				{
 					buildButton.SetActive(false);
+					eraseButton.SetActive(true);
 				}
 				if (isGameplay)
 				{
 					buildButton.SetActive(true);
+					eraseButton.SetActive(false);
 				}
 				//enable pause UI as an overlay
 				if (!buildClicked)
