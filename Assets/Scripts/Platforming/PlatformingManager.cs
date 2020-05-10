@@ -81,6 +81,10 @@ public class PlatformingManager : MonoBehaviour
 			{
 				UpdateUI();
 			}
+			if(timeLeft <= 0.0f) //boot to build if failed clear in time
+			{
+				gc.SetIsBuilding(true);
+			}
 		}
 		if (gc.GetIsBuilding() && needReset) //resets, etc. here when entering building
 		{

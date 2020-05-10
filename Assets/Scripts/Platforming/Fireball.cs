@@ -15,8 +15,6 @@ public class Fireball : MonoBehaviour
 	[SerializeField]
 	bool isFacingForward = true; //determines the direction this object travels
 	[SerializeField]
-	readonly bool isVertical = true;
-	[SerializeField]
 	bool hasReachedMax = true; //inverts on camera minimum/original placement
 	bool didReachMax = false; //used for the states, will be set to false on hitting the bottom
 	[SerializeField]
@@ -120,14 +118,7 @@ public class Fireball : MonoBehaviour
 			{
 				tmp = -1;
 			}
-			if (isVertical)
-			{
-				thisVelocity.y = speed * tmp;
-			}
-			else if (!isVertical)
-			{
-				thisVelocity.x = speed * tmp;
-			}
+			thisVelocity.y = speed * tmp;
 		}
 		rb.velocity = thisVelocity;
 		if (!isMoving) //stops object when not moving

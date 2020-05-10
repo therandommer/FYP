@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 410533104292772827}
   m_Layer: 8
   m_Name: Poison Water
-  m_TagString: Interactable
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

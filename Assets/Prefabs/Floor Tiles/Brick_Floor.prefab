@@ -92,7 +92,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7520152654895856571}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e7848f5993fbd4444947300dc0f65b0c, type: 2}
+  m_Material: {fileID: 6200000, guid: 932578e39d4157444bdf2f8809438c3e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -125,9 +125,6 @@ MonoBehaviour:
   objectValue: 1
   thisID: 0
   defaultPosition: {x: 0, y: 0, z: 0}
-  build: {fileID: 0}
-  pointer: {fileID: 0}
-  parentObject: {fileID: 0}
 --- !u!68 &2599876949894504337
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +134,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 7520152654895856571}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a19a81af8f6278f4bb860db8ad161633, type: 2}
+  m_Material: {fileID: 6200000, guid: 611c23f61fae2c74ba5e26ebb839df00, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
