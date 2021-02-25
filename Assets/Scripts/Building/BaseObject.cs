@@ -27,6 +27,7 @@ public class BaseObject : MonoBehaviour
 		}
 		build = FindObjectOfType<BuildSettings>();
 
+		//remove limiters, keep trackers though
 		if (objectType <= 5)
 		{
 			if (build.GetCurrentObjects(objectType) + objectValue <= build.GetMaxObjects(objectType)) //used to limit and track number of objects placed. Mainly used to limit player to 1
@@ -52,7 +53,7 @@ public class BaseObject : MonoBehaviour
 			}
 		}
 		defaultPosition = transform.position;
-		//ensuring object is placed within bounds
+		//ensuring object is placed within bounds, can remove this
 		if (defaultPosition.x < build.GetLevelSmallest().x || defaultPosition.y < build.GetLevelSmallest().y)
 		{
 			Erase();

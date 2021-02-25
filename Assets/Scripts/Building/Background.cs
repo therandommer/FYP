@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+//Copy Entirely
 public class Background : MonoBehaviour
 {
 	[SerializeField]
